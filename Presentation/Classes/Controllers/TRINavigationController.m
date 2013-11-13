@@ -11,12 +11,15 @@
 #import "TRIBaseScreenController.h"
 #import "TRISourceCodeController.h"
 
+
 static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
+
+
 
 @interface TRINavigationController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSArray *screenDefinitions;
-@property (nonatomic) NSInteger currentScreenIndex;
+@property (nonatomic, strong) NSArray *definitions;
+@property (nonatomic) NSInteger currentIndex;
 @property (nonatomic, strong) TRIBaseScreenController *currentScreen;
 @property (nonatomic, strong) UIPopoverController *screenPopover;
 
@@ -26,6 +29,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextScreenButton;
 
 @end
+
 
 
 @implementation TRINavigationController
@@ -38,10 +42,10 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ScreenDefinitions"
                                                      ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
-    self.screenDefinitions = dict[@"screens"];
+    self.definitions = dict[@"screens"];
     
     // We have to start somewhere
-    self.currentScreenIndex = 0;
+    self.currentIndex = 0;
 
     // Enable and disable toolbar buttons depending on the number of screens
     [self enableButtons];
@@ -81,7 +85,9 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
         contents.tableView.dataSource = self;
         [contents.tableView registerClass:[UITableViewCell class]
                    forCellReuseIdentifier:CELL_REUSE_IDENTIFIER];
-        self.screenPopover = [[UIPopoverController alloc] initWithContentViewController:contents];
+        UIPopoverController *popover = nil;
+        popover = [[UIPopoverController alloc] initWithContentViewController:contents];
+        self.screenPopover = popover;
     }
     else
     {
@@ -94,7 +100,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
                                                animated:YES];
     
     // Select the current screen on the menu
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.currentScreenIndex
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.currentIndex
                                                 inSection:0];
     [contents.tableView selectRowAtIndexPath:indexPath
                                     animated:NO
@@ -103,9 +109,9 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 - (IBAction)goBack:(id)sender
 {
-    if (self.currentScreenIndex > 0)
+    if (self.currentIndex > 0)
     {
-        self.currentScreenIndex -= 1;
+        self.currentIndex -= 1;
         [self showCurrentScreen];
         [self resizeCurrentScreen];
         [self enableButtons];
@@ -121,7 +127,8 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     NSAttributedString *sourceCode = [[self currentScreen] tri_sourceCode];
     if (sourceCode)
     {
-        TRISourceCodeController *controller = [[TRISourceCodeController alloc] init];
+        TRISourceCodeController *controller = nil;
+        controller = [[TRISourceCodeController alloc] init];
         controller.sourceCode = sourceCode;
         
         NSString *className = NSStringFromClass([self.currentScreen class]);
@@ -136,9 +143,9 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 - (IBAction)goForward:(id)sender
 {
-    if (self.currentScreenIndex < ([self.screenDefinitions count] - 1))
+    if (self.currentIndex < ([self.definitions count] - 1))
     {
-        self.currentScreenIndex += 1;
+        self.currentIndex += 1;
         [self showCurrentScreen];
         [self resizeCurrentScreen];
         [self enableButtons];
@@ -152,16 +159,19 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
 {
-    return [self.screenDefinitions count];
+    return [self.definitions count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_REUSE_IDENTIFIER
-                                                            forIndexPath:indexPath];
-    NSDictionary *definition = self.screenDefinitions[indexPath.row];
+    UITableViewCell *cell = nil;
+    cell = [tableView dequeueReusableCellWithIdentifier:CELL_REUSE_IDENTIFIER
+                                           forIndexPath:indexPath];
+    NSDictionary *definition = self.definitions[indexPath.row];
     NSInteger index = indexPath.row + 1;
     NSString *title = definition[@"title"];
     NSString *text = [NSString stringWithFormat:@"%d. %@", index, title];
@@ -169,10 +179,11 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+-       (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.screenPopover dismissPopoverAnimated:YES];
-    self.currentScreenIndex = indexPath.row;
+    self.currentIndex = indexPath.row;
     [self showCurrentScreen];
     [self resizeCurrentScreen];
     [self enableButtons];
@@ -184,11 +195,13 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 {
     if (self.currentScreen != nil)
     {
+        [self.currentScreen viewWillDisappear:NO];
         [self.currentScreen.view removeFromSuperview];
+        [self.currentScreen viewDidDisappear:NO];
         self.currentScreen = nil;
     }
 
-    NSDictionary *definition = self.screenDefinitions[self.currentScreenIndex];
+    NSDictionary *definition = self.definitions[self.currentIndex];
     NSString *className = definition[@"class"];
     Class klass = NSClassFromString(className);
     if (klass)
@@ -197,6 +210,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
         [self.currentScreen viewWillAppear:NO];
         [self.holderView addSubview:self.currentScreen.view];
         [self.currentScreen viewDidAppear:NO];
+        
         self.titleButtonItem.title = self.currentScreen.title;
     }
     else
@@ -212,8 +226,8 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 - (void)enableButtons
 {
-    self.previousScreenButton.enabled = self.currentScreenIndex > 0;
-    self.nextScreenButton.enabled = self.currentScreenIndex < ([self.screenDefinitions count] - 1);
+    self.previousScreenButton.enabled = self.currentIndex > 0;
+    self.nextScreenButton.enabled = self.currentIndex < ([self.definitions count] - 1);
 }
 
 @end
