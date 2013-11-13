@@ -25,6 +25,12 @@
     self.navItem.title = self.title;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
+}
+
 - (IBAction)close:(id)sender
 {
     [self dismissViewControllerAnimated:YES

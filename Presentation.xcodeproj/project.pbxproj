@@ -28,6 +28,8 @@
 		3AC83A851833C9450089524B /* TRITextScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A831833C9450089524B /* TRITextScreen.xib */; };
 		3AC83A891833E4CA0089524B /* TRISpeechScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC83A871833E4CA0089524B /* TRISpeechScreen.m */; };
 		3AC83A8A1833E4CA0089524B /* TRISpeechScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A881833E4CA0089524B /* TRISpeechScreen.xib */; };
+		3AC83A8E183418270089524B /* TRIGeodesicScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC83A8C183418270089524B /* TRIGeodesicScreen.m */; };
+		3AC83A8F183418270089524B /* TRIGeodesicScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A8D183418270089524B /* TRIGeodesicScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,9 @@
 		3AC83A861833E4CA0089524B /* TRISpeechScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRISpeechScreen.h; sourceTree = "<group>"; };
 		3AC83A871833E4CA0089524B /* TRISpeechScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRISpeechScreen.m; sourceTree = "<group>"; };
 		3AC83A881833E4CA0089524B /* TRISpeechScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRISpeechScreen.xib; sourceTree = "<group>"; };
+		3AC83A8B183418270089524B /* TRIGeodesicScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIGeodesicScreen.h; sourceTree = "<group>"; };
+		3AC83A8C183418270089524B /* TRIGeodesicScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIGeodesicScreen.m; sourceTree = "<group>"; };
+		3AC83A8D183418270089524B /* TRIGeodesicScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIGeodesicScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +182,9 @@
 				3AC83A861833E4CA0089524B /* TRISpeechScreen.h */,
 				3AC83A871833E4CA0089524B /* TRISpeechScreen.m */,
 				3AC83A881833E4CA0089524B /* TRISpeechScreen.xib */,
+				3AC83A8B183418270089524B /* TRIGeodesicScreen.h */,
+				3AC83A8C183418270089524B /* TRIGeodesicScreen.m */,
+				3AC83A8D183418270089524B /* TRIGeodesicScreen.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -270,6 +278,7 @@
 			files = (
 				3AC83A801833C1330089524B /* TRINavigationController.xib in Resources */,
 				3A86E4751833B6DD00C1AC2C /* Images.xcassets in Resources */,
+				3AC83A8F183418270089524B /* TRIGeodesicScreen.xib in Resources */,
 				3A86E4851833BAFA00C1AC2C /* TRIPhotoScreen.xib in Resources */,
 				3A86E47F1833B97200C1AC2C /* html in Resources */,
 				3AC83A7E1833BCC80089524B /* TRISourceCodeController.xib in Resources */,
@@ -307,6 +316,7 @@
 				3A86E47B1833B7D900C1AC2C /* NSObject+TRISourceCode.m in Sources */,
 				3AC83A891833E4CA0089524B /* TRISpeechScreen.m in Sources */,
 				3A86E4681833B51600C1AC2C /* TRIAppDelegate.m in Sources */,
+				3AC83A8E183418270089524B /* TRIGeodesicScreen.m in Sources */,
 				3A86E46B1833B53C00C1AC2C /* TRIBaseScreenController.m in Sources */,
 				3A86E46E1833B55B00C1AC2C /* TRINavigationController.m in Sources */,
 				3AC83A7D1833BCC80089524B /* TRISourceCodeController.m in Sources */,

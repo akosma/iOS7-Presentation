@@ -49,12 +49,13 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
     // Enable and disable toolbar buttons depending on the number of screens
     [self enableButtons];
+
+    [self showCurrentScreen];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self showCurrentScreen];
     [self resizeCurrentScreen];
 }
 
@@ -109,6 +110,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 - (IBAction)goBack:(id)sender
 {
+    [self.screenPopover dismissPopoverAnimated:YES];
     if (self.currentIndex > 0)
     {
         self.currentIndex -= 1;
@@ -120,10 +122,12 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 - (IBAction)goHome:(id)sender
 {
+    [self.screenPopover dismissPopoverAnimated:YES];
 }
 
 - (IBAction)showSourceCode:(id)sender
 {
+    [self.screenPopover dismissPopoverAnimated:YES];
     NSAttributedString *sourceCode = [[self currentScreen] tri_sourceCode];
     if (sourceCode)
     {
@@ -143,6 +147,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 - (IBAction)goForward:(id)sender
 {
+    [self.screenPopover dismissPopoverAnimated:YES];
     if (self.currentIndex < ([self.definitions count] - 1))
     {
         self.currentIndex += 1;

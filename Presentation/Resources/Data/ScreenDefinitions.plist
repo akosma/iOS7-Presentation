@@ -39,6 +39,12 @@ Trifork GmbH</string>
 		</dict>
 		<dict>
 			<key>title</key>
+			<string>Geodesic Line</string>
+			<key>class</key>
+			<string>TRIGeodesicScreen</string>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>Thanks</string>
 			<key>contents</key>
 			<string>Thanks!</string>
