@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRINavigationController">
+            <connections>
+                <outlet property="holderView" destination="SAz-0i-IzC" id="Vs7-sa-fcM"/>
+                <outlet property="nextScreenButton" destination="uks-nG-xfT" id="k5A-TA-QWh"/>
+                <outlet property="previousScreenButton" destination="tfs-qK-Rds" id="LiO-Fn-hQv"/>
+                <outlet property="titleButtonItem" destination="JP7-UD-lJD" id="8VQ-6L-HB0"/>
+                <outlet property="view" destination="1" id="raV-vR-neS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHe-Xj-oYY">
+                    <rect key="frame" x="0.0" y="960" width="768" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem systemItem="rewind" id="tfs-qK-Rds">
+                            <connections>
+                                <action selector="goBack:" destination="-1" id="WeP-Pu-IK1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="2k5-7P-0li"/>
+                        <barButtonItem systemItem="action" id="qza-pQ-yfd">
+                            <connections>
+                                <action selector="goHome:" destination="-1" id="gRZ-pm-SUB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="LHT-ha-fKg"/>
+                        <barButtonItem title="Item" width="214" id="JP7-UD-lJD">
+                            <connections>
+                                <action selector="showMenu:" destination="-1" id="LAP-bV-PZD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="IeZ-7L-RKE"/>
+                        <barButtonItem systemItem="search" id="Gmt-5D-0nl">
+                            <connections>
+                                <action selector="showSourceCode:" destination="-1" id="qQ6-uK-mzb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="flt-Fa-3sE"/>
+                        <barButtonItem systemItem="fastForward" id="uks-nG-xfT">
+                            <connections>
+                                <action selector="goForward:" destination="-1" id="v3Z-zI-SKD"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAz-0i-IzC">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="GHe-Xj-oYY" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="5jF-eG-2Qs"/>
+                <constraint firstAttribute="trailing" secondItem="SAz-0i-IzC" secondAttribute="trailing" id="5rL-qr-QOK"/>
+                <constraint firstAttribute="trailing" secondItem="GHe-Xj-oYY" secondAttribute="trailing" id="Q9S-vD-DHF"/>
+                <constraint firstItem="SAz-0i-IzC" firstAttribute="top" secondItem="1" secondAttribute="top" id="RNc-XI-3hj"/>
+                <constraint firstAttribute="bottom" secondItem="GHe-Xj-oYY" secondAttribute="bottom" id="azh-77-9bV"/>
+                <constraint firstItem="GHe-Xj-oYY" firstAttribute="top" secondItem="SAz-0i-IzC" secondAttribute="bottom" id="eQx-vO-gyR"/>
+                <constraint firstItem="SAz-0i-IzC" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="hhp-fv-Lwc"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+        </view>
+    </objects>
+</document>

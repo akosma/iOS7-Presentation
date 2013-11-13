@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>screens</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Title</string>
+			<key>contents</key>
+			<string>What&apos;s new in iOS 7
+
+Adrian Kosmaczewski
+Trifork GmbH</string>
+			<key>class</key>
+			<string>TRITextScreen</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Introduction</string>
+			<key>contents</key>
+			<string>Adrian Kosmaczewski</string>
+			<key>class</key>
+			<string>TRITextScreen</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>More intro</string>
+			<key>contents</key>
+			<string>Trifork GmbH</string>
+			<key>class</key>
+			<string>TRITextScreen</string>
+		</dict>
+	</array>
+</dict>
+</plist>

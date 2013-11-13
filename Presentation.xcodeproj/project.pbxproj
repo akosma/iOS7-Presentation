@@ -10,26 +10,23 @@
 		3A86E4321833B4A500C1AC2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A86E4311833B4A500C1AC2C /* Foundation.framework */; };
 		3A86E4341833B4A500C1AC2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A86E4331833B4A500C1AC2C /* CoreGraphics.framework */; };
 		3A86E4361833B4A500C1AC2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A86E4351833B4A500C1AC2C /* UIKit.framework */; };
-		3A86E43C1833B4A500C1AC2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E43A1833B4A500C1AC2C /* InfoPlist.strings */; };
 		3A86E43E1833B4A500C1AC2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E43D1833B4A500C1AC2C /* main.m */; };
-		3A86E4421833B4A500C1AC2C /* TRIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E4411833B4A500C1AC2C /* TRIAppDelegate.m */; };
-		3A86E4441833B4A500C1AC2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E4431833B4A500C1AC2C /* Images.xcassets */; };
-		3A86E44B1833B4A500C1AC2C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A86E44A1833B4A500C1AC2C /* XCTest.framework */; };
-		3A86E44C1833B4A500C1AC2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A86E4311833B4A500C1AC2C /* Foundation.framework */; };
-		3A86E44D1833B4A600C1AC2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A86E4351833B4A500C1AC2C /* UIKit.framework */; };
-		3A86E4551833B4A600C1AC2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E4531833B4A600C1AC2C /* InfoPlist.strings */; };
-		3A86E4571833B4A600C1AC2C /* PresentationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E4561833B4A600C1AC2C /* PresentationTests.m */; };
+		3A86E4681833B51600C1AC2C /* TRIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E4651833B51600C1AC2C /* TRIAppDelegate.m */; };
+		3A86E46B1833B53C00C1AC2C /* TRIBaseScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E46A1833B53C00C1AC2C /* TRIBaseScreenController.m */; };
+		3A86E46E1833B55B00C1AC2C /* TRINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E46D1833B55B00C1AC2C /* TRINavigationController.m */; };
+		3A86E4751833B6DD00C1AC2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E4741833B6DD00C1AC2C /* Images.xcassets */; };
+		3A86E4771833B6FA00C1AC2C /* ScreenDefinitions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E4761833B6FA00C1AC2C /* ScreenDefinitions.plist */; };
+		3A86E47B1833B7D900C1AC2C /* NSObject+TRISourceCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E47A1833B7D900C1AC2C /* NSObject+TRISourceCode.m */; };
+		3A86E47D1833B8BF00C1AC2C /* generate_html.sh in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E47C1833B8BF00C1AC2C /* generate_html.sh */; };
+		3A86E47F1833B97200C1AC2C /* html in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E47E1833B97200C1AC2C /* html */; };
+		3A86E4841833BAFA00C1AC2C /* TRIPhotoScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E4821833BAFA00C1AC2C /* TRIPhotoScreen.m */; };
+		3A86E4851833BAFA00C1AC2C /* TRIPhotoScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E4831833BAFA00C1AC2C /* TRIPhotoScreen.xib */; };
+		3AC83A7D1833BCC80089524B /* TRISourceCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */; };
+		3AC83A7E1833BCC80089524B /* TRISourceCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */; };
+		3AC83A801833C1330089524B /* TRINavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A7F1833C1330089524B /* TRINavigationController.xib */; };
+		3AC83A841833C9450089524B /* TRITextScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC83A821833C9450089524B /* TRITextScreen.m */; };
+		3AC83A851833C9450089524B /* TRITextScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A831833C9450089524B /* TRITextScreen.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3A86E44E1833B4A600C1AC2C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A86E4261833B4A500C1AC2C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A86E42D1833B4A500C1AC2C;
-			remoteInfo = Presentation;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A86E42E1833B4A500C1AC2C /* Presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,17 +34,31 @@
 		3A86E4331833B4A500C1AC2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3A86E4351833B4A500C1AC2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3A86E4391833B4A500C1AC2C /* Presentation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Presentation-Info.plist"; sourceTree = "<group>"; };
-		3A86E43B1833B4A500C1AC2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A86E43D1833B4A500C1AC2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A86E43F1833B4A500C1AC2C /* Presentation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Presentation-Prefix.pch"; sourceTree = "<group>"; };
-		3A86E4401833B4A500C1AC2C /* TRIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIAppDelegate.h; sourceTree = "<group>"; };
-		3A86E4411833B4A500C1AC2C /* TRIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRIAppDelegate.m; sourceTree = "<group>"; };
-		3A86E4431833B4A500C1AC2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3A86E4491833B4A500C1AC2C /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A86E44A1833B4A500C1AC2C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3A86E4521833B4A600C1AC2C /* PresentationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PresentationTests-Info.plist"; sourceTree = "<group>"; };
-		3A86E4541833B4A600C1AC2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3A86E4561833B4A600C1AC2C /* PresentationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentationTests.m; sourceTree = "<group>"; };
+		3A86E4641833B51600C1AC2C /* TRIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIAppDelegate.h; sourceTree = "<group>"; };
+		3A86E4651833B51600C1AC2C /* TRIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIAppDelegate.m; sourceTree = "<group>"; };
+		3A86E4691833B53C00C1AC2C /* TRIBaseScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIBaseScreenController.h; sourceTree = "<group>"; };
+		3A86E46A1833B53C00C1AC2C /* TRIBaseScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIBaseScreenController.m; sourceTree = "<group>"; };
+		3A86E46C1833B55B00C1AC2C /* TRINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRINavigationController.h; sourceTree = "<group>"; };
+		3A86E46D1833B55B00C1AC2C /* TRINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRINavigationController.m; sourceTree = "<group>"; };
+		3A86E4741833B6DD00C1AC2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3A86E4761833B6FA00C1AC2C /* ScreenDefinitions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ScreenDefinitions.plist; sourceTree = "<group>"; };
+		3A86E4791833B7D900C1AC2C /* NSObject+TRISourceCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TRISourceCode.h"; sourceTree = "<group>"; };
+		3A86E47A1833B7D900C1AC2C /* NSObject+TRISourceCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TRISourceCode.m"; sourceTree = "<group>"; };
+		3A86E47C1833B8BF00C1AC2C /* generate_html.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate_html.sh; sourceTree = "<group>"; };
+		3A86E47E1833B97200C1AC2C /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
+		3A86E4811833BAFA00C1AC2C /* TRIPhotoScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIPhotoScreen.h; sourceTree = "<group>"; };
+		3A86E4821833BAFA00C1AC2C /* TRIPhotoScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIPhotoScreen.m; sourceTree = "<group>"; };
+		3A86E4831833BAFA00C1AC2C /* TRIPhotoScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIPhotoScreen.xib; sourceTree = "<group>"; };
+		3AC83A7A1833BCC80089524B /* TRISourceCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRISourceCodeController.h; sourceTree = "<group>"; };
+		3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRISourceCodeController.m; sourceTree = "<group>"; };
+		3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRISourceCodeController.xib; sourceTree = "<group>"; };
+		3AC83A7F1833C1330089524B /* TRINavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRINavigationController.xib; sourceTree = "<group>"; };
+		3AC83A811833C9450089524B /* TRITextScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRITextScreen.h; sourceTree = "<group>"; };
+		3AC83A821833C9450089524B /* TRITextScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRITextScreen.m; sourceTree = "<group>"; };
+		3AC83A831833C9450089524B /* TRITextScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRITextScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,24 +72,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A86E4461833B4A500C1AC2C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A86E44B1833B4A500C1AC2C /* XCTest.framework in Frameworks */,
-				3A86E44D1833B4A600C1AC2C /* UIKit.framework in Frameworks */,
-				3A86E44C1833B4A500C1AC2C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		3A86E4251833B4A500C1AC2C = {
 			isa = PBXGroup;
 			children = (
+				3A86E47C1833B8BF00C1AC2C /* generate_html.sh */,
+				3A86E47E1833B97200C1AC2C /* html */,
 				3A86E4371833B4A500C1AC2C /* Presentation */,
-				3A86E4501833B4A600C1AC2C /* PresentationTests */,
 				3A86E4301833B4A500C1AC2C /* Frameworks */,
 				3A86E42F1833B4A500C1AC2C /* Products */,
 			);
@@ -88,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				3A86E42E1833B4A500C1AC2C /* Presentation.app */,
-				3A86E4491833B4A500C1AC2C /* PresentationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,9 +108,8 @@
 		3A86E4371833B4A500C1AC2C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				3A86E4401833B4A500C1AC2C /* TRIAppDelegate.h */,
-				3A86E4411833B4A500C1AC2C /* TRIAppDelegate.m */,
-				3A86E4431833B4A500C1AC2C /* Images.xcassets */,
+				3A86E4621833B51600C1AC2C /* Classes */,
+				3A86E46F1833B5A000C1AC2C /* Resources */,
 				3A86E4381833B4A500C1AC2C /* Supporting Files */,
 			);
 			path = Presentation;
@@ -119,29 +119,92 @@
 			isa = PBXGroup;
 			children = (
 				3A86E4391833B4A500C1AC2C /* Presentation-Info.plist */,
-				3A86E43A1833B4A500C1AC2C /* InfoPlist.strings */,
 				3A86E43D1833B4A500C1AC2C /* main.m */,
 				3A86E43F1833B4A500C1AC2C /* Presentation-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3A86E4501833B4A600C1AC2C /* PresentationTests */ = {
+		3A86E4621833B51600C1AC2C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3A86E4561833B4A600C1AC2C /* PresentationTests.m */,
-				3A86E4511833B4A600C1AC2C /* Supporting Files */,
+				3A86E4631833B51600C1AC2C /* AppDelegate */,
+				3A86E4661833B51600C1AC2C /* Controllers */,
+				3A86E4781833B79100C1AC2C /* Helpers */,
 			);
-			path = PresentationTests;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		3A86E4511833B4A600C1AC2C /* Supporting Files */ = {
+		3A86E4631833B51600C1AC2C /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				3A86E4521833B4A600C1AC2C /* PresentationTests-Info.plist */,
-				3A86E4531833B4A600C1AC2C /* InfoPlist.strings */,
+				3A86E4641833B51600C1AC2C /* TRIAppDelegate.h */,
+				3A86E4651833B51600C1AC2C /* TRIAppDelegate.m */,
 			);
-			name = "Supporting Files";
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3A86E4661833B51600C1AC2C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A86E46C1833B55B00C1AC2C /* TRINavigationController.h */,
+				3A86E46D1833B55B00C1AC2C /* TRINavigationController.m */,
+				3AC83A7F1833C1330089524B /* TRINavigationController.xib */,
+				3A86E4691833B53C00C1AC2C /* TRIBaseScreenController.h */,
+				3A86E46A1833B53C00C1AC2C /* TRIBaseScreenController.m */,
+				3AC83A7A1833BCC80089524B /* TRISourceCodeController.h */,
+				3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */,
+				3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */,
+				3A86E4671833B51600C1AC2C /* Screens */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A86E4671833B51600C1AC2C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3A86E4811833BAFA00C1AC2C /* TRIPhotoScreen.h */,
+				3A86E4821833BAFA00C1AC2C /* TRIPhotoScreen.m */,
+				3A86E4831833BAFA00C1AC2C /* TRIPhotoScreen.xib */,
+				3AC83A811833C9450089524B /* TRITextScreen.h */,
+				3AC83A821833C9450089524B /* TRITextScreen.m */,
+				3AC83A831833C9450089524B /* TRITextScreen.xib */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3A86E46F1833B5A000C1AC2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A86E4721833B6DD00C1AC2C /* Data */,
+				3A86E4731833B6DD00C1AC2C /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3A86E4721833B6DD00C1AC2C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3A86E4761833B6FA00C1AC2C /* ScreenDefinitions.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3A86E4731833B6DD00C1AC2C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3A86E4741833B6DD00C1AC2C /* Images.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3A86E4781833B79100C1AC2C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3A86E4791833B7D900C1AC2C /* NSObject+TRISourceCode.h */,
+				3A86E47A1833B7D900C1AC2C /* NSObject+TRISourceCode.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +216,7 @@
 			buildPhases = (
 				3A86E42A1833B4A500C1AC2C /* Sources */,
 				3A86E42B1833B4A500C1AC2C /* Frameworks */,
+				3A86E4801833B98300C1AC2C /* ShellScript */,
 				3A86E42C1833B4A500C1AC2C /* Resources */,
 			);
 			buildRules = (
@@ -164,24 +228,6 @@
 			productReference = 3A86E42E1833B4A500C1AC2C /* Presentation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A86E4481833B4A500C1AC2C /* PresentationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A86E45D1833B4A600C1AC2C /* Build configuration list for PBXNativeTarget "PresentationTests" */;
-			buildPhases = (
-				3A86E4451833B4A500C1AC2C /* Sources */,
-				3A86E4461833B4A500C1AC2C /* Frameworks */,
-				3A86E4471833B4A500C1AC2C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3A86E44F1833B4A600C1AC2C /* PBXTargetDependency */,
-			);
-			name = PresentationTests;
-			productName = PresentationTests;
-			productReference = 3A86E4491833B4A500C1AC2C /* PresentationTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -191,11 +237,6 @@
 				CLASSPREFIX = TRI;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Trifork GmbH";
-				TargetAttributes = {
-					3A86E4481833B4A500C1AC2C = {
-						TestTargetID = 3A86E42D1833B4A500C1AC2C;
-					};
-				};
 			};
 			buildConfigurationList = 3A86E4291833B4A500C1AC2C /* Build configuration list for PBXProject "Presentation" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -210,7 +251,6 @@
 			projectRoot = "";
 			targets = (
 				3A86E42D1833B4A500C1AC2C /* Presentation */,
-				3A86E4481833B4A500C1AC2C /* PresentationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,67 +260,52 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A86E43C1833B4A500C1AC2C /* InfoPlist.strings in Resources */,
-				3A86E4441833B4A500C1AC2C /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A86E4471833B4A500C1AC2C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A86E4551833B4A600C1AC2C /* InfoPlist.strings in Resources */,
+				3AC83A801833C1330089524B /* TRINavigationController.xib in Resources */,
+				3A86E4751833B6DD00C1AC2C /* Images.xcassets in Resources */,
+				3A86E4851833BAFA00C1AC2C /* TRIPhotoScreen.xib in Resources */,
+				3A86E47F1833B97200C1AC2C /* html in Resources */,
+				3AC83A7E1833BCC80089524B /* TRISourceCodeController.xib in Resources */,
+				3A86E47D1833B8BF00C1AC2C /* generate_html.sh in Resources */,
+				3AC83A851833C9450089524B /* TRITextScreen.xib in Resources */,
+				3A86E4771833B6FA00C1AC2C /* ScreenDefinitions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A86E4801833B98300C1AC2C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/generate_html.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A86E42A1833B4A500C1AC2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A86E4421833B4A500C1AC2C /* TRIAppDelegate.m in Sources */,
+				3A86E4841833BAFA00C1AC2C /* TRIPhotoScreen.m in Sources */,
+				3A86E47B1833B7D900C1AC2C /* NSObject+TRISourceCode.m in Sources */,
+				3A86E4681833B51600C1AC2C /* TRIAppDelegate.m in Sources */,
+				3A86E46B1833B53C00C1AC2C /* TRIBaseScreenController.m in Sources */,
+				3A86E46E1833B55B00C1AC2C /* TRINavigationController.m in Sources */,
+				3AC83A7D1833BCC80089524B /* TRISourceCodeController.m in Sources */,
+				3AC83A841833C9450089524B /* TRITextScreen.m in Sources */,
 				3A86E43E1833B4A500C1AC2C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A86E4451833B4A500C1AC2C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A86E4571833B4A600C1AC2C /* PresentationTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3A86E44F1833B4A600C1AC2C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A86E42D1833B4A500C1AC2C /* Presentation */;
-			targetProxy = 3A86E44E1833B4A600C1AC2C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3A86E43A1833B4A500C1AC2C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A86E43B1833B4A500C1AC2C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		3A86E4531833B4A600C1AC2C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A86E4541833B4A600C1AC2C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3A86E4581833B4A600C1AC2C /* Debug */ = {
@@ -383,48 +408,6 @@
 			};
 			name = Release;
 		};
-		3A86E45E1833B4A600C1AC2C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Presentation.app/Presentation";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Presentation/Presentation-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "PresentationTests/PresentationTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		3A86E45F1833B4A600C1AC2C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Presentation.app/Presentation";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Presentation/Presentation-Prefix.pch";
-				INFOPLIST_FILE = "PresentationTests/PresentationTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -444,14 +427,7 @@
 				3A86E45C1833B4A600C1AC2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		3A86E45D1833B4A600C1AC2C /* Build configuration list for PBXNativeTarget "PresentationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A86E45E1833B4A600C1AC2C /* Debug */,
-				3A86E45F1833B4A600C1AC2C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
