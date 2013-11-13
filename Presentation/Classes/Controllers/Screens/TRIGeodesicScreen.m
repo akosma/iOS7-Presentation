@@ -13,8 +13,8 @@
 #import "TRIGeodesicScreen.h"
 
 
-static CLLocationDegrees SAN_FRANCISCO_LATITUDE = 37.775056;
-static CLLocationDegrees SAN_FRANCISCO_LONGITUDE = -122.419321;
+static CLLocationDegrees SF_LATITUDE = 37.775056;
+static CLLocationDegrees SF_LONGITUDE = -122.419321;
 static NSString *REUSE_ID = @"REUSE_ID";
 
 
@@ -37,8 +37,8 @@ static NSString *REUSE_ID = @"REUSE_ID";
     self.locations = [NSMutableArray array];
     
     CLLocation *sf = nil;
-    sf = [[CLLocation alloc] initWithLatitude:SAN_FRANCISCO_LATITUDE
-                                    longitude:SAN_FRANCISCO_LONGITUDE];
+    sf = [[CLLocation alloc] initWithLatitude:SF_LATITUDE
+                                    longitude:SF_LONGITUDE];
     [self.locations addObject:sf];
     
     self.manager = [[CLLocationManager alloc] init];
