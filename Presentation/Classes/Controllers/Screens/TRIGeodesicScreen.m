@@ -34,6 +34,7 @@ static NSString *REUSE_ID = @"REUSE_ID";
 {
     [super viewDidLoad];
     
+    // We initialize the locations array with San Francisco
     self.locations = [NSMutableArray array];
     
     CLLocation *sf = nil;
@@ -41,6 +42,7 @@ static NSString *REUSE_ID = @"REUSE_ID";
                                     longitude:SF_LONGITUDE];
     [self.locations addObject:sf];
     
+    // We start the location manager for a short while
     self.manager = [[CLLocationManager alloc] init];
     self.manager.delegate = self;
     [self.manager startUpdatingLocation];
@@ -53,14 +55,19 @@ static NSString *REUSE_ID = @"REUSE_ID";
 {
     if ([locations count] > 0)
     {
+        // We get a second location and we draw a line
+        // from here to SF.
         CLLocation *location = locations[0];
         [self.locations addObject:location];
         MKGeodesicPolyline *line = [self geodesicLineFrom:location];
         [self.map addOverlay:line];
 
+        // This will zoom the map to show all the locations
+        // passed as parameter
         [self.map showAnnotations:self.locations
                          animated:YES];
         
+        // And we stop the location manager
         [self.manager stopUpdatingLocation];
     }
 }
@@ -94,6 +101,8 @@ static NSString *REUSE_ID = @"REUSE_ID";
 {
     if ([overlay isKindOfClass:[MKPolyline class]])
     {
+        // The MKOverlayRenderer completely replaces the
+        // old MKOverlayView class of yesteryear
         MKPolylineRenderer *renderer = nil;
         renderer = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
         renderer.lineWidth = 5;
@@ -120,7 +129,6 @@ static NSString *REUSE_ID = @"REUSE_ID";
                                                          reuseIdentifier:REUSE_ID];
     }
     
-    // Here we see how to customize annotation views. Very simple!
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     annotationView.rightCalloutAccessoryView = rightButton;
 
