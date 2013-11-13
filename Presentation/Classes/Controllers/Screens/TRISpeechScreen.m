@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Trifork GmbH. All rights reserved.
 //
 
+@import AVFoundation;
+
 #import "TRISpeechScreen.h"
 
 static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";

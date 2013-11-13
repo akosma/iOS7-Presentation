@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Trifork GmbH. All rights reserved.
 //
 
-@import AVFoundation;
 #import "TRIBaseScreenController.h"
 
 @interface TRISpeechScreen : TRIBaseScreenController

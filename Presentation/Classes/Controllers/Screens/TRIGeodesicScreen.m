@@ -6,6 +6,10 @@
 //  Copyright (c) 2013 Trifork GmbH. All rights reserved.
 //
 
+@import CoreLocation;
+@import MapKit;
+
+
 #import "TRIGeodesicScreen.h"
 
 
