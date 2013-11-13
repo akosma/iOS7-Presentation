@@ -31,6 +31,37 @@ Trifork GmbH</string>
 			<key>class</key>
 			<string>TRITextScreen</string>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>Text-to-Speech</string>
+			<key>class</key>
+			<string>TRISpeechScreen</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Thanks</string>
+			<key>contents</key>
+			<string>Thanks!</string>
+			<key>class</key>
+			<string>TRITextScreen</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Questions</string>
+			<key>contents</key>
+			<string>Questions?</string>
+			<key>class</key>
+			<string>TRITextScreen</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Copyright</string>
+			<key>contents</key>
+			<string>Copyright © 2013 Trifork GmbH
+All Rights Reserved</string>
+			<key>class</key>
+			<string>TRITextScreen</string>
+		</dict>
 	</array>
 </dict>
 </plist>
