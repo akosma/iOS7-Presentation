@@ -49,7 +49,7 @@ Trifork GmbH</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Text-to-Speech: Title slide</string>
+			<string>Text-to-Speech</string>
 			<key>contents</key>
 			<string>100% lip service</string>
 			<key>class</key>
@@ -63,7 +63,7 @@ Trifork GmbH</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Maps and Location: title slide</string>
+			<string>Maps and Location</string>
 			<key>contents</key>
 			<string>It&apos;s never been easier for the NSA to find you.</string>
 			<key>class</key>

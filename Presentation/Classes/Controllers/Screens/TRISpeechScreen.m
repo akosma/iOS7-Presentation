@@ -27,6 +27,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.enableSourceCodeButton = YES;
     
     // Get a sorted list of voices
     NSArray *voices = [AVSpeechSynthesisVoice speechVoices];

@@ -12,6 +12,7 @@
 @interface TRIBaseScreenController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *definition;
+@property (nonatomic) BOOL enableSourceCodeButton;
 
 - (instancetype)initWithDefinition:(NSDictionary *)definition;
 

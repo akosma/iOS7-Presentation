@@ -33,6 +33,7 @@ static NSString *REUSE_ID = @"REUSE_ID";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.enableSourceCodeButton = YES;
     
     // We initialize the locations array with San Francisco
     self.locations = [NSMutableArray array];

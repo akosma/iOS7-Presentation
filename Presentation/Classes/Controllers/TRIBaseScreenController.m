@@ -19,6 +19,7 @@
     if (self = [super init])
     {
         self.definition = definition;
+        self.enableSourceCodeButton = NO;
     }
     return self;
 }

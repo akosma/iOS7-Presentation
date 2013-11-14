@@ -9,6 +9,7 @@
                 <outlet property="holderView" destination="SAz-0i-IzC" id="Vs7-sa-fcM"/>
                 <outlet property="nextScreenButton" destination="uks-nG-xfT" id="k5A-TA-QWh"/>
                 <outlet property="previousScreenButton" destination="tfs-qK-Rds" id="LiO-Fn-hQv"/>
+                <outlet property="sourceCodeButton" destination="Gmt-5D-0nl" id="ONQ-W8-3aB"/>
                 <outlet property="titleButtonItem" destination="JP7-UD-lJD" id="8VQ-6L-HB0"/>
                 <outlet property="view" destination="1" id="raV-vR-neS"/>
             </connections>

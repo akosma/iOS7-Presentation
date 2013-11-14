@@ -27,6 +27,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 @property (weak, nonatomic) IBOutlet UIView *holderView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *previousScreenButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextScreenButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sourceCodeButton;
 
 @end
 
@@ -233,6 +234,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.previousScreenButton.enabled = self.currentIndex > 0;
     self.nextScreenButton.enabled = self.currentIndex < ([self.definitions count] - 1);
+    self.sourceCodeButton.enabled = self.currentScreen.enableSourceCodeButton;
 }
 
 @end
