@@ -62,6 +62,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
                     @"speech":   @"TRISpeechScreen",
                     @"geodesic": @"TRIGeodesicScreen",
                     @"download": @"TRIURLSessionScreen",
+                    @"empty":    @"TRIEmptyScreen",
                     };
     
     // We have to start somewhere
