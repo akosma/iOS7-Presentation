@@ -16,7 +16,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 
 
-@interface TRINavigationController () <UITableViewDataSource, UITableViewDelegate>
+@interface TRINavigationController () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSArray *definitions;
 @property (nonatomic) NSInteger currentIndex;
@@ -25,6 +25,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 @property (nonatomic, strong) NSDictionary *xtypes;
 @property (nonatomic, strong) NSMutableArray *filenamesForPDF;
 @property (nonatomic, strong) UIAlertView *generatingPDFAlert;
+@property (nonatomic) BOOL continuePDFGeneration;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *titleButtonItem;
 @property (weak, nonatomic) IBOutlet UIView *holderView;
@@ -172,10 +173,15 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 - (IBAction)generatePDFSnapshot:(id)sender
 {
+    // This method launches an asynchronous processing, that will
+    // cycle through every screen and take a snapshot image of each.
+    // Then a PDF will be created with the result of the operation, and users
+    // will be able to share that PDF with other apps.
+    self.continuePDFGeneration = YES;
     self.generatingPDFAlert = [[UIAlertView alloc] initWithTitle:@"Processing"
                                                          message:@"The PDF is being composed…"
-                                                        delegate:nil
-                                               cancelButtonTitle:nil
+                                                        delegate:self
+                                               cancelButtonTitle:@"Cancel"
                                                otherButtonTitles:nil];
     [self.generatingPDFAlert show];
     [self.screenPopover dismissPopoverAnimated:YES];
@@ -222,6 +228,19 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [self showCurrentScreen];
     [self resizeCurrentScreen];
     [self enableButtons];
+}
+
+#pragma mark - UIAlertViewDelegate methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView == self.generatingPDFAlert)
+    {
+        if (buttonIndex == 0)
+        {
+            self.continuePDFGeneration = NO;
+        }
+    }
 }
 
 #pragma mark - Private methods
@@ -281,38 +300,42 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void)takeSnapshotOfCurrentScreen
 {
-    [self.currentScreen flashAndThen:^{
-        CGRect bounds = self.currentScreen.view.bounds;
-        
-        // Get the current image of the current drawing
-        UIGraphicsBeginImageContext(bounds.size);
-        
-        [self.currentScreen.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-        UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
-        NSData *data = UIImagePNGRepresentation(viewImage);
-        NSString *filename = [NSString stringWithFormat:@"image_%d.png", self.currentIndex];
-        [self.filenamesForPDF addObject:filename];
-        NSString *path = [self.documentsDirectory stringByAppendingPathComponent:filename];
-        [data writeToFile:path
-               atomically:NO];
-        UIGraphicsEndImageContext();
-        
-        BOOL moreScreensLeft = self.currentIndex < ([self.definitions count] - 1);
-        if (moreScreensLeft)
-        {
-            self.currentIndex += 1;
-            [self showCurrentScreen];
-            [self resizeCurrentScreen];
-            [self enableButtons];
-            [self performSelector:@selector(takeSnapshotOfCurrentScreen)
-                       withObject:nil
-                       afterDelay:self.currentScreen.delayForSnapshot];
-        }
-        else
-        {
-            [self mergeSnapshotsInPDF];
-        }
-    }];
+    // We flash the screen and then create an image out of it
+    if (self.continuePDFGeneration)
+    {
+        [self.currentScreen flashAndThen:^{
+            CGRect bounds = self.currentScreen.view.bounds;
+            
+            // Get the current image of the current drawing
+            UIGraphicsBeginImageContext(bounds.size);
+            
+            [self.currentScreen.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+            UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+            NSData *data = UIImagePNGRepresentation(viewImage);
+            NSString *filename = [NSString stringWithFormat:@"image_%d.png", self.currentIndex];
+            [self.filenamesForPDF addObject:filename];
+            NSString *path = [self.documentsDirectory stringByAppendingPathComponent:filename];
+            [data writeToFile:path
+                   atomically:NO];
+            UIGraphicsEndImageContext();
+            
+            BOOL moreScreensLeft = self.currentIndex < ([self.definitions count] - 1);
+            if (moreScreensLeft && self.continuePDFGeneration)
+            {
+                self.currentIndex += 1;
+                [self showCurrentScreen];
+                [self resizeCurrentScreen];
+                [self enableButtons];
+                [self performSelector:@selector(takeSnapshotOfCurrentScreen)
+                           withObject:nil
+                           afterDelay:self.currentScreen.delayForSnapshot];
+            }
+            else
+            {
+                [self mergeSnapshotsInPDF];
+            }
+        }];
+    }
 }
 
 - (void)mergeSnapshotsInPDF
@@ -341,6 +364,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     
     UIGraphicsEndPDFContext();
     
+    self.continuePDFGeneration = NO;
     [self.generatingPDFAlert dismissWithClickedButtonIndex:0
                                                   animated:YES];
 }
