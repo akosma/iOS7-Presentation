@@ -6,14 +6,12 @@
 	<array>
 		<dict>
 			<key>title</key>
-			<string>Title</string>
+			<string>What&apos;s new in iOS 7</string>
 			<key>contents</key>
-			<string>What&apos;s new in iOS 7
-
-Adrian Kosmaczewski
+			<string>Adrian Kosmaczewski
 Trifork GmbH</string>
 			<key>class</key>
-			<string>TRITextScreen</string>
+			<string>TRITitleAndTextScreen</string>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -25,7 +23,7 @@ Trifork GmbH</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>More intro</string>
+			<string>My job</string>
 			<key>contents</key>
 			<string>Trifork GmbH</string>
 			<key>class</key>
@@ -33,23 +31,49 @@ Trifork GmbH</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Text-to-Speech</string>
+			<string>Contact me</string>
+			<key>contents</key>
+			<string>ako@trifork.com
+
+@akotrifork</string>
+			<key>class</key>
+			<string>TRITextScreen</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>My Books</string>
+			<key>contents</key>
+			<string>IMG_5054.JPG</string>
+			<key>class</key>
+			<string>TRIPhotoScreen</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Text-to-Speech: Title slide</string>
+			<key>contents</key>
+			<string>100% lip service</string>
+			<key>class</key>
+			<string>TRITitleAndTextScreen</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Text-to-Speech: Demo</string>
 			<key>class</key>
 			<string>TRISpeechScreen</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Geodesic Line</string>
+			<string>Maps and Location: title slide</string>
+			<key>contents</key>
+			<string>It&apos;s never been easier for the NSA to find you.</string>
 			<key>class</key>
-			<string>TRIGeodesicScreen</string>
+			<string>TRITitleAndTextScreen</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Thanks</string>
-			<key>contents</key>
-			<string>Thanks!</string>
+			<string>Maps and Location: geodesic line demo</string>
 			<key>class</key>
-			<string>TRITextScreen</string>
+			<string>TRIGeodesicScreen</string>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -61,12 +85,13 @@ Trifork GmbH</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Copyright</string>
+			<string>Thanks for attending!</string>
 			<key>contents</key>
 			<string>Copyright © 2013 Trifork GmbH
-All Rights Reserved</string>
+All Rights Reserved
+Source code of this app available in Github</string>
 			<key>class</key>
-			<string>TRITextScreen</string>
+			<string>TRITitleAndTextScreen</string>
 		</dict>
 	</array>
 </dict>
