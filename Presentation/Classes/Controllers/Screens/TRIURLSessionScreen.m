@@ -29,6 +29,7 @@ static NSString *HUGE_WIKIPEDIA_IMAGE = @"http://upload.wikimedia.org/wikipedia/
 {
     [super viewDidLoad];
     self.delayForSnapshot = 5.0;
+    self.enableSourceCodeButton = YES;
     
     self.total = 0;
     self.progressView.progress = 0.0;
