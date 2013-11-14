@@ -231,7 +231,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     NSDictionary *definition = self.definitions[indexPath.row];
     NSInteger index = indexPath.row + 1;
     NSString *title = definition[@"title"];
-    NSString *text = [NSString stringWithFormat:@"%d. %@", index, title];
+    NSString *text = [NSString stringWithFormat:@"%ld. %@", (long)index, title];
     cell.textLabel.text = text;
     return cell;
 }
@@ -353,7 +353,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             [self.currentScreen.view.layer renderInContext:UIGraphicsGetCurrentContext()];
             UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
             NSData *data = UIImagePNGRepresentation(viewImage);
-            NSString *filename = [NSString stringWithFormat:@"image_%d.png", self.currentIndex];
+            NSString *filename = [NSString stringWithFormat:@"image_%ld.png", (long)self.currentIndex];
             [self.filenamesForPDF addObject:filename];
             NSString *path = [self.documentsDirectory stringByAppendingPathComponent:filename];
             [data writeToFile:path
