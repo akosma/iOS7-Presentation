@@ -10,6 +10,7 @@
 #import "TRINavigationController.h"
 #import "TRIBaseScreenController.h"
 #import "TRISourceCodeController.h"
+#import "TRIOpenInAppActivity.h"
 
 
 static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
@@ -518,9 +519,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         NSURL *url = [NSURL fileURLWithPath:[self PDFFilePath]];
         NSArray *objs = @[ url ];
         
+        TRIOpenInAppActivity *activity = [[TRIOpenInAppActivity alloc] initWithView:self.view
+                                                                   andBarButtonItem:self.shareButton];
+        NSArray *activities = @[ activity ];
+        
         UIActivityViewController *controller = nil;
         controller = [[UIActivityViewController alloc] initWithActivityItems:objs
-                                                       applicationActivities:nil];
+                                                       applicationActivities:activities];
         NSArray *excludedActivities = @[
                                         UIActivityTypePostToTwitter,
                                         UIActivityTypePostToFacebook,
@@ -535,6 +540,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         controller.excludedActivityTypes = excludedActivities;
         
         self.sharePopover = [[UIPopoverController alloc] initWithContentViewController:controller];
+        
+        activity.superViewController = self.sharePopover;
     }
     [self.sharePopover presentPopoverFromBarButtonItem:self.shareButton
                               permittedArrowDirections:UIPopoverArrowDirectionAny
