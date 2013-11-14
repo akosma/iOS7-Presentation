@@ -49,6 +49,22 @@ Trifork GmbH</string>
 		</dict>
 		<dict>
 			<key>title</key>
+			<string>URL Session</string>
+			<key>contents</key>
+			<string>Remember ASIHTTPRequest and AFNetworking? Yeah.</string>
+			<key>xtype</key>
+			<string>title</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>URL Session demo</string>
+			<key>contents</key>
+			<string></string>
+			<key>xtype</key>
+			<string>download</string>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>Text-to-Speech</string>
 			<key>contents</key>
 			<string>100% lip service</string>

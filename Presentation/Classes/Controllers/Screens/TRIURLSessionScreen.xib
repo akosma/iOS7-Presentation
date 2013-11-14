@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRIURLSessionScreen">
+            <connections>
+                <outlet property="completedLabel" destination="2go-nt-VBL" id="iTz-6S-DFx"/>
+                <outlet property="progressView" destination="fxZ-vb-JUS" id="ErZ-2C-G0X"/>
+                <outlet property="totalLabel" destination="cS9-AP-f9k" id="aKI-ca-0qS"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOA-IH-TpT">
+                    <rect key="frame" x="20" y="200" width="122" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Launch download">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="launchDownload:" destination="-1" eventType="touchUpInside" id="5vn-R6-Ym8"/>
+                    </connections>
+                </button>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="fxZ-vb-JUS">
+                    <rect key="frame" x="150" y="214" width="598" height="3"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </progressView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total size:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2o-ji-BAy">
+                    <rect key="frame" x="66" y="288" width="76" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23234243" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS9-AP-f9k">
+                    <rect key="frame" x="150" y="288" width="119" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="119" id="0Ql-aM-KPp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lup-Wh-SHz">
+                    <rect key="frame" x="52" y="317" width="90" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2go-nt-VBL">
+                    <rect key="frame" x="150" y="317" width="119" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="119" id="EXP-E5-aCU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cS9-AP-f9k" firstAttribute="top" secondItem="fxZ-vb-JUS" secondAttribute="bottom" constant="72" id="3Bu-we-UG6"/>
+                <constraint firstItem="2go-nt-VBL" firstAttribute="leading" secondItem="Lup-Wh-SHz" secondAttribute="trailing" constant="8" id="5wB-RW-Fug"/>
+                <constraint firstItem="G2o-ji-BAy" firstAttribute="top" secondItem="pOA-IH-TpT" secondAttribute="bottom" constant="58" id="6PX-N1-JWg"/>
+                <constraint firstItem="2go-nt-VBL" firstAttribute="top" secondItem="cS9-AP-f9k" secondAttribute="bottom" constant="8" id="Awf-vK-9rT"/>
+                <constraint firstItem="G2o-ji-BAy" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="66" id="Gd9-lU-7Ae"/>
+                <constraint firstItem="Lup-Wh-SHz" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="52" id="Hxy-if-vhL"/>
+                <constraint firstItem="Lup-Wh-SHz" firstAttribute="top" secondItem="G2o-ji-BAy" secondAttribute="bottom" constant="8" id="Jho-AY-Ws0"/>
+                <constraint firstAttribute="trailing" secondItem="fxZ-vb-JUS" secondAttribute="trailing" constant="20" id="YWY-la-dB8"/>
+                <constraint firstItem="fxZ-vb-JUS" firstAttribute="leading" secondItem="pOA-IH-TpT" secondAttribute="trailing" constant="8" id="cKS-Ag-kJO"/>
+                <constraint firstItem="pOA-IH-TpT" firstAttribute="top" secondItem="2" secondAttribute="top" constant="200" id="eaB-te-Fm3"/>
+                <constraint firstItem="cS9-AP-f9k" firstAttribute="leading" secondItem="G2o-ji-BAy" secondAttribute="trailing" constant="8" id="ibM-3J-G5X"/>
+                <constraint firstItem="fxZ-vb-JUS" firstAttribute="top" secondItem="2" secondAttribute="top" constant="214" id="wRr-k2-cbp"/>
+                <constraint firstItem="pOA-IH-TpT" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="ws1-aB-uh9"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+        </view>
+    </objects>
+</document>
