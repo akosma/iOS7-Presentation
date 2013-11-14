@@ -69,6 +69,8 @@ static NSString *REUSE_ID = @"REUSE_ID";
         
         // And we stop the location manager
         [self.manager stopUpdatingLocation];
+        
+        [self showDistanceToSF];
     }
 }
 
@@ -133,6 +135,33 @@ static NSString *REUSE_ID = @"REUSE_ID";
     annotationView.rightCalloutAccessoryView = rightButton;
 
 	return annotationView;
+}
+
+#pragma mark - Private methods
+
+- (void)showDistanceToSF
+{
+    // Show the distance using the new MKDistanceFormatter
+    CLLocation *sf = self.locations[0];
+    CLLocation *here = self.locations[1];
+    CLLocationDistance distance = [sf distanceFromLocation:here];
+    
+    MKDistanceFormatter *formatter = [[MKDistanceFormatter alloc] init];
+    formatter.units = MKDistanceFormatterUnitsMetric;
+    NSString *km = [formatter stringFromDistance:distance];
+    
+    formatter.units = MKDistanceFormatterUnitsImperial;
+    NSString *miles = [formatter stringFromDistance:distance];
+    
+    NSString *template = @"The distance from here to SF is %@ (%@)";
+    NSString *message = [NSString stringWithFormat:template, km, miles];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Distance"
+                                                    message:message
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 @end
