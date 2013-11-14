@@ -429,10 +429,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     if (self.sharePopover == nil)
     {
         NSURL *url = [NSURL fileURLWithPath:[self PDFFilePath]];
-        NSArray *objectsToShare = @[ url ];
+        NSArray *objs = @[ url ];
         
-        UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare
-                                                                                 applicationActivities:nil];
+        UIActivityViewController *controller = nil;
+        controller = [[UIActivityViewController alloc] initWithActivityItems:objs
+                                                       applicationActivities:nil];
         NSArray *excludedActivities = @[
                                         UIActivityTypePostToTwitter,
                                         UIActivityTypePostToFacebook,
