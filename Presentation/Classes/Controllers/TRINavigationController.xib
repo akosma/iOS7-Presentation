@@ -79,6 +79,20 @@
                 <constraint firstItem="SAz-0i-IzC" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="hhp-fv-Lwc"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Crd-Ec-gXH" appends="YES" id="716-ag-1eh"/>
+                <outletCollection property="gestureRecognizers" destination="244-Q7-nFx" appends="YES" id="ivW-46-RUP"/>
+            </connections>
         </view>
+        <swipeGestureRecognizer direction="left" id="Crd-Ec-gXH">
+            <connections>
+                <action selector="swipeLeft:" destination="-1" id="y2Q-HU-AjS"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="right" id="244-Q7-nFx">
+            <connections>
+                <action selector="swipeRight:" destination="-1" id="a0V-RQ-I7v"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
 </document>

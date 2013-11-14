@@ -209,6 +209,19 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     }
 }
 
+#pragma mark - Gesture recognizer code
+
+- (IBAction)swipeLeft:(id)sender
+{
+    [self goForward:nil];
+}
+
+- (IBAction)swipeRight:(id)sender
+{
+    [self goBack:nil];
+}
+
+
 #pragma mark - Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
