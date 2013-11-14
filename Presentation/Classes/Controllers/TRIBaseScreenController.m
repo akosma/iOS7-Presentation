@@ -22,8 +22,6 @@
     if (self = [super init])
     {
         self.definition = definition;
-        self.enableSourceCodeButton = NO;
-        self.delayForSnapshot = 0.75;
     }
     return self;
 }
@@ -31,7 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = self.definition[@"title"];
+    self.title = (self.definition[@"title"]) ? self.definition[@"title"] : @"";
+    self.enableSourceCodeButton = [self.definition[@"demo"] boolValue];
+    self.delayForSnapshot = (self.definition[@"delay"]) ? [self.definition[@"delay"] floatValue] : 0.75;
 }
 
 #pragma mark - Public methods

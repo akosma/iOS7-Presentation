@@ -9,6 +9,9 @@
 @import UIKit;
 
 
+// This callback is passed to the "flashAndThen:" method,
+// to provide for asynchronous execution of code
+// during the creation of the PDF file.
 typedef void(^TRIBaseScreenControllerFlashCallback)(void);
 
 

@@ -198,27 +198,27 @@
 		3A86E4671833B51600C1AC2C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3A98A41D18350BD1008C83AC /* TRIEmptyScreen.h */,
+				3A98A41E18350BD1008C83AC /* TRIEmptyScreen.m */,
+				3A98A41F18350BD1008C83AC /* TRIEmptyScreen.xib */,
 				3A86E4811833BAFA00C1AC2C /* TRIPhotoScreen.h */,
 				3A86E4821833BAFA00C1AC2C /* TRIPhotoScreen.m */,
 				3A86E4831833BAFA00C1AC2C /* TRIPhotoScreen.xib */,
 				3AC83A811833C9450089524B /* TRITextScreen.h */,
 				3AC83A821833C9450089524B /* TRITextScreen.m */,
 				3AC83A831833C9450089524B /* TRITextScreen.xib */,
+				3A98A4061834A7E7008C83AC /* TRITitleAndTextScreen.h */,
+				3A98A4071834A7E7008C83AC /* TRITitleAndTextScreen.m */,
+				3A98A4081834A7E7008C83AC /* TRITitleAndTextScreen.xib */,
 				3AC83A861833E4CA0089524B /* TRISpeechScreen.h */,
 				3AC83A871833E4CA0089524B /* TRISpeechScreen.m */,
 				3AC83A881833E4CA0089524B /* TRISpeechScreen.xib */,
 				3AC83A8B183418270089524B /* TRIGeodesicScreen.h */,
 				3AC83A8C183418270089524B /* TRIGeodesicScreen.m */,
 				3AC83A8D183418270089524B /* TRIGeodesicScreen.xib */,
-				3A98A4061834A7E7008C83AC /* TRITitleAndTextScreen.h */,
-				3A98A4071834A7E7008C83AC /* TRITitleAndTextScreen.m */,
-				3A98A4081834A7E7008C83AC /* TRITitleAndTextScreen.xib */,
 				3A98A4181834F599008C83AC /* TRIURLSessionScreen.h */,
 				3A98A4191834F599008C83AC /* TRIURLSessionScreen.m */,
 				3A98A41A1834F599008C83AC /* TRIURLSessionScreen.xib */,
-				3A98A41D18350BD1008C83AC /* TRIEmptyScreen.h */,
-				3A98A41E18350BD1008C83AC /* TRIEmptyScreen.m */,
-				3A98A41F18350BD1008C83AC /* TRIEmptyScreen.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";

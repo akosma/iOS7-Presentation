@@ -48,10 +48,6 @@ Trifork GmbH</string>
 			<string>photo</string>
 		</dict>
 		<dict>
-			<key>title</key>
-			<string></string>
-			<key>contents</key>
-			<string></string>
 			<key>xtype</key>
 			<string>empty</string>
 		</dict>
@@ -66,10 +62,12 @@ Trifork GmbH</string>
 		<dict>
 			<key>title</key>
 			<string>URL Session demo</string>
-			<key>contents</key>
-			<string></string>
 			<key>xtype</key>
 			<string>download</string>
+			<key>demo</key>
+			<true/>
+			<key>delay</key>
+			<real>5</real>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -112,10 +110,6 @@ Trifork GmbH</string>
 			<string>text</string>
 		</dict>
 		<dict>
-			<key>title</key>
-			<string></string>
-			<key>contents</key>
-			<string></string>
 			<key>xtype</key>
 			<string>empty</string>
 		</dict>
@@ -130,16 +124,14 @@ Trifork GmbH</string>
 		<dict>
 			<key>title</key>
 			<string>Text-to-Speech: Demo</string>
-			<key>contents</key>
-			<string></string>
 			<key>xtype</key>
 			<string>speech</string>
+			<key>demo</key>
+			<true/>
+			<key>delay</key>
+			<real>1.5</real>
 		</dict>
 		<dict>
-			<key>title</key>
-			<string></string>
-			<key>contents</key>
-			<string></string>
 			<key>xtype</key>
 			<string>empty</string>
 		</dict>
@@ -154,16 +146,14 @@ Trifork GmbH</string>
 		<dict>
 			<key>title</key>
 			<string>Maps and Location: geodesic line demo</string>
-			<key>contents</key>
-			<string></string>
 			<key>xtype</key>
 			<string>geodesic</string>
+			<key>demo</key>
+			<true/>
+			<key>delay</key>
+			<real>10</real>
 		</dict>
 		<dict>
-			<key>title</key>
-			<string></string>
-			<key>contents</key>
-			<string></string>
 			<key>xtype</key>
 			<string>empty</string>
 		</dict>
@@ -180,8 +170,7 @@ Trifork GmbH</string>
 			<string>Thanks for attending!</string>
 			<key>contents</key>
 			<string>Copyright © 2013 Trifork GmbH
-All Rights Reserved
-Source code of this app available in Github</string>
+All Rights Reserved</string>
 			<key>xtype</key>
 			<string>title</string>
 		</dict>

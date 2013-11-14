@@ -247,7 +247,7 @@ static NSString *PDF_FILENAME = @"slides.pdf";
                                            forIndexPath:indexPath];
     NSDictionary *definition = self.definitions[indexPath.row];
     NSInteger index = indexPath.row + 1;
-    NSString *title = definition[@"title"];
+    NSString *title = (definition[@"title"]) ? definition[@"title"] : @"";
     NSString *text = [NSString stringWithFormat:@"%ld. %@", (long)index, title];
     cell.textLabel.text = text;
     return cell;
@@ -494,8 +494,15 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
     CGContextSetTextMatrix(currentContext, CGAffineTransformIdentity);
-    CGRect bounds = CGRectInset(self.currentScreen.view.bounds, 40, 40);
-    CGContextTranslateCTM(currentContext, 0, 730);
+    CGRect bounds = CGRectInset(self.currentScreen.view.bounds, 50, 50);
+    if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation))
+    {
+        CGContextTranslateCTM(currentContext, 0, 730);
+    }
+    else
+    {
+        CGContextTranslateCTM(currentContext, 0, 980);
+    }
     CGContextScaleCTM(currentContext, 1.0, -1.0);
     
     CGMutablePathRef framePath = CGPathCreateMutable();
