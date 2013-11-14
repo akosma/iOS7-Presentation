@@ -289,9 +289,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.currentScreen != nil)
     {
-        [self.currentScreen viewWillDisappear:NO];
         [self.currentScreen.view removeFromSuperview];
-        [self.currentScreen viewDidDisappear:NO];
         self.currentScreen = nil;
     }
 
@@ -301,9 +299,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     if (klass)
     {
         self.currentScreen = [[klass alloc] initWithDefinition:definition];
-        [self.currentScreen viewWillAppear:NO];
         [self.holderView addSubview:self.currentScreen.view];
-        [self.currentScreen viewDidAppear:NO];
         
         self.titleButtonItem.title = self.currentScreen.title;
     }

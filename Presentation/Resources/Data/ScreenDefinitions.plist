@@ -65,6 +65,22 @@ Trifork GmbH</string>
 		</dict>
 		<dict>
 			<key>title</key>
+			<string>NSURLSession ≠ NSOperationQueue</string>
+			<key>contents</key>
+			<string>NSURLSessions are not NSOperationQueues</string>
+			<key>xtype</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>NSURLSession ≠ NSOperationQueue</string>
+			<key>contents</key>
+			<string>… but the idea is similar.</string>
+			<key>xtype</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>Text-to-Speech</string>
 			<key>contents</key>
 			<string>100% lip service</string>

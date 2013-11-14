@@ -34,6 +34,12 @@ static NSString *HUGE_WIKIPEDIA_IMAGE = @"http://upload.wikimedia.org/wikipedia/
     self.completedLabel.text = @"";
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self launchDownload:nil];
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
