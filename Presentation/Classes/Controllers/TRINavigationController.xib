@@ -10,6 +10,7 @@
                 <outlet property="holderView" destination="SAz-0i-IzC" id="Vs7-sa-fcM"/>
                 <outlet property="nextScreenButton" destination="uks-nG-xfT" id="k5A-TA-QWh"/>
                 <outlet property="previousScreenButton" destination="tfs-qK-Rds" id="LiO-Fn-hQv"/>
+                <outlet property="shareButton" destination="qza-pQ-yfd" id="BQl-Gd-oBP"/>
                 <outlet property="sourceCodeButton" destination="Gmt-5D-0nl" id="ONQ-W8-3aB"/>
                 <outlet property="titleButtonItem" destination="JP7-UD-lJD" id="8VQ-6L-HB0"/>
                 <outlet property="view" destination="1" id="raV-vR-neS"/>
@@ -37,7 +38,7 @@
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="2k5-7P-0li"/>
                         <barButtonItem systemItem="action" id="qza-pQ-yfd">
                             <connections>
-                                <action selector="goHome:" destination="-1" id="gRZ-pm-SUB"/>
+                                <action selector="sharePDFFile:" destination="-1" id="dRY-es-iif"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="GqS-0L-E6Y"/>

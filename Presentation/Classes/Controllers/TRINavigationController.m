@@ -36,6 +36,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextScreenButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sourceCodeButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *generatePDFButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;
 
 @end
 
@@ -96,6 +97,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 - (IBAction)showMenu:(id)sender
 {
+    [self.sharePopover dismissPopoverAnimated:YES];
     UITableViewController *contents = nil;
     if (self.screenPopover == nil)
     {
@@ -129,6 +131,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 - (IBAction)goBack:(id)sender
 {
     [self.screenPopover dismissPopoverAnimated:YES];
+    [self.sharePopover dismissPopoverAnimated:YES];
     if (self.currentIndex > 0)
     {
         self.currentIndex -= 1;
@@ -138,14 +141,23 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     }
 }
 
-- (IBAction)goHome:(id)sender
+- (IBAction)sharePDFFile:(id)sender
 {
     [self.screenPopover dismissPopoverAnimated:YES];
+    if (self.sharePopover.popoverVisible)
+    {
+        [self.sharePopover dismissPopoverAnimated:YES];
+    }
+    else
+    {
+        [self sharePDF];
+    }
 }
 
 - (IBAction)showSourceCode:(id)sender
 {
     [self.screenPopover dismissPopoverAnimated:YES];
+    [self.sharePopover dismissPopoverAnimated:YES];
     NSAttributedString *sourceCode = [[self currentScreen] tri_sourceCode];
     if (sourceCode)
     {
@@ -166,6 +178,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 - (IBAction)goForward:(id)sender
 {
     [self.screenPopover dismissPopoverAnimated:YES];
+    [self.sharePopover dismissPopoverAnimated:YES];
     if (self.currentIndex < ([self.definitions count] - 1))
     {
         self.currentIndex += 1;
@@ -177,6 +190,8 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 - (IBAction)generatePDFSnapshot:(id)sender
 {
+    [self.screenPopover dismissPopoverAnimated:YES];
+    [self.sharePopover dismissPopoverAnimated:YES];
     NSString *path = [self PDFFilePath];
     BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:path];
     if (exists)
@@ -247,11 +262,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     {
         // This is the "re-generate PDF?" alert shown
         // when the file already exists
-        if (buttonIndex == 0)
-        {
-            [self sharePDF];
-        }
-        else
+        if (buttonIndex != 0)
         {
             [self startGeneratingPDF];
         }
@@ -298,20 +309,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     self.previousScreenButton.enabled = self.currentIndex > 0;
     self.nextScreenButton.enabled = self.currentIndex < ([self.definitions count] - 1);
     self.sourceCodeButton.enabled = self.currentScreen.enableSourceCodeButton;
+
+    NSString *path = [self PDFFilePath];
+    BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:path];
+    self.shareButton.enabled = exists;
 }
 
-- (NSString *)documentsDirectory
-{
-    static NSString *documentsPath;
-    if (documentsPath == nil)
-    {
-        NSArray *array = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                             NSUserDomainMask,
-                                                             YES);
-        documentsPath = [array lastObject];
-    }
-    return documentsPath;
-}
+#pragma mark - PDF-related methods
 
 - (void)startGeneratingPDF
 {
@@ -405,33 +409,50 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [self.generatingPDFAlert dismissWithClickedButtonIndex:0
                                                   animated:YES];
     
+    [self enableButtons];
     [self sharePDF];
 }
 
 - (void)sharePDF
 {
-    NSURL *url = [NSURL fileURLWithPath:[self PDFFilePath]];
-    NSArray *objectsToShare = @[ url ];
-    
-    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare
-                                                                             applicationActivities:nil];
-    NSArray *excludedActivities = @[
-                                    UIActivityTypePostToTwitter,
-                                    UIActivityTypePostToFacebook,
-                                    UIActivityTypePostToWeibo,
-                                    UIActivityTypeCopyToPasteboard,
-                                    UIActivityTypeSaveToCameraRoll,
-                                    UIActivityTypeAddToReadingList,
-                                    UIActivityTypePostToFlickr,
-                                    UIActivityTypePostToVimeo,
-                                    UIActivityTypePostToTencentWeibo,
-                                    ];
-    controller.excludedActivityTypes = excludedActivities;
-    
-    self.sharePopover = [[UIPopoverController alloc] initWithContentViewController:controller];
-    [self.sharePopover presentPopoverFromBarButtonItem:self.generatePDFButton
+    if (self.sharePopover == nil)
+    {
+        NSURL *url = [NSURL fileURLWithPath:[self PDFFilePath]];
+        NSArray *objectsToShare = @[ url ];
+        
+        UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare
+                                                                                 applicationActivities:nil];
+        NSArray *excludedActivities = @[
+                                        UIActivityTypePostToTwitter,
+                                        UIActivityTypePostToFacebook,
+                                        UIActivityTypePostToWeibo,
+                                        UIActivityTypeCopyToPasteboard,
+                                        UIActivityTypeSaveToCameraRoll,
+                                        UIActivityTypeAddToReadingList,
+                                        UIActivityTypePostToFlickr,
+                                        UIActivityTypePostToVimeo,
+                                        UIActivityTypePostToTencentWeibo,
+                                        ];
+        controller.excludedActivityTypes = excludedActivities;
+        
+        self.sharePopover = [[UIPopoverController alloc] initWithContentViewController:controller];
+    }
+    [self.sharePopover presentPopoverFromBarButtonItem:self.shareButton
                               permittedArrowDirections:UIPopoverArrowDirectionAny
                                               animated:YES];
+}
+
+- (NSString *)documentsDirectory
+{
+    static NSString *documentsPath;
+    if (documentsPath == nil)
+    {
+        NSArray *array = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                             NSUserDomainMask,
+                                                             YES);
+        documentsPath = [array lastObject];
+    }
+    return documentsPath;
 }
 
 - (NSString *)PDFFilePath
