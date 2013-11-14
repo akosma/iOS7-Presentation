@@ -11,6 +11,9 @@
 #import "TRIBaseScreenController.h"
 #import "TRISourceCodeController.h"
 #import "TRIOpenInAppActivity.h"
+#import "TRIReceiver.h"
+#import "TRIReceiverDelegate.h"
+#import "TRIProtocol.h"
 
 
 static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
@@ -20,11 +23,13 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 
 @interface TRINavigationController () <UITableViewDataSource,
                                        UITableViewDelegate,
-                                       UIAlertViewDelegate>
+                                       UIAlertViewDelegate,
+                                       TRIReceiverDelegate>
 
 @property (nonatomic, strong) NSArray *definitions;
 @property (nonatomic) NSInteger currentIndex;
 @property (nonatomic, strong) TRIBaseScreenController *currentScreen;
+@property (nonatomic, strong) TRISourceCodeController *sourceCodeController;
 @property (nonatomic, strong) UIPopoverController *screenPopover;
 @property (nonatomic, strong) UIPopoverController *sharePopover;
 @property (nonatomic, strong) NSDictionary *xtypes;
@@ -49,6 +54,7 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [TRIReceiver receiver].delegate = self;
     
     // Load the order of the screens
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ScreenDefinitions"
@@ -119,17 +125,24 @@ static NSString *PDF_FILENAME = @"slides.pdf";
         contents = (UITableViewController *)self.screenPopover.contentViewController;
     }
     
-    // Present the menu
-    [self.screenPopover presentPopoverFromBarButtonItem:sender
-                               permittedArrowDirections:UIPopoverArrowDirectionAny
-                                               animated:YES];
-    
-    // Select the current screen on the menu
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.currentIndex
-                                                inSection:0];
-    [contents.tableView selectRowAtIndexPath:indexPath
-                                    animated:NO
-                              scrollPosition:UITableViewScrollPositionMiddle];
+    if (self.screenPopover.isPopoverVisible)
+    {
+        [self.screenPopover dismissPopoverAnimated:YES];
+    }
+    else
+    {
+        // Present the menu
+        [self.screenPopover presentPopoverFromBarButtonItem:self.titleButtonItem
+                                   permittedArrowDirections:UIPopoverArrowDirectionAny
+                                                   animated:YES];
+        
+        // Select the current screen on the menu
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.currentIndex
+                                                    inSection:0];
+        [contents.tableView selectRowAtIndexPath:indexPath
+                                        animated:NO
+                                  scrollPosition:UITableViewScrollPositionMiddle];
+    }
 }
 
 - (IBAction)goBack:(id)sender
@@ -162,20 +175,23 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 {
     [self.screenPopover dismissPopoverAnimated:YES];
     [self.sharePopover dismissPopoverAnimated:YES];
-    NSAttributedString *sourceCode = [[self currentScreen] tri_sourceCode];
-    if (sourceCode)
+    
+    if (self.currentScreen.enableSourceCodeButton)
     {
-        TRISourceCodeController *controller = nil;
-        controller = [[TRISourceCodeController alloc] init];
-        controller.sourceCode = sourceCode;
-        
-        NSString *className = NSStringFromClass([self.currentScreen class]);
-        NSString *title = [NSString stringWithFormat:@"%@.m", className];
-        controller.title = title;
+        NSAttributedString *sourceCode = [[self currentScreen] tri_sourceCode];
+        if (sourceCode)
+        {
+            self.sourceCodeController = [[TRISourceCodeController alloc] init];
+            self.sourceCodeController.sourceCode = sourceCode;
+            
+            NSString *className = NSStringFromClass([self.currentScreen class]);
+            NSString *title = [NSString stringWithFormat:@"%@.m", className];
+            self.sourceCodeController.title = title;
 
-        [self presentViewController:controller
-                           animated:YES
-                         completion:nil];
+            [self presentViewController:self.sourceCodeController
+                               animated:YES
+                             completion:nil];
+        }
     }
 }
 
@@ -283,6 +299,40 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         {
             [self startGeneratingPDF];
         }
+    }
+}
+
+#pragma mark - TRIReceiverDelegate methods
+
+- (void)receiver:(TRIReceiver *)receiver didReceiveMessage:(NSString *)message
+{
+    if ([message isEqualToString:MESSAGE_NEXT])
+    {
+        [self goForward:nil];
+    }
+    else if ([message isEqualToString:MESSAGE_PREVIOUS])
+    {
+        [self goBack:nil];
+    }
+    else if ([message isEqualToString:MESSAGE_RESET])
+    {
+        self.currentIndex = 0;
+        [self showCurrentScreen];
+        [self resizeCurrentScreen];
+        [self enableButtons];
+    }
+    else if ([message isEqualToString:MESSAGE_SHOW_SOURCE])
+    {
+        [self showSourceCode:nil];
+    }
+    else if ([message isEqualToString:MESSAGE_HIDE_SOURCE])
+    {
+        [self.sourceCodeController dismissViewControllerAnimated:YES
+                                                      completion:NO];
+    }
+    else if ([message isEqualToString:MESSAGE_TOGGLE_MENU])
+    {
+        [self showMenu:nil];
     }
 }
 

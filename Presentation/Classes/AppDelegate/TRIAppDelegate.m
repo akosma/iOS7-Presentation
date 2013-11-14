@@ -8,6 +8,7 @@
 
 #import "TRIAppDelegate.h"
 #import "TRINavigationController.h"
+#import "TRIRemoteViewController.h"
 
 @interface TRIAppDelegate ()
 
@@ -26,6 +27,10 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
         self.rootController = [[TRINavigationController alloc] init];
+    }
+    else
+    {
+        self.rootController = [[TRIRemoteViewController alloc] init];
     }
     
     self.window.rootViewController = self.rootController;

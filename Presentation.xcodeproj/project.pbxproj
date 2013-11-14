@@ -31,6 +31,11 @@
 		3A98A42418352079008C83AC /* TRIOpenInAppActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A42318352079008C83AC /* TRIOpenInAppActivity.m */; };
 		3A98A42818352303008C83AC /* openinapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A98A42618352303008C83AC /* openinapp.png */; };
 		3A98A42918352303008C83AC /* openinapp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A98A42718352303008C83AC /* openinapp@2x.png */; };
+		3A98A43118356D15008C83AC /* TRIBroadcaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A42B18356D15008C83AC /* TRIBroadcaster.m */; };
+		3A98A43218356D15008C83AC /* TRIProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A42D18356D15008C83AC /* TRIProtocol.m */; };
+		3A98A43318356D15008C83AC /* TRIReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A42F18356D15008C83AC /* TRIReceiver.m */; };
+		3A98A43A1835706F008C83AC /* TRIRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A4381835706F008C83AC /* TRIRemoteViewController.m */; };
+		3A98A43B1835706F008C83AC /* TRIRemoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A98A4391835706F008C83AC /* TRIRemoteViewController.xib */; };
 		3AC83A7D1833BCC80089524B /* TRISourceCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */; };
 		3AC83A7E1833BCC80089524B /* TRISourceCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */; };
 		3AC83A801833C1330089524B /* TRINavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A7F1833C1330089524B /* TRINavigationController.xib */; };
@@ -81,6 +86,16 @@
 		3A98A425183520CE008C83AC /* TRIOpenInAppActivityDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIOpenInAppActivityDelegate.h; sourceTree = "<group>"; };
 		3A98A42618352303008C83AC /* openinapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openinapp.png; sourceTree = "<group>"; };
 		3A98A42718352303008C83AC /* openinapp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openinapp@2x.png"; sourceTree = "<group>"; };
+		3A98A42A18356D15008C83AC /* TRIBroadcaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIBroadcaster.h; sourceTree = "<group>"; };
+		3A98A42B18356D15008C83AC /* TRIBroadcaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIBroadcaster.m; sourceTree = "<group>"; };
+		3A98A42C18356D15008C83AC /* TRIProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIProtocol.h; sourceTree = "<group>"; };
+		3A98A42D18356D15008C83AC /* TRIProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIProtocol.m; sourceTree = "<group>"; };
+		3A98A42E18356D15008C83AC /* TRIReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIReceiver.h; sourceTree = "<group>"; };
+		3A98A42F18356D15008C83AC /* TRIReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIReceiver.m; sourceTree = "<group>"; };
+		3A98A43018356D15008C83AC /* TRIReceiverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIReceiverDelegate.h; sourceTree = "<group>"; };
+		3A98A4371835706F008C83AC /* TRIRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIRemoteViewController.h; sourceTree = "<group>"; };
+		3A98A4381835706F008C83AC /* TRIRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIRemoteViewController.m; sourceTree = "<group>"; };
+		3A98A4391835706F008C83AC /* TRIRemoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIRemoteViewController.xib; sourceTree = "<group>"; };
 		3AC83A7A1833BCC80089524B /* TRISourceCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRISourceCodeController.h; sourceTree = "<group>"; };
 		3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRISourceCodeController.m; sourceTree = "<group>"; };
 		3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRISourceCodeController.xib; sourceTree = "<group>"; };
@@ -165,6 +180,7 @@
 			children = (
 				3A86E4631833B51600C1AC2C /* AppDelegate */,
 				3A86E4661833B51600C1AC2C /* Controllers */,
+				3A98A43618357048008C83AC /* iPhone */,
 				3A86E4781833B79100C1AC2C /* Helpers */,
 			);
 			path = Classes;
@@ -254,6 +270,13 @@
 		3A86E4781833B79100C1AC2C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3A98A42A18356D15008C83AC /* TRIBroadcaster.h */,
+				3A98A42B18356D15008C83AC /* TRIBroadcaster.m */,
+				3A98A42C18356D15008C83AC /* TRIProtocol.h */,
+				3A98A42D18356D15008C83AC /* TRIProtocol.m */,
+				3A98A42E18356D15008C83AC /* TRIReceiver.h */,
+				3A98A42F18356D15008C83AC /* TRIReceiver.m */,
+				3A98A43018356D15008C83AC /* TRIReceiverDelegate.h */,
 				3A86E4791833B7D900C1AC2C /* NSObject+TRISourceCode.h */,
 				3A86E47A1833B7D900C1AC2C /* NSObject+TRISourceCode.m */,
 				3A98A42218352079008C83AC /* TRIOpenInAppActivity.h */,
@@ -261,6 +284,16 @@
 				3A98A425183520CE008C83AC /* TRIOpenInAppActivityDelegate.h */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3A98A43618357048008C83AC /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				3A98A4371835706F008C83AC /* TRIRemoteViewController.h */,
+				3A98A4381835706F008C83AC /* TRIRemoteViewController.m */,
+				3A98A4391835706F008C83AC /* TRIRemoteViewController.xib */,
+			);
+			path = iPhone;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +353,7 @@
 				3A86E4751833B6DD00C1AC2C /* Images.xcassets in Resources */,
 				3A98A41C1834F599008C83AC /* TRIURLSessionScreen.xib in Resources */,
 				3AC83A8F183418270089524B /* TRIGeodesicScreen.xib in Resources */,
+				3A98A43B1835706F008C83AC /* TRIRemoteViewController.xib in Resources */,
 				3A86E4851833BAFA00C1AC2C /* TRIPhotoScreen.xib in Resources */,
 				3A98A42818352303008C83AC /* openinapp.png in Resources */,
 				3A86E47F1833B97200C1AC2C /* html in Resources */,
@@ -362,13 +396,17 @@
 				3A98A4091834A7E7008C83AC /* TRITitleAndTextScreen.m in Sources */,
 				3A86E47B1833B7D900C1AC2C /* NSObject+TRISourceCode.m in Sources */,
 				3AC83A891833E4CA0089524B /* TRISpeechScreen.m in Sources */,
+				3A98A43A1835706F008C83AC /* TRIRemoteViewController.m in Sources */,
 				3A86E4681833B51600C1AC2C /* TRIAppDelegate.m in Sources */,
+				3A98A43218356D15008C83AC /* TRIProtocol.m in Sources */,
 				3AC83A8E183418270089524B /* TRIGeodesicScreen.m in Sources */,
+				3A98A43318356D15008C83AC /* TRIReceiver.m in Sources */,
 				3A98A41B1834F599008C83AC /* TRIURLSessionScreen.m in Sources */,
 				3A98A42018350BD1008C83AC /* TRIEmptyScreen.m in Sources */,
 				3A86E46B1833B53C00C1AC2C /* TRIBaseScreenController.m in Sources */,
 				3A98A42418352079008C83AC /* TRIOpenInAppActivity.m in Sources */,
 				3A86E46E1833B55B00C1AC2C /* TRINavigationController.m in Sources */,
+				3A98A43118356D15008C83AC /* TRIBroadcaster.m in Sources */,
 				3AC83A7D1833BCC80089524B /* TRISourceCodeController.m in Sources */,
 				3AC83A841833C9450089524B /* TRITextScreen.m in Sources */,
 				3A86E43E1833B4A500C1AC2C /* main.m in Sources */,
