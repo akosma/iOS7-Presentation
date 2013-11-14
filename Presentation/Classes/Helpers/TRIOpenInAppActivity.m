@@ -60,7 +60,7 @@
 
 - (UIImage *)activityImage
 {
-    return [UIImage imageNamed:@"TTOpenInAppActivity7"];
+    return [UIImage imageNamed:@"openinapp"];
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems
