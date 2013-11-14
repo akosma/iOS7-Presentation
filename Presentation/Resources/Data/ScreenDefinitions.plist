@@ -10,24 +10,24 @@
 			<key>contents</key>
 			<string>Adrian Kosmaczewski
 Trifork GmbH</string>
-			<key>class</key>
-			<string>TRITitleAndTextScreen</string>
+			<key>xtype</key>
+			<string>title</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>Introduction</string>
 			<key>contents</key>
 			<string>Adrian Kosmaczewski</string>
-			<key>class</key>
-			<string>TRITextScreen</string>
+			<key>xtype</key>
+			<string>text</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>My job</string>
 			<key>contents</key>
 			<string>Trifork GmbH</string>
-			<key>class</key>
-			<string>TRITextScreen</string>
+			<key>xtype</key>
+			<string>text</string>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -36,52 +36,56 @@ Trifork GmbH</string>
 			<string>ako@trifork.com
 
 @akotrifork</string>
-			<key>class</key>
-			<string>TRITextScreen</string>
+			<key>xtype</key>
+			<string>text</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>My Books</string>
 			<key>contents</key>
 			<string>IMG_5054.JPG</string>
-			<key>class</key>
-			<string>TRIPhotoScreen</string>
+			<key>xtype</key>
+			<string>photo</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>Text-to-Speech</string>
 			<key>contents</key>
 			<string>100% lip service</string>
-			<key>class</key>
-			<string>TRITitleAndTextScreen</string>
+			<key>xtype</key>
+			<string>title</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>Text-to-Speech: Demo</string>
-			<key>class</key>
-			<string>TRISpeechScreen</string>
+			<key>contents</key>
+			<string></string>
+			<key>xtype</key>
+			<string>speech</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>Maps and Location</string>
 			<key>contents</key>
 			<string>It&apos;s never been easier for the NSA to find you.</string>
-			<key>class</key>
-			<string>TRITitleAndTextScreen</string>
+			<key>xtype</key>
+			<string>title</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>Maps and Location: geodesic line demo</string>
-			<key>class</key>
-			<string>TRIGeodesicScreen</string>
+			<key>contents</key>
+			<string></string>
+			<key>xtype</key>
+			<string>geodesic</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>Questions</string>
 			<key>contents</key>
 			<string>Questions?</string>
-			<key>class</key>
-			<string>TRITextScreen</string>
+			<key>xtype</key>
+			<string>text</string>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -90,8 +94,8 @@ Trifork GmbH</string>
 			<string>Copyright © 2013 Trifork GmbH
 All Rights Reserved
 Source code of this app available in Github</string>
-			<key>class</key>
-			<string>TRITitleAndTextScreen</string>
+			<key>xtype</key>
+			<string>title</string>
 		</dict>
 	</array>
 </dict>

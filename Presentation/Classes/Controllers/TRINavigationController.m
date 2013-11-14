@@ -22,6 +22,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 @property (nonatomic) NSInteger currentIndex;
 @property (nonatomic, strong) TRIBaseScreenController *currentScreen;
 @property (nonatomic, strong) UIPopoverController *screenPopover;
+@property (nonatomic, strong) NSDictionary *xtypes;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *titleButtonItem;
 @property (weak, nonatomic) IBOutlet UIView *holderView;
@@ -44,6 +45,15 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
                                                      ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     self.definitions = dict[@"screens"];
+    
+    // The aliases used by the definitions file are stored here
+    self.xtypes = @{
+                    @"title":    @"TRITitleAndTextScreen",
+                    @"text":     @"TRITextScreen",
+                    @"photo":    @"TRIPhotoScreen",
+                    @"speech":   @"TRISpeechScreen",
+                    @"geodesic": @"TRIGeodesicScreen",
+                    };
     
     // We have to start somewhere
     self.currentIndex = 0;
@@ -208,7 +218,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
 
     NSDictionary *definition = self.definitions[self.currentIndex];
-    NSString *className = definition[@"class"];
+    NSString *className = self.xtypes[definition[@"xtype"]];
     Class klass = NSClassFromString(className);
     if (klass)
     {
