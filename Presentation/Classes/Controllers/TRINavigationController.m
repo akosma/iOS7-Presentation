@@ -16,12 +16,15 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 
 
-@interface TRINavigationController () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+@interface TRINavigationController () <UITableViewDataSource,
+                                       UITableViewDelegate,
+                                       UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSArray *definitions;
 @property (nonatomic) NSInteger currentIndex;
 @property (nonatomic, strong) TRIBaseScreenController *currentScreen;
 @property (nonatomic, strong) UIPopoverController *screenPopover;
+@property (nonatomic, strong) UIPopoverController *sharePopover;
 @property (nonatomic, strong) NSDictionary *xtypes;
 @property (nonatomic, strong) NSMutableArray *filenamesForPDF;
 @property (nonatomic, strong) UIAlertView *generatingPDFAlert;
@@ -32,6 +35,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *previousScreenButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextScreenButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sourceCodeButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *generatePDFButton;
 
 @end
 
@@ -173,24 +177,21 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 - (IBAction)generatePDFSnapshot:(id)sender
 {
-    // This method launches an asynchronous processing, that will
-    // cycle through every screen and take a snapshot image of each.
-    // Then a PDF will be created with the result of the operation, and users
-    // will be able to share that PDF with other apps.
-    self.continuePDFGeneration = YES;
-    self.generatingPDFAlert = [[UIAlertView alloc] initWithTitle:@"Processing"
-                                                         message:@"The PDF is being composed…"
-                                                        delegate:self
-                                               cancelButtonTitle:@"Cancel"
-                                               otherButtonTitles:nil];
-    [self.generatingPDFAlert show];
-    [self.screenPopover dismissPopoverAnimated:YES];
-    self.filenamesForPDF = [NSMutableArray array];
-    self.currentIndex = 0;
-    [self showCurrentScreen];
-    [self resizeCurrentScreen];
-    [self enableButtons];
-    [self takeSnapshotOfCurrentScreen];
+    NSString *path = [self PDFFilePath];
+    BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:path];
+    if (exists)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Generate PDF again?"
+                                                        message:@"The PDF file already exists. Would you like to re-generate it?"
+                                                       delegate:self
+                                              cancelButtonTitle:@"No"
+                                              otherButtonTitles:@"Yes", nil];
+        [alert show];
+    }
+    else
+    {
+        [self startGeneratingPDF];
+    }
 }
 
 #pragma mark - Table view methods
@@ -236,9 +237,23 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (alertView == self.generatingPDFAlert)
     {
+        // This alert allows the user to cancel the PDF generation
         if (buttonIndex == 0)
         {
             self.continuePDFGeneration = NO;
+        }
+    }
+    else
+    {
+        // This is the "re-generate PDF?" alert shown
+        // when the file already exists
+        if (buttonIndex == 0)
+        {
+            [self sharePDF];
+        }
+        else
+        {
+            [self startGeneratingPDF];
         }
     }
 }
@@ -298,6 +313,28 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     return documentsPath;
 }
 
+- (void)startGeneratingPDF
+{
+    // This method launches an asynchronous processing, that will
+    // cycle through every screen and take a snapshot image of each.
+    // Then a PDF will be created with the result of the operation, and users
+    // will be able to share that PDF with other apps.
+    self.continuePDFGeneration = YES;
+    self.generatingPDFAlert = [[UIAlertView alloc] initWithTitle:@"Processing"
+                                                         message:@"The PDF is being composed…"
+                                                        delegate:self
+                                               cancelButtonTitle:@"Cancel"
+                                               otherButtonTitles:nil];
+    [self.generatingPDFAlert show];
+    [self.screenPopover dismissPopoverAnimated:YES];
+    self.filenamesForPDF = [NSMutableArray array];
+    self.currentIndex = 0;
+    [self showCurrentScreen];
+    [self resizeCurrentScreen];
+    [self enableButtons];
+    [self takeSnapshotOfCurrentScreen];
+}
+
 - (void)takeSnapshotOfCurrentScreen
 {
     // We flash the screen and then create an image out of it
@@ -342,7 +379,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Prepare a PDF context
     CGRect bounds = self.currentScreen.view.bounds;
-    NSString *path = [self.documentsDirectory stringByAppendingPathComponent:@"slides.pdf"];
+    NSString *path = [self PDFFilePath];
     UIGraphicsBeginPDFContextToFile(path, CGRectZero, nil);
     
     for (NSString *filename in self.filenamesForPDF)
@@ -367,6 +404,40 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     self.continuePDFGeneration = NO;
     [self.generatingPDFAlert dismissWithClickedButtonIndex:0
                                                   animated:YES];
+    
+    [self sharePDF];
+}
+
+- (void)sharePDF
+{
+    NSURL *url = [NSURL fileURLWithPath:[self PDFFilePath]];
+    NSArray *objectsToShare = @[ url ];
+    
+    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare
+                                                                             applicationActivities:nil];
+    NSArray *excludedActivities = @[
+                                    UIActivityTypePostToTwitter,
+                                    UIActivityTypePostToFacebook,
+                                    UIActivityTypePostToWeibo,
+                                    UIActivityTypeCopyToPasteboard,
+                                    UIActivityTypeSaveToCameraRoll,
+                                    UIActivityTypeAddToReadingList,
+                                    UIActivityTypePostToFlickr,
+                                    UIActivityTypePostToVimeo,
+                                    UIActivityTypePostToTencentWeibo,
+                                    ];
+    controller.excludedActivityTypes = excludedActivities;
+    
+    self.sharePopover = [[UIPopoverController alloc] initWithContentViewController:controller];
+    [self.sharePopover presentPopoverFromBarButtonItem:self.generatePDFButton
+                              permittedArrowDirections:UIPopoverArrowDirectionAny
+                                              animated:YES];
+}
+
+- (NSString *)PDFFilePath
+{
+    NSString *path = [self.documentsDirectory stringByAppendingPathComponent:@"slides.pdf"];
+    return path;
 }
 
 @end

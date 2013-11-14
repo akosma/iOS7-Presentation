@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRINavigationController">
             <connections>
+                <outlet property="generatePDFButton" destination="TPN-Sy-pxm" id="tNH-pQ-wjl"/>
                 <outlet property="holderView" destination="SAz-0i-IzC" id="Vs7-sa-fcM"/>
                 <outlet property="nextScreenButton" destination="uks-nG-xfT" id="k5A-TA-QWh"/>
                 <outlet property="previousScreenButton" destination="tfs-qK-Rds" id="LiO-Fn-hQv"/>

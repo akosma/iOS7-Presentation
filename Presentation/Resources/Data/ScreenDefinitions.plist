@@ -6,14 +6,6 @@
 	<array>
 		<dict>
 			<key>title</key>
-			<string>Boom</string>
-			<key>contents</key>
-			<string>Bam</string>
-			<key>xtype</key>
-			<string>title</string>
-		</dict>
-		<dict>
-			<key>title</key>
 			<string>What&apos;s new in iOS 7</string>
 			<key>contents</key>
 			<string>Adrian Kosmaczewski

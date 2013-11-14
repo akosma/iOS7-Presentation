@@ -20,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.delayForSnapshot = 1.0;
 
     NSString *name = self.definition[@"contents"];
     UIImage *image = [UIImage imageNamed:name];

@@ -34,7 +34,7 @@ static NSString *REUSE_ID = @"REUSE_ID";
 {
     [super viewDidLoad];
     self.enableSourceCodeButton = YES;
-    self.delayForSnapshot = 5.0;
+    self.delayForSnapshot = 10.0;
 
     // We initialize the locations array with San Francisco
     self.locations = [NSMutableArray array];
