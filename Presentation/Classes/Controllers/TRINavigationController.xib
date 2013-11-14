@@ -48,7 +48,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="LHT-ha-fKg"/>
-                        <barButtonItem title="Item" width="214" id="JP7-UD-lJD">
+                        <barButtonItem title="Item" width="328" id="JP7-UD-lJD">
                             <connections>
                                 <action selector="showMenu:" destination="-1" id="LAP-bV-PZD"/>
                             </connections>
