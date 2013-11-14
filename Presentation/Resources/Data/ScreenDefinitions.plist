@@ -43,7 +43,7 @@ Trifork GmbH</string>
 			<key>title</key>
 			<string>My Books</string>
 			<key>contents</key>
-			<string>IMG_5054.JPG</string>
+			<string>books</string>
 			<key>xtype</key>
 			<string>photo</string>
 		</dict>
