@@ -145,6 +145,23 @@ Trifork GmbH</string>
 		</dict>
 		<dict>
 			<key>title</key>
+			<string>MKDistanceFormatter</string>
+			<key>contents</key>
+			<string>MKDistanceFormatter</string>
+			<key>xtype</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>MKDistanceFormatter</string>
+			<key>contents</key>
+			<string>MKDistanceFormatterUnitsImperial
+MKDistanceFormatterUnitsMetric</string>
+			<key>xtype</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>Maps and Location: geodesic line demo</string>
 			<key>xtype</key>
 			<string>geodesic</string>
