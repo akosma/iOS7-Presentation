@@ -6,7 +6,8 @@
 //  Copyright (c) 2013 Trifork GmbH. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 
 @interface TRIAppDelegate : UIResponder <UIApplicationDelegate>
 
