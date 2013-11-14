@@ -72,6 +72,21 @@ static NSString *HUGE_WIKIPEDIA_IMAGE = @"http://upload.wikimedia.org/wikipedia/
     self.completedLabel.text = @"";
 }
 
+- (IBAction)cancel:(id)sender
+{
+    [self.session invalidateAndCancel];
+}
+
+- (IBAction)resume:(id)sender
+{
+    [self.task resume];
+}
+
+- (IBAction)suspend:(id)sender
+{
+    [self.task suspend];
+}
+
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
@@ -85,7 +100,7 @@ static NSString *HUGE_WIKIPEDIA_IMAGE = @"http://upload.wikimedia.org/wikipedia/
         dispatch_async(dispatch_get_main_queue(), ^{
             int64_t count = self.progress.completedUnitCount;
             self.progressView.progress = (float)count / 100.0f;
-            self.totalLabel.text = [NSString stringWithFormat:@"%lld", self.total];
+            self.totalLabel.text = [NSString stringWithFormat:@"%lld MB", self.total / 1024 / 1024];
             self.completedLabel.text = [NSString stringWithFormat:@"%lld %%", count];
         });
     }
