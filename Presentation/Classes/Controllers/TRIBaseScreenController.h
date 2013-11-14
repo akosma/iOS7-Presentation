@@ -9,11 +9,17 @@
 @import UIKit;
 
 
+typedef void(^TRIBaseScreenControllerFlashCallback)(void);
+
+
 @interface TRIBaseScreenController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *definition;
 @property (nonatomic) BOOL enableSourceCodeButton;
+@property (nonatomic) NSTimeInterval delayForSnapshot;
 
 - (instancetype)initWithDefinition:(NSDictionary *)definition;
+
+- (void)flashAndThen:(TRIBaseScreenControllerFlashCallback)callback;
 
 @end

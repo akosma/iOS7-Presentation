@@ -23,6 +23,8 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 @property (nonatomic, strong) TRIBaseScreenController *currentScreen;
 @property (nonatomic, strong) UIPopoverController *screenPopover;
 @property (nonatomic, strong) NSDictionary *xtypes;
+@property (nonatomic, strong) NSMutableArray *filenamesForPDF;
+@property (nonatomic, strong) UIAlertView *generatingPDFAlert;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *titleButtonItem;
 @property (weak, nonatomic) IBOutlet UIView *holderView;
@@ -168,6 +170,23 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     }
 }
 
+- (IBAction)generatePDFSnapshot:(id)sender
+{
+    self.generatingPDFAlert = [[UIAlertView alloc] initWithTitle:@"Processing"
+                                                         message:@"The PDF is being composed…"
+                                                        delegate:nil
+                                               cancelButtonTitle:nil
+                                               otherButtonTitles:nil];
+    [self.generatingPDFAlert show];
+    [self.screenPopover dismissPopoverAnimated:YES];
+    self.filenamesForPDF = [NSMutableArray array];
+    self.currentIndex = 0;
+    [self showCurrentScreen];
+    [self resizeCurrentScreen];
+    [self enableButtons];
+    [self takeSnapshotOfCurrentScreen];
+}
+
 #pragma mark - Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -245,6 +264,85 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     self.previousScreenButton.enabled = self.currentIndex > 0;
     self.nextScreenButton.enabled = self.currentIndex < ([self.definitions count] - 1);
     self.sourceCodeButton.enabled = self.currentScreen.enableSourceCodeButton;
+}
+
+- (NSString *)documentsDirectory
+{
+    static NSString *documentsPath;
+    if (documentsPath == nil)
+    {
+        NSArray *array = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                             NSUserDomainMask,
+                                                             YES);
+        documentsPath = [array lastObject];
+    }
+    return documentsPath;
+}
+
+- (void)takeSnapshotOfCurrentScreen
+{
+    [self.currentScreen flashAndThen:^{
+        CGRect bounds = self.currentScreen.view.bounds;
+        
+        // Get the current image of the current drawing
+        UIGraphicsBeginImageContext(bounds.size);
+        
+        [self.currentScreen.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+        NSData *data = UIImagePNGRepresentation(viewImage);
+        NSString *filename = [NSString stringWithFormat:@"image_%d.png", self.currentIndex];
+        [self.filenamesForPDF addObject:filename];
+        NSString *path = [self.documentsDirectory stringByAppendingPathComponent:filename];
+        [data writeToFile:path
+               atomically:NO];
+        UIGraphicsEndImageContext();
+        
+        BOOL moreScreensLeft = self.currentIndex < ([self.definitions count] - 1);
+        if (moreScreensLeft)
+        {
+            self.currentIndex += 1;
+            [self showCurrentScreen];
+            [self resizeCurrentScreen];
+            [self enableButtons];
+            [self performSelector:@selector(takeSnapshotOfCurrentScreen)
+                       withObject:nil
+                       afterDelay:self.currentScreen.delayForSnapshot];
+        }
+        else
+        {
+            [self mergeSnapshotsInPDF];
+        }
+    }];
+}
+
+- (void)mergeSnapshotsInPDF
+{
+    // Prepare a PDF context
+    CGRect bounds = self.currentScreen.view.bounds;
+    NSString *path = [self.documentsDirectory stringByAppendingPathComponent:@"slides.pdf"];
+    UIGraphicsBeginPDFContextToFile(path, CGRectZero, nil);
+    
+    for (NSString *filename in self.filenamesForPDF)
+    {
+        NSString *path = [self.documentsDirectory stringByAppendingPathComponent:filename];
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        UIGraphicsBeginPDFPageWithInfo(bounds, nil);
+        
+        CGContextRef currentContext = UIGraphicsGetCurrentContext();
+        
+        // PDF contexts have an inverted coordinate system,
+        // which means we have to make a transformation before drawing
+        CGContextTranslateCTM(currentContext, 0, bounds.size.height);
+        CGContextScaleCTM(currentContext, 1.0, -1.0);
+        
+        // Draw the image in the PDF file
+        CGContextDrawImage(currentContext, bounds, image.CGImage);
+    }
+    
+    UIGraphicsEndPDFContext();
+    
+    [self.generatingPDFAlert dismissWithClickedButtonIndex:0
+                                                  animated:YES];
 }
 
 @end

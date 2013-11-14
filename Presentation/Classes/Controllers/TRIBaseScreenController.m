@@ -10,7 +10,10 @@
 
 @interface TRIBaseScreenController ()
 
+@property (nonatomic, strong) UIView *snapshotFlashView;
+
 @end
+
 
 @implementation TRIBaseScreenController
 
@@ -20,6 +23,7 @@
     {
         self.definition = definition;
         self.enableSourceCodeButton = NO;
+        self.delayForSnapshot = 0.75;
     }
     return self;
 }
@@ -28,6 +32,39 @@
 {
     [super viewDidLoad];
     self.title = self.definition[@"title"];
+}
+
+#pragma mark - Public methods
+
+- (void)flashAndThen:(TRIBaseScreenControllerFlashCallback)callback
+{
+    self.snapshotFlashView.alpha = 1.0;
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.6
+                     animations:^{
+                         weakSelf.snapshotFlashView.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished) {
+                         if (finished)
+                         {
+                             callback();
+                         }
+                     }];
+}
+
+#pragma mark - Lazy getter
+
+- (UIView *)snapshotFlashView
+{
+    if (_snapshotFlashView == nil)
+    {
+        _snapshotFlashView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1024, 1024)];
+        _snapshotFlashView.backgroundColor = [UIColor whiteColor];
+        _snapshotFlashView.center = self.view.center;
+        _snapshotFlashView.alpha = 0.0;
+        [self.view addSubview:self.snapshotFlashView];
+    }
+    return _snapshotFlashView;
 }
 
 @end

@@ -39,6 +39,12 @@
                                 <action selector="goHome:" destination="-1" id="gRZ-pm-SUB"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="GqS-0L-E6Y"/>
+                        <barButtonItem systemItem="camera" id="TPN-Sy-pxm">
+                            <connections>
+                                <action selector="generatePDFSnapshot:" destination="-1" id="IMj-y5-Mhz"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="LHT-ha-fKg"/>
                         <barButtonItem title="Item" width="214" id="JP7-UD-lJD">
                             <connections>
