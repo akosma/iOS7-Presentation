@@ -7,6 +7,7 @@
 //
 
 @import UIKit;
+@import CoreText;
 
 
 @interface TRINavigationController : UIViewController

@@ -371,6 +371,15 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                    atomically:NO];
             UIGraphicsEndImageContext();
             
+            if (self.currentScreen.enableSourceCodeButton)
+            {
+                // The current screen has source code to show. Let's
+                // add that to the PDF too!
+                NSString *className = NSStringFromClass([self.currentScreen class]);
+                NSString *htmlFilename = [NSString stringWithFormat:@"html/%@.m", className];
+                [self.filenamesForPDF addObject:htmlFilename];
+            }
+            
             BOOL moreScreensLeft = self.currentIndex < ([self.definitions count] - 1);
             if (moreScreensLeft && self.continuePDFGeneration)
             {
@@ -399,19 +408,72 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     
     for (NSString *filename in self.filenamesForPDF)
     {
-        NSString *path = [[self tempDirectory] stringByAppendingPathComponent:filename];
-        UIImage *image = [UIImage imageWithContentsOfFile:path];
-        UIGraphicsBeginPDFPageWithInfo(bounds, nil);
-        
-        CGContextRef currentContext = UIGraphicsGetCurrentContext();
-        
-        // PDF contexts have an inverted coordinate system,
-        // which means we have to make a transformation before drawing
-        CGContextTranslateCTM(currentContext, 0, bounds.size.height);
-        CGContextScaleCTM(currentContext, 1.0, -1.0);
-        
-        // Draw the image in the PDF file
-        CGContextDrawImage(currentContext, bounds, image.CGImage);
+        if ([filename hasSuffix:@".png"])
+        {
+            // It's an image!
+            NSString *path = [[self tempDirectory] stringByAppendingPathComponent:filename];
+            
+            UIImage *image = [UIImage imageWithContentsOfFile:path];
+            UIGraphicsBeginPDFPageWithInfo(bounds, nil);
+            
+            CGContextRef currentContext = UIGraphicsGetCurrentContext();
+            
+            // PDF contexts have an inverted coordinate system,
+            // which means we have to make a transformation before drawing
+            CGContextTranslateCTM(currentContext, 0, bounds.size.height);
+            CGContextScaleCTM(currentContext, 1.0, -1.0);
+            
+            // Draw the image in the PDF file
+            CGContextDrawImage(currentContext, bounds, image.CGImage);
+        }
+        else if ([filename hasSuffix:@".m"])
+        {
+            // It's source code in HTML format!
+            NSString *path = [[NSBundle mainBundle] pathForResource:filename
+                                                             ofType:@"html"];
+            NSMutableAttributedString *string = nil;
+            
+            if (path)
+            {
+                NSURL *url = [NSURL fileURLWithPath:path];
+                
+                // Now we're going to load that HTML on a mutable string
+                NSDictionary *options = @{
+                                          NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType
+                                          };
+                NSError *error = nil;
+                string = [[NSMutableAttributedString alloc] initWithFileURL:url
+                                                                    options:options
+                                                         documentAttributes:nil
+                                                                      error:&error];
+                
+                if (error == nil)
+                {
+                    // We have an attributed string; let's draw it into the PDF
+                    // adding as many pages as required
+                    CFAttributedStringRef currentText = (__bridge CFAttributedStringRef)string;
+                    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString(currentText);
+                    CFRange currentRange = CFRangeMake(0, 0);
+                    NSInteger currentPage = 0;
+                    BOOL done = NO;
+                    do
+                    {
+                        UIGraphicsBeginPDFPageWithInfo(bounds, nil);
+                        currentPage++;
+                        
+                        currentRange = [self renderPage:currentPage
+                                          withTextRange:currentRange
+                                         andFramesetter:framesetter];
+                        if (currentRange.location == CFAttributedStringGetLength(currentText))
+                        {
+                            done = YES;
+                        }
+                    }
+                    while (!done);
+                    CFRelease(framesetter);
+                }
+            }
+        }
     }
     
     UIGraphicsEndPDFContext();
@@ -422,6 +484,30 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     
     [self enableButtons];
     [self sharePDF];
+}
+
+- (CFRange)renderPage:(NSInteger)pageNum
+        withTextRange:(CFRange)currentRange
+       andFramesetter:(CTFramesetterRef)framesetter
+{
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    CGContextSetTextMatrix(currentContext, CGAffineTransformIdentity);
+    CGRect bounds = CGRectInset(self.currentScreen.view.bounds, 40, 40);
+    CGContextTranslateCTM(currentContext, 0, 730);
+    CGContextScaleCTM(currentContext, 1.0, -1.0);
+    
+    CGMutablePathRef framePath = CGPathCreateMutable();
+    CGPathAddRect(framePath, NULL, bounds);
+    CTFrameRef frameRef = CTFramesetterCreateFrame(framesetter, currentRange, framePath, NULL);
+    CGPathRelease(framePath);
+    
+    CTFrameDraw(frameRef, currentContext);
+    currentRange = CTFrameGetVisibleStringRange(frameRef);
+    currentRange.location += currentRange.length;
+    currentRange.length = 0;
+    CFRelease(frameRef);
+    
+    return currentRange;
 }
 
 - (void)sharePDF
