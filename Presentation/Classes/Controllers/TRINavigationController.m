@@ -355,7 +355,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             NSData *data = UIImagePNGRepresentation(viewImage);
             NSString *filename = [NSString stringWithFormat:@"image_%ld.png", (long)self.currentIndex];
             [self.filenamesForPDF addObject:filename];
-            NSString *path = [self.documentsDirectory stringByAppendingPathComponent:filename];
+            NSString *path = [[self tempDirectory] stringByAppendingPathComponent:filename];
             [data writeToFile:path
                    atomically:NO];
             UIGraphicsEndImageContext();
@@ -388,7 +388,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     
     for (NSString *filename in self.filenamesForPDF)
     {
-        NSString *path = [self.documentsDirectory stringByAppendingPathComponent:filename];
+        NSString *path = [[self tempDirectory] stringByAppendingPathComponent:filename];
         UIImage *image = [UIImage imageWithContentsOfFile:path];
         UIGraphicsBeginPDFPageWithInfo(bounds, nil);
         
@@ -440,6 +440,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [self.sharePopover presentPopoverFromBarButtonItem:self.shareButton
                               permittedArrowDirections:UIPopoverArrowDirectionAny
                                               animated:YES];
+}
+
+- (NSString *)tempDirectory
+{
+    return NSTemporaryDirectory();
 }
 
 - (NSString *)documentsDirectory
