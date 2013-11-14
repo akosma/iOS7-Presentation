@@ -17,7 +17,10 @@ fi;
 mkdir ${DIR}
 
 # Find all the *.m and *.h files, in all subfolders, and format them as HTML.
-find Presentation/Classes/Controllers/Screens \( -name \*.m -or -name \*.h \) -exec ${PYG} ${OPTS} -o {}.html {} \;
+# find Presentation/Classes/Controllers/Screens \( -name \*.m -or -name \*.h \) -exec ${PYG} ${OPTS} -o {}.html {} \;
+
+# Find all the *.m files, in all subfolders, and format them as HTML.
+find Presentation/Classes/Controllers/Screens -name \*.m -exec ${PYG} ${OPTS} -o {}.html {} \;
 
 # Move all the HTML files into a folder, which is automatically included inside
 # of the bundle when Xcode builds the project.
