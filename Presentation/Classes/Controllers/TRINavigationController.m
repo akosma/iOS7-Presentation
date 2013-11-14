@@ -13,6 +13,7 @@
 
 
 static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
+static NSString *PDF_FILENAME = @"slides.pdf";
 
 
 
@@ -560,7 +561,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (NSString *)PDFFilePath
 {
-    NSString *path = [self.documentsDirectory stringByAppendingPathComponent:@"slides.pdf"];
+    NSString *path = [self.documentsDirectory stringByAppendingPathComponent:PDF_FILENAME];
     return path;
 }
 
