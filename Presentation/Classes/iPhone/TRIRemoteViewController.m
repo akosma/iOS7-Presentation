@@ -12,12 +12,21 @@
 #import "TRIHelpers.h"
 
 @interface TRIRemoteViewController () <TRIReceiverDelegate,
-                                       TRIMenuControllerDelegate>
+                                       TRIMenuControllerDelegate,
+                                       UIActionSheetDelegate>
 
 @property (nonatomic, strong) TRIBroadcaster *broadcaster;
 @property (nonatomic, strong) TRIReceiver *receiver;
 @property (nonatomic, strong) UINavigationController *menu;
 @property (nonatomic, strong) NSArray *definitions;
+@property (nonatomic, getter = isReady) BOOL ready;
+@property (nonatomic) NSInteger currentIndex;
+
+@property (weak, nonatomic) IBOutlet UILabel *nextSlideLabel;
+@property (weak, nonatomic) IBOutlet UILabel *currentSlideLabel;
+@property (weak, nonatomic) IBOutlet UIView *nextSlideView;
+@property (weak, nonatomic) IBOutlet UIView *currentSlideView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *optionsButton;
 
 @end
 
@@ -26,6 +35,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.ready = NO;
+    self.nextSlideLabel.text = @"";
+    self.currentSlideLabel.text = @"";
+    self.nextSlideView.hidden = YES;
+    self.currentSlideView.hidden = YES;
+    self.optionsButton.enabled = NO;
 
     CBUUID *remoteControlChar = [CBUUID UUIDWithString:REMOTE_CONTROL_CHARACTERISTIC_UUID];
     CBUUID *remoteControlService = [CBUUID UUIDWithString:REMOTE_CONTROL_SERVICE_UUID];
@@ -38,6 +54,11 @@
                                                         service:presenterService];
     
     self.receiver.delegate = self;
+    
+    [self addObserver:self
+           forKeyPath:@"currentIndex"
+              options:0
+              context:NULL];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -46,57 +67,97 @@
     [self.broadcaster startAdvertising];
 }
 
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    self.currentSlideLabel.text = self.definitions[self.currentIndex][@"title"];
+    
+    if (self.currentIndex < ([self.definitions count] - 1))
+    {
+        NSInteger nextIndex = (self.currentIndex + 1);
+        self.nextSlideLabel.text = self.definitions[nextIndex][@"title"];
+    }
+    else
+    {
+        self.nextSlideLabel.text = @"(end of presentation)";
+    }
+}
+
 #pragma mark - IBActions
 
-- (IBAction)reset:(id)sender
+- (IBAction)showOptions:(id)sender
 {
-    [self.broadcaster sendText:MESSAGE_RESET];
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                         destructiveButtonTitle:@"Reset Presentation"
+                                              otherButtonTitles:@"Show menu", @"Show Source Code", nil];
+    [sheet showInView:self.view];
 }
 
 - (IBAction)next:(id)sender
 {
-    [self.broadcaster sendText:MESSAGE_NEXT];
+    if (self.currentIndex < ([self.definitions count] - 1))
+    {
+        self.currentIndex += 1;
+        [self.broadcaster sendText:MESSAGE_NEXT];
+    }
 }
 
 - (IBAction)previous:(id)sender
 {
-    [self.broadcaster sendText:MESSAGE_PREVIOUS];
-}
-
-- (IBAction)showSource:(id)sender
-{
-    [self.broadcaster sendText:MESSAGE_SHOW_SOURCE];
-}
-
-- (IBAction)hideSource:(id)sender
-{
-    [self.broadcaster sendText:MESSAGE_HIDE_SOURCE];
-}
-
-- (IBAction)toggleMenu:(id)sender
-{
-    [self.broadcaster sendText:MESSAGE_TOGGLE_MENU];
-}
-
-- (IBAction)showLocalMenu:(id)sender
-{
-    if (self.menu != nil)
+    if (self.currentIndex > 0)
     {
-        [self presentViewController:self.menu
-                           animated:YES
-                         completion:nil];
+        self.currentIndex -= 1;
+        [self.broadcaster sendText:MESSAGE_PREVIOUS];
     }
 }
 
-- (IBAction)closeLocalMenu:(id)sender
+- (void)closeLocalMenu:(id)sender
 {
     [self.menu dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UIActionSheetDelegate methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex)
+    {
+        case 0:
+        {
+            [self.broadcaster sendText:MESSAGE_RESET];
+            break;
+        }
+            
+        case 1:
+        {
+            [self presentViewController:self.menu
+                               animated:YES
+                             completion:nil];
+            break;
+        }
+            
+        case 2:
+        {
+            [self.broadcaster sendText:MESSAGE_SHOW_SOURCE];
+            break;
+        }
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - TRIMenuControllerDelegate methods
 
 - (void)menuController:(TRIMenuController *)menuController didSelectItemAtIndex:(NSInteger)index
 {
+    self.currentIndex = index;
     [self.broadcaster sendText:[@(index) description]];
 }
 
@@ -132,6 +193,12 @@
                                                                                      target:self
                                                                                      action:@selector(closeLocalMenu:)];
         menu.navigationItem.rightBarButtonItem = closeButton;
+        
+        // Prepare the UI
+        self.currentSlideView.hidden = NO;
+        self.nextSlideView.hidden = NO;
+        self.optionsButton.enabled = YES;
+        self.currentIndex = 0;
     }
 }
 
