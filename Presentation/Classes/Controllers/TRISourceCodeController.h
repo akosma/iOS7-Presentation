@@ -10,6 +10,6 @@
 
 @interface TRISourceCodeController : UIViewController
 
-@property (nonatomic, strong) NSAttributedString *sourceCode;
+@property (nonatomic, strong) NSMutableAttributedString *sourceCode;
 
 @end

@@ -24,6 +24,12 @@
 
     NSString *name = self.definition[@"contents"];
     UIImage *image = [UIImage imageNamed:name];
+    
+    if (self.definition[@"contentMode"])
+    {
+        self.imageView.contentMode = (UIViewContentMode)[self.definition[@"contentMode"] integerValue];
+    }
+    
     self.imageView.image = image;
 }
 

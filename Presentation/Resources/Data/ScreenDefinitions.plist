@@ -6,6 +6,16 @@
 	<array>
 		<dict>
 			<key>title</key>
+			<string>iOS 7 Logo</string>
+			<key>contents</key>
+			<string>IOS_7_Logo</string>
+			<key>xtype</key>
+			<string>photo</string>
+			<key>contentMode</key>
+			<integer>4</integer>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>What&apos;s new in iOS 7</string>
 			<key>contents</key>
 			<string>Adrian Kosmaczewski

@@ -47,6 +47,7 @@
 		3AC83A8F183418270089524B /* TRIGeodesicScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A8D183418270089524B /* TRIGeodesicScreen.xib */; };
 		3AC9837418361EFC004E3A94 /* TRIPDFHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9837318361EFC004E3A94 /* TRIPDFHelper.m */; };
 		3AC9837718362C0A004E3A94 /* TRIMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9837618362C0A004E3A94 /* TRIMenuController.m */; };
+		3AC9837A18365D71004E3A94 /* IOS_7_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC9837918365D71004E3A94 /* IOS_7_Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,7 @@
 		3AC9837518362C0A004E3A94 /* TRIMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIMenuController.h; sourceTree = "<group>"; };
 		3AC9837618362C0A004E3A94 /* TRIMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIMenuController.m; sourceTree = "<group>"; };
 		3AC9837818362C98004E3A94 /* TRIMenuControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIMenuControllerDelegate.h; sourceTree = "<group>"; };
+		3AC9837918365D71004E3A94 /* IOS_7_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IOS_7_Logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 		3A86E4731833B6DD00C1AC2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3AC9837918365D71004E3A94 /* IOS_7_Logo.png */,
 				3A98A42618352303008C83AC /* openinapp.png */,
 				3A98A42718352303008C83AC /* openinapp@2x.png */,
 				3A98A40F1834E077008C83AC /* books.png */,
@@ -377,6 +380,7 @@
 				3A86E47D1833B8BF00C1AC2C /* generate_html.sh in Resources */,
 				3A98A40A1834A7E7008C83AC /* TRITitleAndTextScreen.xib in Resources */,
 				3AC83A851833C9450089524B /* TRITextScreen.xib in Resources */,
+				3AC9837A18365D71004E3A94 /* IOS_7_Logo.png in Resources */,
 				3AC83A8A1833E4CA0089524B /* TRISpeechScreen.xib in Resources */,
 				3A98A42118350BD1008C83AC /* TRIEmptyScreen.xib in Resources */,
 				3A86E4771833B6FA00C1AC2C /* ScreenDefinitions.plist in Resources */,

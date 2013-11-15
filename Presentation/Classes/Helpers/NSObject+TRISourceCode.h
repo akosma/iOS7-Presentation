@@ -11,6 +11,6 @@
 
 @interface NSObject (TRISourceCode)
 
-- (NSAttributedString *)tri_sourceCode;
+- (NSMutableAttributedString *)tri_sourceCode;
 
 @end

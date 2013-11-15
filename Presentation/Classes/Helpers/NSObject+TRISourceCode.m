@@ -10,7 +10,7 @@
 
 @implementation NSObject (TRISourceCode)
 
-- (NSAttributedString *)tri_sourceCode
+- (NSMutableAttributedString *)tri_sourceCode
 {
     // Let's find out the path of the HTML file to show
     NSString *className = NSStringFromClass([self class]);
@@ -32,34 +32,6 @@
                                                             options:options
                                                  documentAttributes:nil
                                                               error:&error];
-        
-        if (error == nil)
-        {
-            NSInteger index = 1; // If we use zero, the font will be Times New Roman :)
-            
-            // Get the string currently selected by the CSS
-            UIFont *font = [string attribute:NSFontAttributeName
-                                     atIndex:index
-                              effectiveRange:NULL];
-            
-            // Use the same font, but with the size selected by the user
-            // in the system preferences
-            NSString *style = UIFontTextStyleBody;
-            UIFontDescriptor *descriptor = nil;
-            descriptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:style];
-            font = [UIFont fontWithName:font.familyName
-                                   size:descriptor.pointSize];
-            
-            // Let's apply that font all over the attributed string
-            NSInteger length = [string length];
-            NSRange range = NSMakeRange(0, length);
-            
-            [string beginEditing];
-            [string addAttribute:NSFontAttributeName
-                           value:font
-                           range:range];
-            [string endEditing];
-        }
     }
     
     return string;

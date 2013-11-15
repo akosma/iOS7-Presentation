@@ -205,7 +205,7 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     
     if (self.currentScreen.enableSourceCodeButton)
     {
-        NSAttributedString *sourceCode = [[self currentScreen] tri_sourceCode];
+        NSMutableAttributedString *sourceCode = [[self currentScreen] tri_sourceCode];
         if (sourceCode)
         {
             self.sourceCodeController = [[TRISourceCodeController alloc] init];

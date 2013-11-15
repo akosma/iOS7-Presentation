@@ -66,7 +66,7 @@
             NSString *path = [[NSBundle mainBundle] pathForResource:filename
                                                              ofType:@"html"];
             NSMutableAttributedString *string = nil;
-            
+
             if (path)
             {
                 NSURL *url = [NSURL fileURLWithPath:path];
