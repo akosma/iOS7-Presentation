@@ -26,7 +26,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="200" id="wO7-xf-8kT"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="710" translatesAutoresizingMaskIntoConstraints="NO" id="vmr-s5-e8P">
@@ -35,7 +35,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="152" id="8WR-bk-z5h"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
