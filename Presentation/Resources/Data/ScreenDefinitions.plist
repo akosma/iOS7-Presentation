@@ -33,11 +33,13 @@ Trifork GmbH</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>My job</string>
+			<string>Trifork Logo</string>
 			<key>contents</key>
-			<string>Trifork GmbH</string>
+			<string>trifork_logo</string>
 			<key>xtype</key>
-			<string>text</string>
+			<string>photo</string>
+			<key>contentMode</key>
+			<string>4</string>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -200,6 +202,16 @@ MKDistanceFormatterUnitsMetric</string>
 All Rights Reserved</string>
 			<key>xtype</key>
 			<string>title</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Trifork Logo</string>
+			<key>contents</key>
+			<string>trifork_logo</string>
+			<key>xtype</key>
+			<string>photo</string>
+			<key>contentMode</key>
+			<string>4</string>
 		</dict>
 	</array>
 </dict>
