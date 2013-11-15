@@ -196,6 +196,20 @@ MKDistanceFormatterUnitsMetric</string>
 		</dict>
 		<dict>
 			<key>title</key>
+			<string>Credits</string>
+			<key>contents</key>
+			<string>Credits:
+
+objc.io #5
+NSHipster
+Wikipedia
+Big Nerd Ranch Blog
+CapTech Consulting Blog</string>
+			<key>xtype</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>Thanks for attending!</string>
 			<key>contents</key>
 			<string>Copyright © 2013 Trifork GmbH
