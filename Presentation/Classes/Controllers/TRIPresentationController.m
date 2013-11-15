@@ -89,14 +89,13 @@ static NSString *PDF_FILENAME = @"slides.pdf";
                     @"empty":    @"TRIEmptyScreen",
                     };
     
+    [self addObserver:self
+           forKeyPath:@"currentIndex"
+              options:0
+              context:NULL];
+
     // We have to start somewhere
     self.currentIndex = 0;
-
-    // Enable and disable toolbar buttons depending on the number of screens
-    [self enableButtons];
-
-    // Let's start
-    [self showCurrentScreen];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -118,6 +117,23 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     [super willRotateToInterfaceOrientation:toInterfaceOrientation
                                    duration:duration];
     self.holderView.hidden = YES;
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (object == self
+        && [keyPath isEqualToString:@"currentIndex"])
+    {
+        [self showCurrentScreen];
+        [self resizeCurrentScreen];
+        [self enableButtons];
+
+        // Let's notify the iPhone app that we've moved
+        NSString *message = [@(self.currentIndex) description];
+        [self.broadcaster sendText:message];
+    }
 }
 
 #pragma mark - IBAction methods
@@ -166,9 +182,6 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     if (self.currentIndex > 0)
     {
         self.currentIndex -= 1;
-        [self showCurrentScreen];
-        [self resizeCurrentScreen];
-        [self enableButtons];
     }
 }
 
@@ -216,9 +229,6 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     if (self.currentIndex < ([self.definitions count] - 1))
     {
         self.currentIndex += 1;
-        [self showCurrentScreen];
-        [self resizeCurrentScreen];
-        [self enableButtons];
     }
 }
 
@@ -255,7 +265,6 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     [self goBack:nil];
 }
 
-
 #pragma mark - TRIMenuControllerDelegate methods
 
 - (void)menuController:(TRIMenuController *)menuController
@@ -263,9 +272,6 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 {
     [self.screenPopover dismissPopoverAnimated:YES];
     self.currentIndex = index;
-    [self showCurrentScreen];
-    [self resizeCurrentScreen];
-    [self enableButtons];
 }
 
 #pragma mark - UIAlertViewDelegate methods
@@ -298,9 +304,6 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     if ([message integerValue] > 0)
     {
         self.currentIndex = [message integerValue];
-        [self showCurrentScreen];
-        [self resizeCurrentScreen];
-        [self enableButtons];
     }
     else if ([message isEqualToString:MESSAGE_NEXT])
     {
@@ -313,9 +316,6 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     else if ([message isEqualToString:MESSAGE_RESET])
     {
         self.currentIndex = 0;
-        [self showCurrentScreen];
-        [self resizeCurrentScreen];
-        [self enableButtons];
     }
     else if ([message isEqualToString:MESSAGE_SHOW_SOURCE])
     {
@@ -403,9 +403,6 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     [self.screenPopover dismissPopoverAnimated:YES];
     self.filenamesForPDF = [NSMutableArray array];
     self.currentIndex = 0;
-    [self showCurrentScreen];
-    [self resizeCurrentScreen];
-    [self enableButtons];
     [self takeSnapshotOfCurrentScreen];
 }
 
@@ -436,9 +433,6 @@ static NSString *PDF_FILENAME = @"slides.pdf";
             if (moreScreensLeft && weakSelf.continuePDFGeneration)
             {
                 weakSelf.currentIndex += 1;
-                [weakSelf showCurrentScreen];
-                [weakSelf resizeCurrentScreen];
-                [weakSelf enableButtons];
                 [weakSelf performSelector:@selector(takeSnapshotOfCurrentScreen)
                            withObject:nil
                            afterDelay:weakSelf.currentScreen.delayForSnapshot];
