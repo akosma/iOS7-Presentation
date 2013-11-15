@@ -21,6 +21,7 @@ static NSString *REUSE_ID = @"REUSE_ID";
 @interface TRIGeodesicScreen () <CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *map;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (nonatomic, strong) CLLocationManager *manager;
 @property (nonatomic, strong) NSMutableArray *locations;
 
@@ -156,12 +157,9 @@ static NSString *REUSE_ID = @"REUSE_ID";
     NSString *template = @"The distance from here to SF is %@ (%@)";
     NSString *message = [NSString stringWithFormat:template, km, miles];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Distance"
-                                                    message:message
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    self.distanceLabel.hidden = NO;
+    self.distanceLabel.text = message;
+    
 }
 
 @end

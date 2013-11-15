@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRIGeodesicScreen">
             <connections>
+                <outlet property="distanceLabel" destination="Wg8-xs-WTb" id="Hx4-H2-rUd"/>
                 <outlet property="map" destination="OF7-Tv-AJ8" id="3y6-XM-0PM"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
@@ -22,6 +23,14 @@
                         <outlet property="delegate" destination="-1" id="wrW-S7-wx7"/>
                     </connections>
                 </mapView>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="311" translatesAutoresizingMaskIntoConstraints="NO" id="Wg8-xs-WTb">
+                    <rect key="frame" x="20" y="20" width="311" height="138"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
