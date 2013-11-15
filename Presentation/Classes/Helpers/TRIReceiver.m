@@ -28,8 +28,8 @@
     self = [super init];
     if (self)
     {
-        _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
-        _data = [NSMutableData data];
+        self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+        self.data = [NSMutableData data];
         
         self.characteristicID = characteristicID;
         self.serviceID = serviceID;
@@ -217,9 +217,6 @@ didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic
     NSString *stringFromData = [[NSString alloc] initWithData:characteristic.value
                                                      encoding:NSUTF8StringEncoding];
 
-    // Log it
-    NSLog(@"Received: %@", stringFromData);
-    
     // Have we got everything we need?
     if ([stringFromData isEqualToString:@"EOM"])
     {
@@ -230,6 +227,11 @@ didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic
         if ([self.delegate respondsToSelector:@selector(receiver:didReceiveMessage:)])
         {
             [self.delegate receiver:self didReceiveMessage:message];
+        }
+        
+        if ([self.delegate respondsToSelector:@selector(receiver:didReceiveData:)])
+        {
+            [self.delegate receiver:self didReceiveData:self.data];
         }
         
         // Reset the state of this object for the next communication

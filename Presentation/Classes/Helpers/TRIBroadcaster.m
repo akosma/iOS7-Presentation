@@ -33,9 +33,9 @@ static const NSInteger NOTIFY_MTU = 20;
     self = [super init];
     if (self)
     {
-        _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self
+        self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self
                                                                      queue:nil];
-        _ready = NO;
+        self.ready = NO;
         
         self.characteristicID = characteristicID;
         self.serviceID = serviceID;
@@ -62,10 +62,7 @@ static const NSInteger NOTIFY_MTU = 20;
     }
     
     // We're in CBPeripheralManagerStatePoweredOn state...
-    NSLog(@"self.peripheralManager powered on.");
-    
     // ... so build our service.
-    
     // Start with the CBMutableCharacteristic
     self.transferCharacteristic = [[CBMutableCharacteristic alloc] initWithType:self.characteristicID
                                                                      properties:CBCharacteristicPropertyNotify
@@ -90,8 +87,6 @@ static const NSInteger NOTIFY_MTU = 20;
                      central:(CBCentral *)central
 didSubscribeToCharacteristic:(CBCharacteristic *)characteristic
 {
-    NSLog(@"Central subscribed to characteristic");
-    
     self.ready = YES;
     
     if ([self.delegate respondsToSelector:@selector(broadcasterIsReady:)])
@@ -103,7 +98,7 @@ didSubscribeToCharacteristic:(CBCharacteristic *)characteristic
     self.sendDataIndex = 0;
     
     // Start sending
-    [self sendData];
+    [self send];
 }
 
 
@@ -113,8 +108,12 @@ didSubscribeToCharacteristic:(CBCharacteristic *)characteristic
                          central:(CBCentral *)central
 didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
 {
-    NSLog(@"Central unsubscribed from characteristic");
     self.ready = NO;
+
+    if ([self.delegate respondsToSelector:@selector(broadcasterIsNotReady:)])
+    {
+        [self.delegate broadcasterIsNotReady:self];
+    }
 }
 
 /** This callback comes in when the PeripheralManager is ready to send the next chunk of data.
@@ -123,7 +122,7 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
 - (void)peripheralManagerIsReadyToUpdateSubscribers:(CBPeripheralManager *)peripheral
 {
     // Start sending again
-    [self sendData];
+    [self send];
 }
 
 #pragma mark - Public methods
@@ -144,14 +143,22 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
     [self.peripheralManager stopAdvertising];
 }
 
-- (void)send:(NSString *)string
+- (void)sendText:(NSString *)string
 {
     if (self.isReady)
     {
         NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+        [self sendData:data];
+    }
+}
+
+- (void)sendData:(NSData *)data
+{
+    if (self.isReady)
+    {
         self.dataToSend = data;
         self.sendDataIndex = 0;
-        [self sendData];
+        [self send];
     }
 }
 
@@ -160,7 +167,7 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
 
 /** Sends the next amount of data to the connected central
  */
-- (void)sendData
+- (void)send
 {
     // First up, check if we're meant to be sending an EOM
     static BOOL sendingEOM = NO;
@@ -177,8 +184,6 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
         {
             // It did, so mark it as sent
             sendingEOM = NO;
-            
-            NSLog(@"Sent: EOM");
         }
         
         // It didn't send, so we'll exit and wait for peripheralManagerIsReadyToUpdateSubscribers
@@ -228,9 +233,6 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
             return;
         }
         
-        NSString *stringFromData = [[NSString alloc] initWithData:chunk encoding:NSUTF8StringEncoding];
-        NSLog(@"Sent: %@", stringFromData);
-        
         // It did send, so update our index
         self.sendDataIndex += amountToSend;
         
@@ -251,8 +253,6 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
             {
                 // It sent, we're all done
                 sendingEOM = NO;
-                
-                NSLog(@"Sent: EOM");
             }
             
             return;

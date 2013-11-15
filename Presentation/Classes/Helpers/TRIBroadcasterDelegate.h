@@ -17,5 +17,6 @@
 @optional
 
 - (void)broadcasterIsReady:(TRIBroadcaster *)broadcaster;
+- (void)broadcasterIsNotReady:(TRIBroadcaster *)broadcaster;
 
 @end

@@ -9,19 +9,19 @@
 #import "TRIPresentationController.h"
 #import "TRIBaseScreenController.h"
 #import "TRISourceCodeController.h"
+#import "TRIMenuController.h"
+#import "TRIMenuControllerDelegate.h"
 #import "TRIHelpers.h"
 
 
-static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 static NSString *PDF_FILENAME = @"slides.pdf";
 
 
 
-@interface TRIPresentationController () <UITableViewDataSource,
-                                       UITableViewDelegate,
-                                       UIAlertViewDelegate,
-                                       TRIReceiverDelegate,
-                                       TRIBroadcasterDelegate>
+@interface TRIPresentationController () <UIAlertViewDelegate,
+                                         TRIReceiverDelegate,
+                                         TRIBroadcasterDelegate,
+                                         TRIMenuControllerDelegate>
 
 @property (nonatomic, strong) NSArray *definitions;
 @property (nonatomic) NSInteger currentIndex;
@@ -55,20 +55,24 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 {
     [super viewDidLoad];
 
+    // The iPad application receives information from the remote control (iPhone)
     CBUUID *remoteControlChar = [CBUUID UUIDWithString:REMOTE_CONTROL_CHARACTERISTIC_UUID];
     CBUUID *remoteControlService = [CBUUID UUIDWithString:REMOTE_CONTROL_SERVICE_UUID];
     self.receiver = [[TRIReceiver alloc] initWithCharacteristic:remoteControlChar
                                                         service:remoteControlService];
-    
+
+    self.receiver.delegate = self;
+
+    // The iPad application broadcasts information as the presenter to the remote control (iPhone)
     CBUUID *presenterChar = [CBUUID UUIDWithString:PRESENTER_CHARACTERISTIC_UUID];
     CBUUID *presenterService = [CBUUID UUIDWithString:PRESENTER_SERVICE_UUID];
     self.broadcaster = [[TRIBroadcaster alloc] initWithCharacteristic:presenterChar
                                                               service:presenterService];
     
-    self.receiver.delegate = self;
+    self.broadcaster.delegate = self;
     [self.broadcaster startAdvertising];
     
-    // Load the order of the screens
+    // Load the order of the screens from the configuration file
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ScreenDefinitions"
                                                      ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
@@ -91,6 +95,7 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     // Enable and disable toolbar buttons depending on the number of screens
     [self enableButtons];
 
+    // Let's start
     [self showCurrentScreen];
 }
 
@@ -120,21 +125,18 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 - (IBAction)showMenu:(id)sender
 {
     [self.sharePopover dismissPopoverAnimated:YES];
-    UITableViewController *contents = nil;
+    TRIMenuController *contents = nil;
     if (self.screenPopover == nil)
     {
-        contents = [[UITableViewController alloc] init];
-        contents.tableView.delegate = self;
-        contents.tableView.dataSource = self;
-        [contents.tableView registerClass:[UITableViewCell class]
-                   forCellReuseIdentifier:CELL_REUSE_IDENTIFIER];
+        contents = [[TRIMenuController alloc] initWithDefinitions:self.definitions];
+        contents.delegate = self;
         UIPopoverController *popover = nil;
         popover = [[UIPopoverController alloc] initWithContentViewController:contents];
         self.screenPopover = popover;
     }
     else
     {
-        contents = (UITableViewController *)self.screenPopover.contentViewController;
+        contents = (TRIMenuController *)self.screenPopover.contentViewController;
     }
     
     if (self.screenPopover.isPopoverVisible)
@@ -254,38 +256,13 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 }
 
 
-#pragma mark - Table view methods
+#pragma mark - TRIMenuControllerDelegate methods
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView
- numberOfRowsInSection:(NSInteger)section
-{
-    return [self.definitions count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = nil;
-    cell = [tableView dequeueReusableCellWithIdentifier:CELL_REUSE_IDENTIFIER
-                                           forIndexPath:indexPath];
-    NSDictionary *definition = self.definitions[indexPath.row];
-    NSInteger index = indexPath.row + 1;
-    NSString *title = (definition[@"title"]) ? definition[@"title"] : @"";
-    NSString *text = [NSString stringWithFormat:@"%ld. %@", (long)index, title];
-    cell.textLabel.text = text;
-    return cell;
-}
-
--       (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)menuController:(TRIMenuController *)menuController
+  didSelectItemAtIndex:(NSInteger)index
 {
     [self.screenPopover dismissPopoverAnimated:YES];
-    self.currentIndex = indexPath.row;
+    self.currentIndex = index;
     [self showCurrentScreen];
     [self resizeCurrentScreen];
     [self enableButtons];
@@ -318,7 +295,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void)receiver:(TRIReceiver *)receiver didReceiveMessage:(NSString *)message
 {
-    if ([message isEqualToString:MESSAGE_NEXT])
+    if ([message integerValue] > 0)
+    {
+        self.currentIndex = [message integerValue];
+        [self showCurrentScreen];
+        [self resizeCurrentScreen];
+        [self enableButtons];
+    }
+    else if ([message isEqualToString:MESSAGE_NEXT])
     {
         [self goForward:nil];
     }
@@ -346,14 +330,23 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     {
         [self showMenu:nil];
     }
-    [self.broadcaster send:[NSString stringWithFormat:@"echo: %@", message]];
+    [self.broadcaster sendText:[NSString stringWithFormat:@"echo: %@", message]];
 }
 
 #pragma mark - TRIBroadcasterDelegate methods
 
 - (void)broadcasterIsReady:(TRIBroadcaster *)broadcaster
 {
-    [self.broadcaster send:@"BOOM"];
+    // When the broadcaster is ready, we send the list of screens
+    NSData *data = [NSPropertyListSerialization dataFromPropertyList:self.definitions
+                                                              format:NSPropertyListXMLFormat_v1_0
+                                                    errorDescription:nil];
+    [self.broadcaster sendData:data];
+}
+
+- (void)broadcasterIsNotReady:(TRIBroadcaster *)broadcaster
+{
+    [self.broadcaster stopAdvertising];
 }
 
 #pragma mark - Private methods
@@ -534,7 +527,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (NSString *)PDFFilePath
 {
-    NSString *path = [self.documentsDirectory stringByAppendingPathComponent:PDF_FILENAME];
+    NSString *path = [[self documentsDirectory] stringByAppendingPathComponent:PDF_FILENAME];
     return path;
 }
 

@@ -46,6 +46,7 @@
 		3AC83A8E183418270089524B /* TRIGeodesicScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC83A8C183418270089524B /* TRIGeodesicScreen.m */; };
 		3AC83A8F183418270089524B /* TRIGeodesicScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A8D183418270089524B /* TRIGeodesicScreen.xib */; };
 		3AC9837418361EFC004E3A94 /* TRIPDFHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9837318361EFC004E3A94 /* TRIPDFHelper.m */; };
+		3AC9837718362C0A004E3A94 /* TRIMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9837618362C0A004E3A94 /* TRIMenuController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,9 @@
 		3AC983711835FC48004E3A94 /* TRIBroadcasterDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIBroadcasterDelegate.h; sourceTree = "<group>"; };
 		3AC9837218361EFC004E3A94 /* TRIPDFHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIPDFHelper.h; sourceTree = "<group>"; };
 		3AC9837318361EFC004E3A94 /* TRIPDFHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIPDFHelper.m; sourceTree = "<group>"; };
+		3AC9837518362C0A004E3A94 /* TRIMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIMenuController.h; sourceTree = "<group>"; };
+		3AC9837618362C0A004E3A94 /* TRIMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIMenuController.m; sourceTree = "<group>"; };
+		3AC9837818362C98004E3A94 /* TRIMenuControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIMenuControllerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,9 @@
 				3A86E46C1833B55B00C1AC2C /* TRIPresentationController.h */,
 				3A86E46D1833B55B00C1AC2C /* TRIPresentationController.m */,
 				3AC83A7F1833C1330089524B /* TRIPresentationController.xib */,
+				3AC9837518362C0A004E3A94 /* TRIMenuController.h */,
+				3AC9837618362C0A004E3A94 /* TRIMenuController.m */,
+				3AC9837818362C98004E3A94 /* TRIMenuControllerDelegate.h */,
 				3A86E4691833B53C00C1AC2C /* TRIBaseScreenController.h */,
 				3A86E46A1833B53C00C1AC2C /* TRIBaseScreenController.m */,
 				3AC83A7A1833BCC80089524B /* TRISourceCodeController.h */,
@@ -280,6 +287,7 @@
 				3A98A42D18356D15008C83AC /* TRIProtocol.m */,
 				3A98A42A18356D15008C83AC /* TRIBroadcaster.h */,
 				3A98A42B18356D15008C83AC /* TRIBroadcaster.m */,
+				3AC983711835FC48004E3A94 /* TRIBroadcasterDelegate.h */,
 				3A98A42E18356D15008C83AC /* TRIReceiver.h */,
 				3A98A42F18356D15008C83AC /* TRIReceiver.m */,
 				3A98A43018356D15008C83AC /* TRIReceiverDelegate.h */,
@@ -288,7 +296,6 @@
 				3A98A42218352079008C83AC /* TRIOpenInAppActivity.h */,
 				3A98A42318352079008C83AC /* TRIOpenInAppActivity.m */,
 				3A98A425183520CE008C83AC /* TRIOpenInAppActivityDelegate.h */,
-				3AC983711835FC48004E3A94 /* TRIBroadcasterDelegate.h */,
 				3AC9837218361EFC004E3A94 /* TRIPDFHelper.h */,
 				3AC9837318361EFC004E3A94 /* TRIPDFHelper.m */,
 			);
@@ -415,6 +422,7 @@
 				3A98A42018350BD1008C83AC /* TRIEmptyScreen.m in Sources */,
 				3A86E46B1833B53C00C1AC2C /* TRIBaseScreenController.m in Sources */,
 				3A98A42418352079008C83AC /* TRIOpenInAppActivity.m in Sources */,
+				3AC9837718362C0A004E3A94 /* TRIMenuController.m in Sources */,
 				3A86E46E1833B55B00C1AC2C /* TRIPresentationController.m in Sources */,
 				3A98A43118356D15008C83AC /* TRIBroadcaster.m in Sources */,
 				3AC83A7D1833BCC80089524B /* TRISourceCodeController.m in Sources */,

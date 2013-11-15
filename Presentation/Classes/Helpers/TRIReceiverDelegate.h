@@ -16,5 +16,6 @@
 @optional
 
 - (void)receiver:(TRIReceiver *)receiver didReceiveMessage:(NSString *)message;
+- (void)receiver:(TRIReceiver *)receiver didReceiveData:(NSData *)data;
 
 @end

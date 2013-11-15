@@ -22,6 +22,7 @@
 
 - (void)startAdvertising;
 - (void)stopAdvertising;
-- (void)send:(NSString *)string;
+- (void)sendText:(NSString *)string;
+- (void)sendData:(NSData *)data;
 
 @end
