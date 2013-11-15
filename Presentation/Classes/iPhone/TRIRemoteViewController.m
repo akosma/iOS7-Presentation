@@ -95,7 +95,7 @@
                                                        delegate:self
                                               cancelButtonTitle:@"Cancel"
                                          destructiveButtonTitle:@"Reset Presentation"
-                                              otherButtonTitles:@"Show menu", @"Show Source Code", nil];
+                                              otherButtonTitles:@"Show menu", @"Show Source Code", @"Hide Source Code", nil];
     [sheet showInView:self.view];
 }
 
@@ -130,6 +130,7 @@
     {
         case 0:
         {
+            self.currentIndex = 0;
             [self.broadcaster sendText:MESSAGE_RESET];
             break;
         }
@@ -141,10 +142,16 @@
                              completion:nil];
             break;
         }
-            
+
         case 2:
         {
             [self.broadcaster sendText:MESSAGE_SHOW_SOURCE];
+            break;
+        }
+            
+        case 3:
+        {
+            [self.broadcaster sendText:MESSAGE_HIDE_SOURCE];
             break;
         }
             
