@@ -16,24 +16,61 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="This is a sample text in English!" translatesAutoresizingMaskIntoConstraints="NO" id="vKK-7X-0EY">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="Greetings from Switzerland!" translatesAutoresizingMaskIntoConstraints="NO" id="vKK-7X-0EY">
                     <rect key="frame" x="20" y="20" width="728" height="251"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="251" id="SYU-fX-gG8"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1w-6Q-nV4">
-                    <rect key="frame" x="20" y="279" width="216" height="30"/>
+                    <rect key="frame" x="20" y="279" width="360" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <state key="normal" title="Speak in English the text above">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="speak:" destination="-1" eventType="touchUpInside" id="36X-1G-4KY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFI-5Y-047">
+                    <rect key="frame" x="20" y="396" width="170" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" title="Minimum pitch">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="speak:" destination="-1" eventType="touchUpInside" id="4Bb-kZ-8Lo"/>
+                        <action selector="speakAtMinimumRate:" destination="-1" eventType="touchUpInside" id="Fg7-Wm-jM7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBt-LZ-d7d">
+                    <rect key="frame" x="20" y="448" width="145" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" title="Default pitch">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="speak:" destination="-1" eventType="touchUpInside" id="yn4-kg-Gxn"/>
+                        <action selector="speakAtDefaultRate:" destination="-1" eventType="touchUpInside" id="inC-bs-KQF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7d-TM-4df">
+                    <rect key="frame" x="20" y="500" width="177" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" title="Maximum pitch">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="speak:" destination="-1" eventType="touchUpInside" id="giB-NT-Ecb"/>
+                        <action selector="speakAtMaximumRate:" destination="-1" eventType="touchUpInside" id="T5r-fS-YGW"/>
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TvO-2I-SNe">
@@ -48,18 +85,6 @@
                         <outlet property="delegate" destination="-1" id="N1R-Zf-gkE"/>
                     </connections>
                 </tableView>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qki-h4-hXD">
-                    <rect key="frame" x="20" y="354" width="221" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <segments>
-                        <segment title="Minimum"/>
-                        <segment title="Default"/>
-                        <segment title="Maximum"/>
-                    </segments>
-                    <connections>
-                        <action selector="changeRate:" destination="-1" eventType="valueChanged" id="FrY-kz-hRf"/>
-                    </connections>
-                </segmentedControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -70,8 +95,6 @@
                 <constraint firstItem="Z1w-6Q-nV4" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="n5H-hK-WDr"/>
                 <constraint firstItem="vKK-7X-0EY" firstAttribute="top" secondItem="2" secondAttribute="top" constant="20" id="ngd-HD-kF9"/>
                 <constraint firstAttribute="trailing" secondItem="vKK-7X-0EY" secondAttribute="trailing" constant="20" id="t4J-ch-y3d"/>
-                <constraint firstItem="Qki-h4-hXD" firstAttribute="top" secondItem="Z1w-6Q-nV4" secondAttribute="bottom" constant="45" id="vap-iP-0a7"/>
-                <constraint firstItem="Qki-h4-hXD" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="wGq-Oe-TbG"/>
                 <constraint firstAttribute="bottom" secondItem="TvO-2I-SNe" secondAttribute="bottom" constant="77" id="wHZ-eH-BIW"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

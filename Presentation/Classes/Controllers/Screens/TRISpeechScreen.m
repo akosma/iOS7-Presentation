@@ -24,6 +24,27 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 @implementation TRISpeechScreen
 
+
+
+#pragma mark - Speech methods
+
+
+- (void)say:(NSString *)text withVoice:(AVSpeechSynthesisVoice *)voice
+{
+    AVSpeechUtterance *utterance = nil;
+    utterance = [[AVSpeechUtterance alloc] initWithString:text];
+    utterance.voice = voice;
+    utterance.preUtteranceDelay = 0.3;
+    utterance.rate = self.speechRate;
+    
+    AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+    [synth speakUtterance:utterance];
+}
+
+
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -52,32 +73,27 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     [self say:text withVoice:voice];
 }
 
-- (IBAction)changeRate:(id)sender
+- (IBAction)speakAtMinimumRate:(id)sender
 {
-    NSInteger index = [sender selectedSegmentIndex];
-    switch (index)
-    {
-        case 0:
-        {
-            self.speechRate = AVSpeechUtteranceMinimumSpeechRate;
-            break;
-        }
-            
-        case 1:
-        {
-            self.speechRate = AVSpeechUtteranceDefaultSpeechRate;
-            break;
-        }
-            
-        case 2:
-        {
-            self.speechRate = AVSpeechUtteranceMaximumSpeechRate;
-            break;
-        }
-            
-        default:
-            break;
-    }
+    self.speechRate = AVSpeechUtteranceMinimumSpeechRate;
+    AVSpeechSynthesisVoice *voice = nil;
+    voice = [AVSpeechSynthesisVoice voiceWithLanguage:self.speechLanguage];
+    NSString *text = self.inputText.text;
+    [self say:text withVoice:voice];
+}
+
+- (IBAction)speakAtDefaultRate:(id)sender
+{
+    self.speechRate = AVSpeechUtteranceDefaultSpeechRate;
+    AVSpeechSynthesisVoice *voice = nil;
+    voice = [AVSpeechSynthesisVoice voiceWithLanguage:self.speechLanguage];
+    NSString *text = self.inputText.text;
+    [self say:text withVoice:voice];
+}
+
+- (IBAction)speakAtMaximumRate:(id)sender
+{
+    self.speechRate = AVSpeechUtteranceMaximumSpeechRate;
     AVSpeechSynthesisVoice *voice = nil;
     voice = [AVSpeechSynthesisVoice voiceWithLanguage:self.speechLanguage];
     NSString *text = self.inputText.text;
@@ -97,6 +113,12 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     return [self.speechVoices count];
 }
 
+-    (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44.0;
+}
+
 - (NSString *)tableView:(UITableView *)tableView
 titleForHeaderInSection:(NSInteger)section
 {
@@ -109,6 +131,7 @@ titleForHeaderInSection:(NSInteger)section
     UITableViewCell *cell = nil;
     cell = [tableView dequeueReusableCellWithIdentifier:CELL_REUSE_IDENTIFIER
                                            forIndexPath:indexPath];
+    cell.textLabel.font = [UIFont systemFontOfSize:26.0];
     AVSpeechSynthesisVoice *voice = self.speechVoices[indexPath.row];
     cell.textLabel.text = voice.language;
     return cell;
@@ -121,20 +144,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     AVSpeechSynthesisVoice *voice = self.speechVoices[indexPath.row];
     self.speechLanguage = voice.language;
     [self say:text withVoice:voice];
-}
-
-#pragma mark - Private methods
-
-- (void)say:(NSString *)text withVoice:(AVSpeechSynthesisVoice *)voice
-{
-    AVSpeechUtterance *utterance = nil;
-    utterance = [[AVSpeechUtterance alloc] initWithString:text];
-    utterance.voice = voice;
-    utterance.preUtteranceDelay = 0.3;
-    utterance.rate = self.speechRate;
-    
-    AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
-    [synth speakUtterance:utterance];
 }
 
 @end
