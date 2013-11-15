@@ -16,6 +16,8 @@ static const NSInteger NOTIFY_MTU = 20;
 
 @property (nonatomic, strong) CBPeripheralManager *peripheralManager;
 @property (nonatomic, strong) CBMutableCharacteristic *transferCharacteristic;
+@property (nonatomic, strong) CBUUID *characteristicID;
+@property (nonatomic, strong) CBUUID *serviceID;
 @property (nonatomic, strong) NSData *dataToSend;
 @property (nonatomic, readwrite) NSInteger sendDataIndex;
 @property (nonatomic, getter = isReady) BOOL ready;
@@ -25,17 +27,8 @@ static const NSInteger NOTIFY_MTU = 20;
 
 @implementation TRIBroadcaster
 
-+ (TRIBroadcaster *)broadcaster
-{
-    static dispatch_once_t pred = 0;
-    __strong static id singleton = nil;
-    dispatch_once(&pred, ^{
-        singleton = [[self alloc] init];
-    });
-    return singleton;
-}
-
-- (id)init
+- (instancetype)initWithCharacteristic:(CBUUID *)characteristicID
+                               service:(CBUUID *)serviceID
 {
     self = [super init];
     if (self)
@@ -43,6 +36,9 @@ static const NSInteger NOTIFY_MTU = 20;
         _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self
                                                                      queue:nil];
         _ready = NO;
+        
+        self.characteristicID = characteristicID;
+        self.serviceID = serviceID;
     }
     return self;
 }
@@ -71,13 +67,13 @@ static const NSInteger NOTIFY_MTU = 20;
     // ... so build our service.
     
     // Start with the CBMutableCharacteristic
-    self.transferCharacteristic = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:TRANSFER_CHARACTERISTIC_UUID]
+    self.transferCharacteristic = [[CBMutableCharacteristic alloc] initWithType:self.characteristicID
                                                                      properties:CBCharacteristicPropertyNotify
                                                                           value:nil
                                                                     permissions:CBAttributePermissionsReadable];
     
     // Then the service
-    CBMutableService *transferService = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]
+    CBMutableService *transferService = [[CBMutableService alloc] initWithType:self.serviceID
                                                                        primary:YES];
     
     // Add the characteristic to the service
@@ -97,6 +93,11 @@ didSubscribeToCharacteristic:(CBCharacteristic *)characteristic
     NSLog(@"Central subscribed to characteristic");
     
     self.ready = YES;
+    
+    if ([self.delegate respondsToSelector:@selector(broadcasterIsReady:)])
+    {
+        [self.delegate broadcasterIsReady:self];
+    }
     
     // Reset the index
     self.sendDataIndex = 0;
@@ -130,7 +131,7 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
 - (void)startAdvertising
 {
     [self.peripheralManager startAdvertising:@{
-         CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]]
+         CBAdvertisementDataServiceUUIDsKey : @[self.serviceID]
      }];
 }
 
@@ -148,36 +149,6 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
         self.sendDataIndex = 0;
         [self sendData];
     }
-}
-
-- (void)sendReset
-{
-    [self send:MESSAGE_RESET];
-}
-
-- (void)sendNext
-{
-    [self send:MESSAGE_NEXT];
-}
-
-- (void)sendPrevious
-{
-    [self send:MESSAGE_PREVIOUS];
-}
-
-- (void)sendShowSource
-{
-    [self send:MESSAGE_SHOW_SOURCE];
-}
-
-- (void)sendHideSource
-{
-    [self send:MESSAGE_HIDE_SOURCE];
-}
-
-- (void)sendToggleMenu
-{
-    [self send:MESSAGE_TOGGLE_MENU];
 }
 
 #pragma mark - Private methods

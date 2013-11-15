@@ -14,29 +14,25 @@
 @property (nonatomic, strong) CBCentralManager *centralManager;
 @property (nonatomic, strong) CBPeripheral *discoveredPeripheral;
 @property (nonatomic, strong) NSMutableData *data;
+@property (nonatomic, strong) CBUUID *characteristicID;
+@property (nonatomic, strong) CBUUID *serviceID;
 
 @end
 
 
 @implementation TRIReceiver
 
-+ (TRIReceiver *)receiver
-{
-    static dispatch_once_t pred = 0;
-    __strong static id singleton = nil;
-    dispatch_once(&pred, ^{
-        singleton = [[self alloc] init];
-    });
-    return singleton;
-}
-
-- (id)init
+- (instancetype)initWithCharacteristic:(CBUUID *)characteristicID
+                               service:(CBUUID *)serviceID
 {
     self = [super init];
     if (self)
     {
         _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
         _data = [NSMutableData data];
+        
+        self.characteristicID = characteristicID;
+        self.serviceID = serviceID;
     }
     return self;
 }
@@ -75,7 +71,7 @@
  */
 - (void)scan
 {
-    [self.centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]]
+    [self.centralManager scanForPeripheralsWithServices:@[self.serviceID]
                                                 options:@{ CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
     
     NSLog(@"Scanning started");
@@ -148,7 +144,7 @@ didFailToConnectPeripheral:(CBPeripheral *)peripheral
     peripheral.delegate = self;
     
     // Search only for services that match our UUID
-    [peripheral discoverServices:@[[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]]];
+    [peripheral discoverServices:@[self.serviceID]];
 }
 
 #pragma mark - CBPeripheralDelegate methods
@@ -171,7 +167,7 @@ didDiscoverServices:(NSError *)error
     // Loop through the newly filled peripheral.services array, just in case there's more than one.
     for (CBService *service in peripheral.services)
     {
-        [peripheral discoverCharacteristics:@[[CBUUID UUIDWithString:TRANSFER_CHARACTERISTIC_UUID]]
+        [peripheral discoverCharacteristics:@[self.characteristicID]
                                  forService:service];
     }
 }
@@ -196,7 +192,7 @@ didDiscoverCharacteristicsForService:(CBService *)service
     for (CBCharacteristic *characteristic in service.characteristics) {
         
         // And check if it's the right one
-        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_CHARACTERISTIC_UUID]]) {
+        if ([characteristic.UUID isEqual:self.characteristicID]) {
             
             // If it is, subscribe to it
             [peripheral setNotifyValue:YES forCharacteristic:characteristic];
@@ -265,7 +261,7 @@ didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic
     }
     
     // Exit if it's not the transfer characteristic
-    if (![characteristic.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_CHARACTERISTIC_UUID]])
+    if (![characteristic.UUID isEqual:self.characteristicID])
     {
         return;
     }
@@ -324,7 +320,7 @@ didDisconnectPeripheral:(CBPeripheral *)peripheral
             {
                 for (CBCharacteristic *characteristic in service.characteristics)
                 {
-                    if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_CHARACTERISTIC_UUID]])
+                    if ([characteristic.UUID isEqual:self.characteristicID])
                     {
                         if (characteristic.isNotifying)
                         {

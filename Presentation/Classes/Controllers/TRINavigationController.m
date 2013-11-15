@@ -6,14 +6,10 @@
 //  Copyright (c) 2013 Trifork GmbH. All rights reserved.
 //
 
-#import "NSObject+TRISourceCode.h"
 #import "TRINavigationController.h"
 #import "TRIBaseScreenController.h"
 #import "TRISourceCodeController.h"
-#import "TRIOpenInAppActivity.h"
-#import "TRIReceiver.h"
-#import "TRIReceiverDelegate.h"
-#import "TRIProtocol.h"
+#import "TRIHelpers.h"
 
 
 static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
@@ -24,7 +20,8 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 @interface TRINavigationController () <UITableViewDataSource,
                                        UITableViewDelegate,
                                        UIAlertViewDelegate,
-                                       TRIReceiverDelegate>
+                                       TRIReceiverDelegate,
+                                       TRIBroadcasterDelegate>
 
 @property (nonatomic, strong) NSArray *definitions;
 @property (nonatomic) NSInteger currentIndex;
@@ -36,6 +33,9 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 @property (nonatomic, strong) NSMutableArray *filenamesForPDF;
 @property (nonatomic, strong) UIAlertView *generatingPDFAlert;
 @property (nonatomic) BOOL continuePDFGeneration;
+
+@property (nonatomic, strong) TRIBroadcaster *broadcaster;
+@property (nonatomic, strong) TRIReceiver *receiver;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *titleButtonItem;
 @property (weak, nonatomic) IBOutlet UIView *holderView;
@@ -54,7 +54,19 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [TRIReceiver receiver].delegate = self;
+
+    CBUUID *remoteControlChar = [CBUUID UUIDWithString:REMOTE_CONTROL_CHARACTERISTIC_UUID];
+    CBUUID *remoteControlService = [CBUUID UUIDWithString:REMOTE_CONTROL_SERVICE_UUID];
+    self.receiver = [[TRIReceiver alloc] initWithCharacteristic:remoteControlChar
+                                                        service:remoteControlService];
+    
+    CBUUID *presenterChar = [CBUUID UUIDWithString:PRESENTER_CHARACTERISTIC_UUID];
+    CBUUID *presenterService = [CBUUID UUIDWithString:PRESENTER_SERVICE_UUID];
+    self.broadcaster = [[TRIBroadcaster alloc] initWithCharacteristic:presenterChar
+                                                              service:presenterService];
+    
+    self.receiver.delegate = self;
+    [self.broadcaster startAdvertising];
     
     // Load the order of the screens
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ScreenDefinitions"
@@ -334,6 +346,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     {
         [self showMenu:nil];
     }
+    [self.broadcaster send:[NSString stringWithFormat:@"echo: %@", message]];
+}
+
+#pragma mark - TRIBroadcasterDelegate methods
+
+- (void)broadcasterIsReady:(TRIBroadcaster *)broadcaster
+{
+    [self.broadcaster send:@"BOOM"];
 }
 
 #pragma mark - Private methods

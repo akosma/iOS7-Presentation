@@ -10,19 +10,18 @@
 @import CoreBluetooth;
 
 
+#import "TRIBroadcasterDelegate.h"
+
+
 @interface TRIBroadcaster : NSObject
 
-+ (TRIBroadcaster *)broadcaster;
+@property (nonatomic, weak) id<TRIBroadcasterDelegate> delegate;
 
-- (void)send:(NSString *)string;
-- (void)sendReset;
-- (void)sendNext;
-- (void)sendPrevious;
-- (void)sendShowSource;
-- (void)sendHideSource;
-- (void)sendToggleMenu;
+- (instancetype)initWithCharacteristic:(CBUUID *)characteristicID
+                               service:(CBUUID *)serviceID;
 
 - (void)startAdvertising;
 - (void)stopAdvertising;
+- (void)send:(NSString *)string;
 
 @end

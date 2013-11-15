@@ -96,6 +96,7 @@
 		3A98A4371835706F008C83AC /* TRIRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIRemoteViewController.h; sourceTree = "<group>"; };
 		3A98A4381835706F008C83AC /* TRIRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIRemoteViewController.m; sourceTree = "<group>"; };
 		3A98A4391835706F008C83AC /* TRIRemoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIRemoteViewController.xib; sourceTree = "<group>"; };
+		3A98A43C1835FA94008C83AC /* TRIHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIHelpers.h; sourceTree = "<group>"; };
 		3AC83A7A1833BCC80089524B /* TRISourceCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRISourceCodeController.h; sourceTree = "<group>"; };
 		3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRISourceCodeController.m; sourceTree = "<group>"; };
 		3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRISourceCodeController.xib; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		3AC83A8B183418270089524B /* TRIGeodesicScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIGeodesicScreen.h; sourceTree = "<group>"; };
 		3AC83A8C183418270089524B /* TRIGeodesicScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIGeodesicScreen.m; sourceTree = "<group>"; };
 		3AC83A8D183418270089524B /* TRIGeodesicScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIGeodesicScreen.xib; sourceTree = "<group>"; };
+		3AC983711835FC48004E3A94 /* TRIBroadcasterDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIBroadcasterDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,10 +272,11 @@
 		3A86E4781833B79100C1AC2C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3A98A42A18356D15008C83AC /* TRIBroadcaster.h */,
-				3A98A42B18356D15008C83AC /* TRIBroadcaster.m */,
+				3A98A43C1835FA94008C83AC /* TRIHelpers.h */,
 				3A98A42C18356D15008C83AC /* TRIProtocol.h */,
 				3A98A42D18356D15008C83AC /* TRIProtocol.m */,
+				3A98A42A18356D15008C83AC /* TRIBroadcaster.h */,
+				3A98A42B18356D15008C83AC /* TRIBroadcaster.m */,
 				3A98A42E18356D15008C83AC /* TRIReceiver.h */,
 				3A98A42F18356D15008C83AC /* TRIReceiver.m */,
 				3A98A43018356D15008C83AC /* TRIReceiverDelegate.h */,
@@ -282,6 +285,7 @@
 				3A98A42218352079008C83AC /* TRIOpenInAppActivity.h */,
 				3A98A42318352079008C83AC /* TRIOpenInAppActivity.m */,
 				3A98A425183520CE008C83AC /* TRIOpenInAppActivityDelegate.h */,
+				3AC983711835FC48004E3A94 /* TRIBroadcasterDelegate.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

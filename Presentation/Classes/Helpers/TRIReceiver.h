@@ -13,7 +13,8 @@
 
 @interface TRIReceiver : NSObject
 
-+ (TRIReceiver *)receiver;
+- (instancetype)initWithCharacteristic:(CBUUID *)characteristicID
+                               service:(CBUUID *)serviceID;
 
 @property (nonatomic, weak) id<TRIReceiverDelegate> delegate;
 

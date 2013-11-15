@@ -7,9 +7,12 @@
 //
 
 #import "TRIRemoteViewController.h"
-#import "TRIBroadcaster.h"
+#import "TRIHelpers.h"
 
-@interface TRIRemoteViewController ()
+@interface TRIRemoteViewController () <TRIReceiverDelegate>
+
+@property (nonatomic, strong) TRIBroadcaster *broadcaster;
+@property (nonatomic, strong) TRIReceiver *receiver;
 
 @end
 
@@ -18,44 +21,63 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    CBUUID *remoteControlChar = [CBUUID UUIDWithString:REMOTE_CONTROL_CHARACTERISTIC_UUID];
+    CBUUID *remoteControlService = [CBUUID UUIDWithString:REMOTE_CONTROL_SERVICE_UUID];
+    self.broadcaster = [[TRIBroadcaster alloc] initWithCharacteristic:remoteControlChar
+                                                              service:remoteControlService];
+    
+    CBUUID *presenterChar = [CBUUID UUIDWithString:PRESENTER_CHARACTERISTIC_UUID];
+    CBUUID *presenterService = [CBUUID UUIDWithString:PRESENTER_SERVICE_UUID];
+    self.receiver = [[TRIReceiver alloc] initWithCharacteristic:presenterChar
+                                                        service:presenterService];
+    
+    self.receiver.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [[TRIBroadcaster broadcaster] startAdvertising];
+    [self.broadcaster startAdvertising];
 }
 
 #pragma mark - IBActions
 
 - (IBAction)reset:(id)sender
 {
-    [[TRIBroadcaster broadcaster] sendReset];
+    [self.broadcaster send:MESSAGE_RESET];
 }
 
 - (IBAction)next:(id)sender
 {
-    [[TRIBroadcaster broadcaster] sendNext];
+    [self.broadcaster send:MESSAGE_NEXT];
 }
 
 - (IBAction)previous:(id)sender
 {
-    [[TRIBroadcaster broadcaster] sendPrevious];
+    [self.broadcaster send:MESSAGE_PREVIOUS];
 }
 
 - (IBAction)showSource:(id)sender
 {
-    [[TRIBroadcaster broadcaster] sendShowSource];
+    [self.broadcaster send:MESSAGE_SHOW_SOURCE];
 }
 
 - (IBAction)hideSource:(id)sender
 {
-    [[TRIBroadcaster broadcaster] sendHideSource];
+    [self.broadcaster send:MESSAGE_HIDE_SOURCE];
 }
 
 - (IBAction)toggleMenu:(id)sender
 {
-    [[TRIBroadcaster broadcaster] sendToggleMenu];
+    [self.broadcaster send:MESSAGE_TOGGLE_MENU];
+}
+
+#pragma mark - TRIReceiverDelegate methods
+
+- (void)receiver:(TRIReceiver *)receiver didReceiveMessage:(NSString *)message
+{
+    NSLog(@"received in iPhone: %@", message);
 }
 
 @end
