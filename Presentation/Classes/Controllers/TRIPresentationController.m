@@ -427,45 +427,38 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     // We flash the screen and then create an image out of it
     if (self.continuePDFGeneration)
     {
+        __weak typeof(self) weakSelf = self;
+        
         [self.currentScreen flashAndThen:^{
-            CGRect bounds = self.currentScreen.view.bounds;
             
-            // Get the current image of the current drawing
-            UIGraphicsBeginImageContext(bounds.size);
+            // Ask the current screen to render itself as a PNG image
+            NSString *filename = [NSString stringWithFormat:@"image_%ld.png", (long)weakSelf.currentIndex];
+            [weakSelf.currentScreen saveTempSnapshotWithFilename:filename];
+            [weakSelf.filenamesForPDF addObject:filename];
             
-            [self.currentScreen.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-            UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
-            NSData *data = UIImagePNGRepresentation(viewImage);
-            NSString *filename = [NSString stringWithFormat:@"image_%ld.png", (long)self.currentIndex];
-            [self.filenamesForPDF addObject:filename];
-            NSString *path = [[self tempDirectory] stringByAppendingPathComponent:filename];
-            [data writeToFile:path
-                   atomically:NO];
-            UIGraphicsEndImageContext();
-            
-            if (self.currentScreen.enableSourceCodeButton)
+            if (weakSelf.currentScreen.enableSourceCodeButton)
             {
                 // The current screen has source code to show. Let's
                 // add that to the PDF too!
-                NSString *className = NSStringFromClass([self.currentScreen class]);
+                NSString *className = NSStringFromClass([weakSelf.currentScreen class]);
                 NSString *htmlFilename = [NSString stringWithFormat:@"html/%@.m", className];
-                [self.filenamesForPDF addObject:htmlFilename];
+                [weakSelf.filenamesForPDF addObject:htmlFilename];
             }
             
-            BOOL moreScreensLeft = self.currentIndex < ([self.definitions count] - 1);
-            if (moreScreensLeft && self.continuePDFGeneration)
+            BOOL moreScreensLeft = weakSelf.currentIndex < ([weakSelf.definitions count] - 1);
+            if (moreScreensLeft && weakSelf.continuePDFGeneration)
             {
-                self.currentIndex += 1;
-                [self showCurrentScreen];
-                [self resizeCurrentScreen];
-                [self enableButtons];
-                [self performSelector:@selector(takeSnapshotOfCurrentScreen)
+                weakSelf.currentIndex += 1;
+                [weakSelf showCurrentScreen];
+                [weakSelf resizeCurrentScreen];
+                [weakSelf enableButtons];
+                [weakSelf performSelector:@selector(takeSnapshotOfCurrentScreen)
                            withObject:nil
-                           afterDelay:self.currentScreen.delayForSnapshot];
+                           afterDelay:weakSelf.currentScreen.delayForSnapshot];
             }
             else
             {
-                [self mergeSnapshotsInPDF];
+                [weakSelf mergeSnapshotsInPDF];
             }
         }];
     }
@@ -476,79 +469,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     // Prepare a PDF context
     CGRect bounds = self.currentScreen.view.bounds;
     NSString *path = [self PDFFilePath];
-    UIGraphicsBeginPDFContextToFile(path, CGRectZero, nil);
     
-    for (NSString *filename in self.filenamesForPDF)
-    {
-        if ([filename hasSuffix:@".png"])
-        {
-            // It's an image!
-            NSString *path = [[self tempDirectory] stringByAppendingPathComponent:filename];
-            
-            UIImage *image = [UIImage imageWithContentsOfFile:path];
-            UIGraphicsBeginPDFPageWithInfo(bounds, nil);
-            
-            CGContextRef currentContext = UIGraphicsGetCurrentContext();
-            
-            // PDF contexts have an inverted coordinate system,
-            // which means we have to make a transformation before drawing
-            CGContextTranslateCTM(currentContext, 0, bounds.size.height);
-            CGContextScaleCTM(currentContext, 1.0, -1.0);
-            
-            // Draw the image in the PDF file
-            CGContextDrawImage(currentContext, bounds, image.CGImage);
-        }
-        else if ([filename hasSuffix:@".m"])
-        {
-            // It's source code in HTML format!
-            NSString *path = [[NSBundle mainBundle] pathForResource:filename
-                                                             ofType:@"html"];
-            NSMutableAttributedString *string = nil;
-            
-            if (path)
-            {
-                NSURL *url = [NSURL fileURLWithPath:path];
-                
-                // Now we're going to load that HTML on a mutable string
-                NSDictionary *options = @{
-                                          NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType
-                                          };
-                NSError *error = nil;
-                string = [[NSMutableAttributedString alloc] initWithFileURL:url
-                                                                    options:options
-                                                         documentAttributes:nil
-                                                                      error:&error];
-                
-                if (error == nil)
-                {
-                    // We have an attributed string; let's draw it into the PDF
-                    // adding as many pages as required
-                    CFAttributedStringRef currentText = (__bridge CFAttributedStringRef)string;
-                    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString(currentText);
-                    CFRange currentRange = CFRangeMake(0, 0);
-                    NSInteger currentPage = 0;
-                    BOOL done = NO;
-                    do
-                    {
-                        UIGraphicsBeginPDFPageWithInfo(bounds, nil);
-                        currentPage++;
-                        
-                        currentRange = [self renderPage:currentPage
-                                          withTextRange:currentRange
-                                         andFramesetter:framesetter];
-                        if (currentRange.location == CFAttributedStringGetLength(currentText))
-                        {
-                            done = YES;
-                        }
-                    }
-                    while (!done);
-                    CFRelease(framesetter);
-                }
-            }
-        }
-    }
-    
-    UIGraphicsEndPDFContext();
+    TRIPDFHelper *helper = [[TRIPDFHelper alloc] initWithFiles:self.filenamesForPDF
+                                                        bounds:bounds
+                                                   orientation:self.interfaceOrientation];
+    [helper generatePDFWithPath:path];
     
     self.continuePDFGeneration = NO;
     [self.generatingPDFAlert dismissWithClickedButtonIndex:0
@@ -556,37 +481,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     
     [self enableButtons];
     [self sharePDF];
-}
-
-- (CFRange)renderPage:(NSInteger)pageNum
-        withTextRange:(CFRange)currentRange
-       andFramesetter:(CTFramesetterRef)framesetter
-{
-    CGContextRef currentContext = UIGraphicsGetCurrentContext();
-    CGContextSetTextMatrix(currentContext, CGAffineTransformIdentity);
-    CGRect bounds = CGRectInset(self.currentScreen.view.bounds, 50, 50);
-    if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation))
-    {
-        CGContextTranslateCTM(currentContext, 0, 730);
-    }
-    else
-    {
-        CGContextTranslateCTM(currentContext, 0, 980);
-    }
-    CGContextScaleCTM(currentContext, 1.0, -1.0);
-    
-    CGMutablePathRef framePath = CGPathCreateMutable();
-    CGPathAddRect(framePath, NULL, bounds);
-    CTFrameRef frameRef = CTFramesetterCreateFrame(framesetter, currentRange, framePath, NULL);
-    CGPathRelease(framePath);
-    
-    CTFrameDraw(frameRef, currentContext);
-    currentRange = CTFrameGetVisibleStringRange(frameRef);
-    currentRange.location += currentRange.length;
-    currentRange.length = 0;
-    CFRelease(frameRef);
-    
-    return currentRange;
 }
 
 - (void)sharePDF
@@ -623,11 +517,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [self.sharePopover presentPopoverFromBarButtonItem:self.shareButton
                               permittedArrowDirections:UIPopoverArrowDirectionAny
                                               animated:YES];
-}
-
-- (NSString *)tempDirectory
-{
-    return NSTemporaryDirectory();
 }
 
 - (NSString *)documentsDirectory

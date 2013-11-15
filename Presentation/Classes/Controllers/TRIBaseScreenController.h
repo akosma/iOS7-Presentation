@@ -24,5 +24,6 @@ typedef void(^TRIBaseScreenControllerFlashCallback)(void);
 - (instancetype)initWithDefinition:(NSDictionary *)definition;
 
 - (void)flashAndThen:(TRIBaseScreenControllerFlashCallback)callback;
+- (void)saveTempSnapshotWithFilename:(NSString *)filename;
 
 @end

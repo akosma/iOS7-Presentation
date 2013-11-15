@@ -52,6 +52,22 @@
                      }];
 }
 
+- (void)saveTempSnapshotWithFilename:(NSString *)filename
+{
+    // Get the current image of the current drawing
+    CGRect bounds = self.view.bounds;
+    UIGraphicsBeginImageContext(bounds.size);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    // Save the file on the temporary folder
+    NSData *data = UIImagePNGRepresentation(viewImage);
+    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
+    [data writeToFile:path
+           atomically:NO];
+}
+
 #pragma mark - Lazy getter
 
 - (UIView *)snapshotFlashView

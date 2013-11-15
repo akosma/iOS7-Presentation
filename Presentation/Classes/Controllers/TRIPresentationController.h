@@ -7,7 +7,6 @@
 //
 
 @import UIKit;
-@import CoreText;
 
 
 @interface TRIPresentationController : UIViewController

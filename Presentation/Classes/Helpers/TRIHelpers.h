@@ -14,3 +14,4 @@
 #import "NSObject+TRISourceCode.h"
 #import "TRIOpenInAppActivity.h"
 #import "TRIOpenInAppActivityDelegate.h"
+#import "TRIPDFHelper.h"

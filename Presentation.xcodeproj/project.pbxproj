@@ -45,6 +45,7 @@
 		3AC83A8A1833E4CA0089524B /* TRISpeechScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A881833E4CA0089524B /* TRISpeechScreen.xib */; };
 		3AC83A8E183418270089524B /* TRIGeodesicScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC83A8C183418270089524B /* TRIGeodesicScreen.m */; };
 		3AC83A8F183418270089524B /* TRIGeodesicScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A8D183418270089524B /* TRIGeodesicScreen.xib */; };
+		3AC9837418361EFC004E3A94 /* TRIPDFHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9837318361EFC004E3A94 /* TRIPDFHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,8 @@
 		3AC83A8C183418270089524B /* TRIGeodesicScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIGeodesicScreen.m; sourceTree = "<group>"; };
 		3AC83A8D183418270089524B /* TRIGeodesicScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIGeodesicScreen.xib; sourceTree = "<group>"; };
 		3AC983711835FC48004E3A94 /* TRIBroadcasterDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIBroadcasterDelegate.h; sourceTree = "<group>"; };
+		3AC9837218361EFC004E3A94 /* TRIPDFHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIPDFHelper.h; sourceTree = "<group>"; };
+		3AC9837318361EFC004E3A94 /* TRIPDFHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIPDFHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +289,8 @@
 				3A98A42318352079008C83AC /* TRIOpenInAppActivity.m */,
 				3A98A425183520CE008C83AC /* TRIOpenInAppActivityDelegate.h */,
 				3AC983711835FC48004E3A94 /* TRIBroadcasterDelegate.h */,
+				3AC9837218361EFC004E3A94 /* TRIPDFHelper.h */,
+				3AC9837318361EFC004E3A94 /* TRIPDFHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				3A86E47B1833B7D900C1AC2C /* NSObject+TRISourceCode.m in Sources */,
 				3AC83A891833E4CA0089524B /* TRISpeechScreen.m in Sources */,
 				3A98A43A1835706F008C83AC /* TRIRemoteViewController.m in Sources */,
+				3AC9837418361EFC004E3A94 /* TRIPDFHelper.m in Sources */,
 				3A86E4681833B51600C1AC2C /* TRIAppDelegate.m in Sources */,
 				3A98A43218356D15008C83AC /* TRIProtocol.m in Sources */,
 				3AC83A8E183418270089524B /* TRIGeodesicScreen.m in Sources */,

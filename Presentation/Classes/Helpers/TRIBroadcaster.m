@@ -130,9 +130,13 @@ didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
 
 - (void)startAdvertising
 {
+#if TARGET_IPHONE_SIMULATOR
+    // Do nothing… the line below crashes in the simulator.
+#else
     [self.peripheralManager startAdvertising:@{
          CBAdvertisementDataServiceUUIDsKey : @[self.serviceID]
      }];
+#endif
 }
 
 - (void)stopAdvertising
