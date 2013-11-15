@@ -330,7 +330,6 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     {
         [self showMenu:nil];
     }
-    [self.broadcaster sendText:[NSString stringWithFormat:@"echo: %@", message]];
 }
 
 #pragma mark - TRIBroadcasterDelegate methods
@@ -342,11 +341,6 @@ static NSString *PDF_FILENAME = @"slides.pdf";
                                                               format:NSPropertyListXMLFormat_v1_0
                                                     errorDescription:nil];
     [self.broadcaster sendData:data];
-}
-
-- (void)broadcasterIsNotReady:(TRIBroadcaster *)broadcaster
-{
-    [self.broadcaster stopAdvertising];
 }
 
 #pragma mark - Private methods
