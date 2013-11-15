@@ -1,5 +1,5 @@
 //
-//  TRINavigationController.h
+//  TRIPresentationController.h
 //  Presentation
 //
 //  Created by Adrian on 13/11/13.
@@ -10,6 +10,6 @@
 @import CoreText;
 
 
-@interface TRINavigationController : UIViewController
+@interface TRIPresentationController : UIViewController
 
 @end

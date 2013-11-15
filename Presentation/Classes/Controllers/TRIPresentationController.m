@@ -1,12 +1,12 @@
 //
-//  TRINavigationController.m
+//  TRIPresentationController.m
 //  Presentation
 //
 //  Created by Adrian on 13/11/13.
 //  Copyright (c) 2013 Trifork GmbH. All rights reserved.
 //
 
-#import "TRINavigationController.h"
+#import "TRIPresentationController.h"
 #import "TRIBaseScreenController.h"
 #import "TRISourceCodeController.h"
 #import "TRIHelpers.h"
@@ -17,7 +17,7 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 
 
 
-@interface TRINavigationController () <UITableViewDataSource,
+@interface TRIPresentationController () <UITableViewDataSource,
                                        UITableViewDelegate,
                                        UIAlertViewDelegate,
                                        TRIReceiverDelegate,
@@ -49,7 +49,7 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 
 
 
-@implementation TRINavigationController
+@implementation TRIPresentationController
 
 - (void)viewDidLoad
 {

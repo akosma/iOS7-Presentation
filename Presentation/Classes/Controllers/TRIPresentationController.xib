@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRINavigationController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRIPresentationController">
             <connections>
                 <outlet property="generatePDFButton" destination="TPN-Sy-pxm" id="tNH-pQ-wjl"/>
                 <outlet property="holderView" destination="SAz-0i-IzC" id="Vs7-sa-fcM"/>
