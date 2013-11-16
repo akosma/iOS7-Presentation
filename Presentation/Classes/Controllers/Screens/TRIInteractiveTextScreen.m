@@ -5,6 +5,12 @@
 //  Created by Adrian on 16/11/13.
 //  Copyright (c) 2013 Trifork GmbH. All rights reserved.
 //
+// This code is adapted from
+// https://github.com/objcio/issue-5-textkit
+//
+// The custom path is courtesy of
+// https://github.com/Kjuly/UIBezierPath-Symbol
+//
 
 #import "TRIInteractiveTextScreen.h"
 #import "TRIViews.h"
@@ -18,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
-
 
 
 @implementation TRIInteractiveTextScreen
@@ -62,17 +67,15 @@
 
 - (void)updateExclusionPaths
 {
+    // Since text container does not know about the inset,
+    // we must shift the frame to container coordinates
     CGRect frame = [self.textView convertRect:self.crossView.bounds
                                      fromView:self.crossView];
     
-    // Since text container does not know about the inset,
-    // we must shift the frame to container coordinates
     frame.origin.x -= self.textView.textContainerInset.left;
     frame.origin.y -= self.textView.textContainerInset.top;
     
-    // Simply set the exclusion path
-    // The custom path is courtesy of
-    // https://github.com/Kjuly/UIBezierPath-Symbol
+    // Set the exclusion path.
     UIBezierPath *path = [UIBezierPath customBezierPathOfPlusSymbolWithRect:frame
                                                                       scale:1.0];
     self.textView.textContainer.exclusionPaths = @[path];
