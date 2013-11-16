@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *urlLabel;
+@property (weak, nonatomic) IBOutlet UIView *holderView;
+@property (strong, nonatomic) XCDYouTubeVideoPlayerViewController *player;
 
 @end
 
@@ -22,8 +24,6 @@
 {
     [super viewDidLoad];
 
-    self.delayForSnapshot = 1.0;
-    
     NSString *name = self.definition[@"placeholder"];
     UIImage *image = [UIImage imageNamed:name];
     self.imageView.image = image;
@@ -46,9 +46,9 @@
 - (void)play
 {
     NSString *videoId = self.definition[@"contents"];
-    XCDYouTubeVideoPlayerViewController *player = nil;
-    player = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:videoId];
-    [self presentMoviePlayerViewControllerAnimated:player];
+    self.player = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:videoId];
+    self.player.view.frame = self.holderView.bounds;
+    [self.holderView addSubview:self.player.view];
 }
 
 @end

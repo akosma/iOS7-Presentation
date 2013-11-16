@@ -207,8 +207,6 @@ MKDistanceFormatterUnitsMetric</string>
 		<dict>
 			<key>title</key>
 			<string>Minority Report</string>
-			<key>delay</key>
-			<real>10</real>
 			<key>contents</key>
 			<string>ITjsb22-EwQ</string>
 			<key>xtype</key>

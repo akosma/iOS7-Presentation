@@ -107,19 +107,22 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     [self resizeCurrentScreen];
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-    [self resizeCurrentScreen];
-    self.holderView.hidden = NO;
-}
-
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
                                 duration:(NSTimeInterval)duration
 {
     [super willRotateToInterfaceOrientation:toInterfaceOrientation
                                    duration:duration];
+    [self.currentScreen willRotateToInterfaceOrientation:toInterfaceOrientation
+                                                duration:duration];
     self.holderView.hidden = YES;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    [self.currentScreen didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    [self resizeCurrentScreen];
+    self.holderView.hidden = NO;
 }
 
 #pragma mark - KVO
