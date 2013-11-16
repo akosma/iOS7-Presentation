@@ -16,3 +16,4 @@
 #import "TRIOpenInAppActivityDelegate.h"
 #import "TRIPDFHelper.h"
 #import "UIBezierPath+Symbol.h"
+#import "XCDYouTubeVideoPlayerViewController.h"
