@@ -21,6 +21,7 @@
 		3A86E47F1833B97200C1AC2C /* html in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E47E1833B97200C1AC2C /* html */; };
 		3A86E4841833BAFA00C1AC2C /* TRIPhotoScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E4821833BAFA00C1AC2C /* TRIPhotoScreen.m */; };
 		3A86E4851833BAFA00C1AC2C /* TRIPhotoScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E4831833BAFA00C1AC2C /* TRIPhotoScreen.xib */; };
+		3A8D29351837FC330019C684 /* forbes_ibeacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D29341837FC330019C684 /* forbes_ibeacon.png */; };
 		3A98A4091834A7E7008C83AC /* TRITitleAndTextScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A4071834A7E7008C83AC /* TRITitleAndTextScreen.m */; };
 		3A98A40A1834A7E7008C83AC /* TRITitleAndTextScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A98A4081834A7E7008C83AC /* TRITitleAndTextScreen.xib */; };
 		3A98A4101834E077008C83AC /* books.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A98A40F1834E077008C83AC /* books.png */; };
@@ -81,6 +82,7 @@
 		3A86E4811833BAFA00C1AC2C /* TRIPhotoScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIPhotoScreen.h; sourceTree = "<group>"; };
 		3A86E4821833BAFA00C1AC2C /* TRIPhotoScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIPhotoScreen.m; sourceTree = "<group>"; };
 		3A86E4831833BAFA00C1AC2C /* TRIPhotoScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIPhotoScreen.xib; sourceTree = "<group>"; };
+		3A8D29341837FC330019C684 /* forbes_ibeacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forbes_ibeacon.png; sourceTree = "<group>"; };
 		3A98A4061834A7E7008C83AC /* TRITitleAndTextScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRITitleAndTextScreen.h; sourceTree = "<group>"; };
 		3A98A4071834A7E7008C83AC /* TRITitleAndTextScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRITitleAndTextScreen.m; sourceTree = "<group>"; };
 		3A98A4081834A7E7008C83AC /* TRITitleAndTextScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRITitleAndTextScreen.xib; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 		3A86E4731833B6DD00C1AC2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3A8D29341837FC330019C684 /* forbes_ibeacon.png */,
 				3AC9837B18365F2B004E3A94 /* trifork_logo.png */,
 				3AC9837918365D71004E3A94 /* IOS_7_Logo.png */,
 				3A98A42618352303008C83AC /* openinapp.png */,
@@ -425,6 +428,7 @@
 				3AC83A8A1833E4CA0089524B /* TRISpeechScreen.xib in Resources */,
 				3AB9BA211837DA2B00B8161D /* TRIBeaconScreen.xib in Resources */,
 				3A98A42118350BD1008C83AC /* TRIEmptyScreen.xib in Resources */,
+				3A8D29351837FC330019C684 /* forbes_ibeacon.png in Resources */,
 				3A86E4771833B6FA00C1AC2C /* ScreenDefinitions.plist in Resources */,
 				3A98A42918352303008C83AC /* openinapp@2x.png in Resources */,
 				3A98A4101834E077008C83AC /* books.png in Resources */,

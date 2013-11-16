@@ -196,6 +196,16 @@ MKDistanceFormatterUnitsMetric</string>
 		</dict>
 		<dict>
 			<key>title</key>
+			<string>Forbes about iBeacon</string>
+			<key>contents</key>
+			<string>forbes_ibeacon</string>
+			<key>xtype</key>
+			<string>photo</string>
+			<key>contentMode</key>
+			<string>4</string>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>iBeacon Demo</string>
 			<key>xtype</key>
 			<string>ibeacon</string>
