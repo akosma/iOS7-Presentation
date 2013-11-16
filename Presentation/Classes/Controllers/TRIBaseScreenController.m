@@ -29,9 +29,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = (self.definition[@"title"]) ? self.definition[@"title"] : @"";
-    self.enableSourceCodeButton = [self.definition[@"demo"] boolValue];
-    self.delayForSnapshot = (self.definition[@"delay"]) ? [self.definition[@"delay"] floatValue] : 0.75;
+    NSString *title = self.definition[@"title"];
+    self.title = (title) ? title : @"";
+
+    NSNumber *enableDemo = self.definition[@"demo"];
+    self.enableSourceCodeButton = [enableDemo boolValue];
+
+    NSNumber *delay = self.definition[@"delay"];
+    self.delayForSnapshot = (delay) ? [delay floatValue] : 0.75;
 }
 
 #pragma mark - Public methods
