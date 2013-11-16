@@ -34,6 +34,7 @@
     
     // Enable hyphenation
     self.textView.layoutManager.hyphenationFactor = 1.0;
+    [self updateExclusionPaths];
 }
 
 - (void)viewDidAppear:(BOOL)animated
