@@ -188,6 +188,28 @@ MKDistanceFormatterUnitsMetric</string>
 		</dict>
 		<dict>
 			<key>title</key>
+			<string>iBeacon</string>
+			<key>contents</key>
+			<string>Marketing people rejoice</string>
+			<key>xtype</key>
+			<string>title</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>iBeacon Demo</string>
+			<key>xtype</key>
+			<string>ibeacon</string>
+			<key>demo</key>
+			<true/>
+			<key>delay</key>
+			<integer>60</integer>
+		</dict>
+		<dict>
+			<key>xtype</key>
+			<string>empty</string>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>Questions</string>
 			<key>contents</key>
 			<string>Questions?</string>

@@ -87,6 +87,7 @@ static NSString *PDF_FILENAME = @"slides.pdf";
                     @"geodesic": @"TRIGeodesicScreen",
                     @"download": @"TRIURLSessionScreen",
                     @"empty":    @"TRIEmptyScreen",
+                    @"ibeacon":  @"TRIBeaconScreen",
                     };
     
     [self addObserver:self
