@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRIYouTubeScreen">
             <connections>
                 <outlet property="imageView" destination="eDT-1Z-1PA" id="5hG-Te-GX0"/>
+                <outlet property="urlLabel" destination="mZ9-Lw-T4Q" id="aFn-Kr-yMp"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -15,21 +16,36 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-1Z-1PA">
-                    <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-1Z-1PA">
+                    <rect key="frame" x="9" y="272" width="750" height="460"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="460" id="vvA-3g-OLr"/>
+                        <constraint firstAttribute="width" constant="750" id="xcK-It-Ie5"/>
+                    </constraints>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="gp4-bE-bVQ" appends="YES" id="Qcy-gq-MfY"/>
                     </connections>
                 </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://www.youtube.com/watch?v=xxxxxxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ9-Lw-T4Q">
+                    <rect key="frame" x="9" y="740" width="750" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="jJQ-Zz-u8c"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="eDT-1Z-1PA" secondAttribute="bottom" id="FsV-hP-Roe"/>
-                <constraint firstAttribute="trailing" secondItem="eDT-1Z-1PA" secondAttribute="trailing" id="IEC-s3-CjC"/>
-                <constraint firstItem="eDT-1Z-1PA" firstAttribute="top" secondItem="2" secondAttribute="top" id="KJE-K9-ejz"/>
-                <constraint firstItem="eDT-1Z-1PA" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="piy-vE-Mdu"/>
+                <constraint firstItem="mZ9-Lw-T4Q" firstAttribute="trailing" secondItem="eDT-1Z-1PA" secondAttribute="trailing" id="HVJ-7b-VzO"/>
+                <constraint firstItem="mZ9-Lw-T4Q" firstAttribute="top" secondItem="eDT-1Z-1PA" secondAttribute="bottom" constant="8" symbolic="YES" id="QIk-N9-GqY"/>
+                <constraint firstAttribute="centerX" secondItem="eDT-1Z-1PA" secondAttribute="centerX" id="dU3-wD-Ei1"/>
+                <constraint firstAttribute="centerY" secondItem="eDT-1Z-1PA" secondAttribute="centerY" id="uPi-ON-gcG"/>
+                <constraint firstItem="mZ9-Lw-T4Q" firstAttribute="leading" secondItem="eDT-1Z-1PA" secondAttribute="leading" id="y3u-Nc-669"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
         </view>

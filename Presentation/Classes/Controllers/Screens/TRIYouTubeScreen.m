@@ -12,6 +12,7 @@
 @interface TRIYouTubeScreen ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *urlLabel;
 
 @end
 
@@ -26,12 +27,10 @@
     NSString *name = self.definition[@"placeholder"];
     UIImage *image = [UIImage imageNamed:name];
     self.imageView.image = image;
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self play];
+    
+    NSString *videoId = self.definition[@"contents"];
+    NSString *url = [NSString stringWithFormat:@"http://www.youtube.com/watch?v=%@", videoId];
+    self.urlLabel.text = url;
 }
 
 #pragma mark - UIGestureRecognizer methods
