@@ -88,6 +88,7 @@ static NSString *PDF_FILENAME = @"slides.pdf";
                     @"download": @"TRIURLSessionScreen",
                     @"empty":    @"TRIEmptyScreen",
                     @"ibeacon":  @"TRIBeaconScreen",
+                    @"movetxt":  @"TRIInteractiveTextScreen",
                     };
     
     [self addObserver:self

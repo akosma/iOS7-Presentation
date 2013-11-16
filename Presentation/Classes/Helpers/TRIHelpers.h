@@ -15,3 +15,4 @@
 #import "TRIOpenInAppActivity.h"
 #import "TRIOpenInAppActivityDelegate.h"
 #import "TRIPDFHelper.h"
+#import "UIBezierPath+Symbol.h"

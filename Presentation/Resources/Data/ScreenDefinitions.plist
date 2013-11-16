@@ -210,6 +210,26 @@ MKDistanceFormatterUnitsMetric</string>
 		</dict>
 		<dict>
 			<key>title</key>
+			<string>TextKit</string>
+			<key>contents</key>
+			<string>Text processing for the masses</string>
+			<key>xtype</key>
+			<string>title</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>TextKit Demo</string>
+			<key>xtype</key>
+			<string>movetxt</string>
+			<key>demo</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>xtype</key>
+			<string>empty</string>
+		</dict>
+		<dict>
+			<key>title</key>
 			<string>Questions</string>
 			<key>contents</key>
 			<string>Questions?</string>

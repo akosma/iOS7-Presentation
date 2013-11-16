@@ -50,12 +50,12 @@
 
 - (NSString *)activityType
 {
-	return NSStringFromClass([self class]);
+    return NSStringFromClass([self class]);
 }
 
 - (NSString *)activityTitle
 {
-	return NSLocalizedString(@"Open in ...", @"Open in ...");
+    return NSLocalizedString(@"Open in ...", @"Open in ...");
 }
 
 - (UIImage *)activityImage
@@ -69,28 +69,28 @@
     
     for (id activityItem in activityItems)
     {
-		if ([activityItem isKindOfClass:[NSURL class]]
+        if ([activityItem isKindOfClass:[NSURL class]]
             && [(NSURL *)activityItem isFileURL])
         {
-			count++;
-		}
-	}
-	
-	return (count >= 1);
+            count++;
+        }
+    }
+    
+    return (count >= 1);
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems
 {
     NSMutableArray *fileURLs = [NSMutableArray array];
     
-	for (id activityItem in activityItems)
+    for (id activityItem in activityItems)
     {
-		if ([activityItem isKindOfClass:[NSURL class]]
+        if ([activityItem isKindOfClass:[NSURL class]]
             && [(NSURL *)activityItem isFileURL])
         {
             [fileURLs addObject:activityItem];
-		}
-	}
+        }
+    }
     
     self.fileURLs = [fileURLs copy];
 }
@@ -256,7 +256,7 @@
     }
     else
     {
-	    [self activityDidFinish:NO];
+        [self activityDidFinish:NO];
     }
 }
 

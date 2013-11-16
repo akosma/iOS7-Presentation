@@ -119,10 +119,10 @@ static NSString *REUSE_ID = @"REUSE_ID";
 - (MKAnnotationView *)mapView:(MKMapView *)mapView
             viewForAnnotation:(id <MKAnnotation>)annotation
 {
-	if (annotation == mapView.userLocation)
+    if (annotation == mapView.userLocation)
     {
-		return nil;
-	}
+        return nil;
+    }
     
     MKAnnotationView *annotationView = nil;
     annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:REUSE_ID];
@@ -135,7 +135,7 @@ static NSString *REUSE_ID = @"REUSE_ID";
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     annotationView.rightCalloutAccessoryView = rightButton;
 
-	return annotationView;
+    return annotationView;
 }
 
 #pragma mark - Private methods

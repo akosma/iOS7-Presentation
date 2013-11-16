@@ -38,6 +38,10 @@
 		3A98A43B1835706F008C83AC /* TRIRemoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A98A4391835706F008C83AC /* TRIRemoteViewController.xib */; };
 		3AB9BA201837DA2B00B8161D /* TRIBeaconScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9BA1E1837DA2B00B8161D /* TRIBeaconScreen.m */; };
 		3AB9BA211837DA2B00B8161D /* TRIBeaconScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9BA1F1837DA2B00B8161D /* TRIBeaconScreen.xib */; };
+		3AB9BA251837E09700B8161D /* TRIInteractiveTextScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9BA231837E09700B8161D /* TRIInteractiveTextScreen.m */; };
+		3AB9BA261837E09700B8161D /* TRIInteractiveTextScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9BA241837E09700B8161D /* TRIInteractiveTextScreen.xib */; };
+		3AB9BA291837E81700B8161D /* UIBezierPath+Symbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9BA281837E81700B8161D /* UIBezierPath+Symbol.m */; };
+		3AB9BA2D1837E85400B8161D /* TRICrossView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9BA2C1837E85400B8161D /* TRICrossView.m */; };
 		3AC83A7D1833BCC80089524B /* TRISourceCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */; };
 		3AC83A7E1833BCC80089524B /* TRISourceCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */; };
 		3AC83A801833C1330089524B /* TRIPresentationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A7F1833C1330089524B /* TRIPresentationController.xib */; };
@@ -106,6 +110,14 @@
 		3AB9BA1D1837DA2B00B8161D /* TRIBeaconScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIBeaconScreen.h; sourceTree = "<group>"; };
 		3AB9BA1E1837DA2B00B8161D /* TRIBeaconScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIBeaconScreen.m; sourceTree = "<group>"; };
 		3AB9BA1F1837DA2B00B8161D /* TRIBeaconScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIBeaconScreen.xib; sourceTree = "<group>"; };
+		3AB9BA221837E09700B8161D /* TRIInteractiveTextScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIInteractiveTextScreen.h; sourceTree = "<group>"; };
+		3AB9BA231837E09700B8161D /* TRIInteractiveTextScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIInteractiveTextScreen.m; sourceTree = "<group>"; };
+		3AB9BA241837E09700B8161D /* TRIInteractiveTextScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIInteractiveTextScreen.xib; sourceTree = "<group>"; };
+		3AB9BA271837E81700B8161D /* UIBezierPath+Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Symbol.h"; sourceTree = "<group>"; };
+		3AB9BA281837E81700B8161D /* UIBezierPath+Symbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Symbol.m"; sourceTree = "<group>"; };
+		3AB9BA2B1837E85400B8161D /* TRICrossView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRICrossView.h; sourceTree = "<group>"; };
+		3AB9BA2C1837E85400B8161D /* TRICrossView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRICrossView.m; sourceTree = "<group>"; };
+		3AB9BA2E1837E8BD00B8161D /* TRIViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIViews.h; sourceTree = "<group>"; };
 		3AC83A7A1833BCC80089524B /* TRISourceCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRISourceCodeController.h; sourceTree = "<group>"; };
 		3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRISourceCodeController.m; sourceTree = "<group>"; };
 		3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRISourceCodeController.xib; sourceTree = "<group>"; };
@@ -198,6 +210,7 @@
 			children = (
 				3A86E4631833B51600C1AC2C /* AppDelegate */,
 				3A86E4661833B51600C1AC2C /* Controllers */,
+				3AB9BA2A1837E84700B8161D /* Views */,
 				3A98A43618357048008C83AC /* iPhone */,
 				3A86E4781833B79100C1AC2C /* Helpers */,
 			);
@@ -259,6 +272,9 @@
 				3AB9BA1D1837DA2B00B8161D /* TRIBeaconScreen.h */,
 				3AB9BA1E1837DA2B00B8161D /* TRIBeaconScreen.m */,
 				3AB9BA1F1837DA2B00B8161D /* TRIBeaconScreen.xib */,
+				3AB9BA221837E09700B8161D /* TRIInteractiveTextScreen.h */,
+				3AB9BA231837E09700B8161D /* TRIInteractiveTextScreen.m */,
+				3AB9BA241837E09700B8161D /* TRIInteractiveTextScreen.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -305,6 +321,8 @@
 				3A98A42E18356D15008C83AC /* TRIReceiver.h */,
 				3A98A42F18356D15008C83AC /* TRIReceiver.m */,
 				3A98A43018356D15008C83AC /* TRIReceiverDelegate.h */,
+				3AB9BA271837E81700B8161D /* UIBezierPath+Symbol.h */,
+				3AB9BA281837E81700B8161D /* UIBezierPath+Symbol.m */,
 				3A86E4791833B7D900C1AC2C /* NSObject+TRISourceCode.h */,
 				3A86E47A1833B7D900C1AC2C /* NSObject+TRISourceCode.m */,
 				3A98A42218352079008C83AC /* TRIOpenInAppActivity.h */,
@@ -324,6 +342,16 @@
 				3A98A4391835706F008C83AC /* TRIRemoteViewController.xib */,
 			);
 			path = iPhone;
+			sourceTree = "<group>";
+		};
+		3AB9BA2A1837E84700B8161D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AB9BA2E1837E8BD00B8161D /* TRIViews.h */,
+				3AB9BA2B1837E85400B8161D /* TRICrossView.h */,
+				3AB9BA2C1837E85400B8161D /* TRICrossView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AC83A801833C1330089524B /* TRIPresentationController.xib in Resources */,
+				3AB9BA261837E09700B8161D /* TRIInteractiveTextScreen.xib in Resources */,
 				3A86E4751833B6DD00C1AC2C /* Images.xcassets in Resources */,
 				3AC9837C18365F2B004E3A94 /* trifork_logo.png in Resources */,
 				3A98A41C1834F599008C83AC /* TRIURLSessionScreen.xib in Resources */,
@@ -441,9 +470,12 @@
 				3A86E46B1833B53C00C1AC2C /* TRIBaseScreenController.m in Sources */,
 				3A98A42418352079008C83AC /* TRIOpenInAppActivity.m in Sources */,
 				3AC9837718362C0A004E3A94 /* TRIMenuController.m in Sources */,
+				3AB9BA291837E81700B8161D /* UIBezierPath+Symbol.m in Sources */,
 				3A86E46E1833B55B00C1AC2C /* TRIPresentationController.m in Sources */,
 				3A98A43118356D15008C83AC /* TRIBroadcaster.m in Sources */,
 				3AC83A7D1833BCC80089524B /* TRISourceCodeController.m in Sources */,
+				3AB9BA251837E09700B8161D /* TRIInteractiveTextScreen.m in Sources */,
+				3AB9BA2D1837E85400B8161D /* TRICrossView.m in Sources */,
 				3AC83A841833C9450089524B /* TRITextScreen.m in Sources */,
 				3A86E43E1833B4A500C1AC2C /* main.m in Sources */,
 			);

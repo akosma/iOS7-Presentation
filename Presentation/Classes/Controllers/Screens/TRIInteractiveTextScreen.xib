@@ -1,0 +1,1944 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRIInteractiveTextScreen">
+            <connections>
+                <outlet property="crossView" destination="fkm-rj-idG" id="KXR-kQ-azJ"/>
+                <outlet property="textView" destination="rmh-Fe-CLw" id="BIJ-Nn-ws2"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rmh-Fe-CLw">
+                    <rect key="frame" x="0.0" y="20" width="768" height="984"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Switzerland">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Bold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" (">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="German">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/German_language"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=": ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Schweiz">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[note 3]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[ˈʃvaɪts]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Help:IPA_for_German"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="; ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="French">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/French_language"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=": ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Suisse">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[sɥis]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Help:IPA_for_French"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="; ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Italian">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Italian_language"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=": ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Svizzera">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[ˈzvittsera]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Help:IPA_for_Italian"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="; ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Romansh">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Romansh_language"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=": ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Svizra">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[ˈʒviːtsrɐ]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Help:IPA"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" or ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[ˈʒviːtsʁːɐ]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Help:IPA"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="), officially the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Swiss Confederation">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Bold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" (">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Latin">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Latin_language"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=": ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Confoederatio Helvetica">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", hence its abbreviation ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="CH">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Data_codes_for_Switzerland#Country"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="), is a ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="federal">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Federal"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="parliamentary republic">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Parliamentary_republic"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" consisting of ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="26 cantons">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Cantons_of_Switzerland"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", with ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Bern">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Bern"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" as the seat of the federal authorities. The country is situated in ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Western">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Western_Europe"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Central Europe">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Central_Europe"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=",">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[note 4]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" where it is bordered by ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Germany">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Germany"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" to the north, ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="France">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/France"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" to the west, ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Italy">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Italy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" to the south, and ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Austria">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Austria"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Liechtenstein">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Liechtenstein"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content"> to the east.
+Switzerland is a </string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="landlocked country">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Landlocked_country"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" geographically divided between the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Alps">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Swiss_Alps"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Swiss Plateau">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Swiss_Plateau"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Jura">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Jura_Mountains"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", spanning an area of 41,285 km">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="2">
+                            <attributes>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <integer key="NSSuperScript" value="1"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content"> (15,940 sq mi). While the Alps occupy the greater part of the territory, the Swiss population of approximately 8 million people is concentrated mostly on the Plateau, where the largest cities are to be found. Among them are the two </string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="global cities">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Global_city"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and economic centres – ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Zürich">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Z%C3%BCrich"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Geneva">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Geneva"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">.
+The Swiss Confederation has a long history of </string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="armed neutrality">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Armed_Neutrality"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="—it has not been in a state of war internationally since 1815—and did not join the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="United Nations">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/United_Nations"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content"> until 2002. It pursues, however, an active foreign policy and is frequently involved in peace-building processes around the world.</string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[8]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" Switzerland is also the birthplace of the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Red Cross">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/International_Committee_of_the_Red_Cross"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and home to a large number of international organizations, including the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="second largest UN office">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/United_Nations_Office_at_Geneva"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=". On the European level, it is a founding member of the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="European Free Trade Association">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/European_Free_Trade_Association"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and is part of the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Schengen Area">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Schengen_Area"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" – although it is notably not a member of the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="European Union">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/European_Union"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", nor the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="European Economic Area">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/European_Economic_Area"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">.
+Switzerland is one of the </string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="richest countries">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/List_of_countries_by_GDP_(PPP)_per_capita"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" in the world by ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="per capita">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Per_capita"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="gross domestic product">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Gross_domestic_product"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", and has the highest ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="wealth">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Wealth"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" per adult (financial and non-financial assets) of any country in the world.">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[9][10]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" Zürich and Geneva have respectively been ranked as the cities with the second and eighth highest quality of life in the world.">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[11]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" It has the world's nineteenth largest economy by nominal ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="GDP">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/GDP"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="thirty-sixth largest">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/List_of_countries_by_GDP_(PPP)"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" by ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="purchasing power parity">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Purchasing_power_parity"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=". It is the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="fifteenth largest exporter">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/List_of_countries_by_exports"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="seventeenth largest importer">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/List_of_countries_by_imports"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content"> of goods.
+Switzerland comprises four main linguistic and cultural regions: German, French, Italian and the </string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Romansh">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Romansh_language"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="-speaking valleys. The ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Swiss">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Swiss_people"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", therefore, though predominantly German-speaking, do not form a ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="nation">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Nation"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content"> in the sense of a common ethnic or linguistic identity. The strong sense of belonging to the country is founded on the common historical background, shared values (</string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="federalism">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Federalism"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="direct democracy">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Direct_democracy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=")">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[12]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Alpine">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Alps"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" symbolism.">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[13]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" The establishment of the Swiss Confederation is traditionally dated to 1 August 1291; ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Swiss National Day">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Swiss_National_Day"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content"> is celebrated on the anniversary.
+
+The English name </string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Switzerland">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" is a compound containing ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Switzer">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", an obsolete term for the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Swiss">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Swiss_people"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", which was in use during the 16th to 19th centuries.">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[14]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" The English adjective ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Swiss">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" is a loan from French ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Suisse">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", also in use since the 16th century. The name ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Switzer">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" is from the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Alemannic">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Alemannic_German"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Schwiizer">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", in origin an inhabitant of ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Schwyz">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Schwyz"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and its ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="associated territory">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Canton_of_Schwyz"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", one of the Waldstätten cantons which formed the nucleus of the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Old Swiss Confederacy">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Old_Swiss_Confederacy"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=". The name originates as an exonym, applied ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="pars pro toto">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Pars_pro_toto"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" to the troops of the Confederacy. The Swiss themselves began to adopt the name for themselves after the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Swabian War">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Swabian_War"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" of 1499, used alongside the term for &quot;Confederates&quot;, ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Eidgenossen">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Eidgenosse"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">, used since the 14th century.
+The toponym </string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Schwyz">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" itself is first attested in 972, as ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Old High German">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Old_High_German"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Suittes">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", ultimately perhaps related to ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="suedan">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" &quot;to burn&quot;, referring to the area of forest that was burned and cleared to build.">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[15]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content"> The name was extended to the area dominated by the canton, and after the Swabian War of 1499 gradually came to be used for the entire Confederation.</string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[16][17]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" The ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Swiss German">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Swiss_German"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" name of the country, ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Schwiiz">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", is homophonous to that of the canton and the settlement, but distinguished by the use of the definite article (">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="d'Schwiiz">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" for the Confederation,">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[18]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" but simply ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Schwyz">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" for the canton and the town).">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[19]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">
+The </string>
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Latin">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Latin"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" name ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Confoederatio Helvetica">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" was neologized and introduced gradually after the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="formation of the federal state">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Switzerland_as_a_federal_state"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" in 1848, harking back to the Napoleonic ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Helvetic Republic">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Helvetic_Republic"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", appearing on coins from 1879, inscribed on the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Federal Palace">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" in 1902 and after 1948 used in the official seal.">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[20]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" It is derived from the name of the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Helvetii">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Helvetii"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=", a ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Gaulish tribe">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Gaulish_tribe"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" living on the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Swiss plateau">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Swiss_plateau"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" before the ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Roman era">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Switzerland_in_the_Roman_era"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=". ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Helvetia">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica-Oblique"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Helvetia"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" appears as a ">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="national personification">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <url key="NSLink" string="http://en.wikipedia.org/wiki/National_personification"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" of the Swiss confederacy in the 17th century, with a 1672 play by Johann Caspar Weissenbach.">
+                            <attributes>
+                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                        <fragment content="[21]">
+                            <attributes>
+                                <color key="NSColor" red="0.035294117647058823" green="0.18431372549019609" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="11" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="6.4000000000000004" defaultTabInterval="36">
+                                    <tabStops/>
+                                </paragraphStyle>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fkm-rj-idG" customClass="TRICrossView">
+                    <rect key="frame" x="192" y="105" width="320" height="320"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="XCY-Z5-gtK" appends="YES" id="C2K-K5-Ehb"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rmh-Fe-CLw" secondAttribute="trailing" id="EcL-Rz-YeQ"/>
+                <constraint firstAttribute="bottom" secondItem="rmh-Fe-CLw" secondAttribute="bottom" id="jFN-IW-ig5"/>
+                <constraint firstItem="rmh-Fe-CLw" firstAttribute="top" secondItem="2" secondAttribute="top" constant="20" id="rcI-gm-rdM"/>
+                <constraint firstItem="rmh-Fe-CLw" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="yZF-Km-Gfv"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="XCY-Z5-gtK">
+            <connections>
+                <action selector="pan:" destination="-1" id="XYO-Cy-Ruj"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+</document>
