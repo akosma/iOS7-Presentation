@@ -246,8 +246,10 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:path];
     if (exists)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Generate PDF again?"
-                                                        message:@"The PDF file already exists. Would you like to re-generate it?"
+        NSString *title = @"Generate PDF again?";
+        NSString *message = @"The PDF file already exists. Would you like to re-generate it?";
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                        message:message
                                                        delegate:self
                                               cancelButtonTitle:@"No"
                                               otherButtonTitles:@"Yes", nil];
@@ -282,7 +284,8 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 
 #pragma mark - UIAlertViewDelegate methods
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+-    (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (alertView == self.generatingPDFAlert)
     {
@@ -305,7 +308,8 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 
 #pragma mark - TRIReceiverDelegate methods
 
-- (void)receiver:(TRIReceiver *)receiver didReceiveMessage:(NSString *)message
+-  (void)receiver:(TRIReceiver *)receiver
+didReceiveMessage:(NSString *)message
 {
     if ([message integerValue] > 0)
     {
