@@ -13,11 +13,12 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    [[UIColor redColor] setFill];
-    UIBezierPath *path = [UIBezierPath customBezierPathOfPlusSymbolWithRect:self.bounds
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
+    CGRect bounds = CGRectInset(rect, 20, 20);
+    UIBezierPath *path = [UIBezierPath customBezierPathOfPlusSymbolWithRect:bounds
                                                                       scale:1.0];
     [path fill];
-
 }
 
 @end

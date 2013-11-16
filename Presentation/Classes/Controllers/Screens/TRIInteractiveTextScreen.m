@@ -17,7 +17,7 @@
 #import "TRIHelpers.h"
 
 
-@interface TRIInteractiveTextScreen ()
+@interface TRIInteractiveTextScreen () <UITextViewDelegate>
 
 @property (nonatomic) CGPoint offset;
 @property (weak, nonatomic) IBOutlet UIView *crossView;
@@ -36,14 +36,13 @@
     self.textView.layoutManager.hyphenationFactor = 1.0;
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
     [self updateExclusionPaths];
 }
 
-
-#pragma mark - Exclusion
+#pragma mark - Gesture recognizers
 
 - (IBAction)pan:(UIPanGestureRecognizer *)pan
 {
@@ -54,31 +53,66 @@
     else
     {
         CGPoint location = [pan locationInView:self.view];
-        CGPoint circleCenter = self.crossView.center;
+        CGPoint center = self.crossView.center;
         
         CGFloat width = self.crossView.frame.size.width;
-        circleCenter.x = location.x - self.offset.x + width / 2;
-        circleCenter.y = location.y - self.offset.y + width / 2;
-        self.crossView.center = circleCenter;
+        center.x = location.x - self.offset.x + width / 2;
+        center.y = location.y - self.offset.y + width / 2;
+        self.crossView.center = center;
         
         [self updateExclusionPaths];
     }
 }
 
+#pragma mark - UITextViewDelegate methods
+
+-      (BOOL)textView:(UITextView *)textView
+shouldInteractWithURL:(NSURL *)URL
+              inRange:(NSRange)characterRange
+{
+    NSString *template = @"You won't be able to navigate to %@";
+    NSString *message = [NSString stringWithFormat:template, [URL description]];
+    UIAlertView *alert = nil;
+    alert = [[UIAlertView alloc] initWithTitle:@"URL"
+                                       message:message
+                                      delegate:nil
+                             cancelButtonTitle:@"OK"
+                             otherButtonTitles:nil];
+    [alert show];
+    return NO;
+}
+
+#pragma mark - UIScrollViewDelegate methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self updateExclusionPaths];
+}
+
+#pragma mark - Private methods
+
 - (void)updateExclusionPaths
 {
-    // Since text container does not know about the inset,
-    // we must shift the frame to container coordinates
-    CGRect frame = [self.textView convertRect:self.crossView.bounds
-                                     fromView:self.crossView];
-    
-    frame.origin.x -= self.textView.textContainerInset.left;
-    frame.origin.y -= self.textView.textContainerInset.top;
-    
-    // Set the exclusion path.
-    UIBezierPath *path = [UIBezierPath customBezierPathOfPlusSymbolWithRect:frame
-                                                                      scale:1.0];
-    self.textView.textContainer.exclusionPaths = @[path];
+    __weak typeof(self) weakSelf = self;
+    dispatch_queue_priority_t prio = DISPATCH_QUEUE_PRIORITY_HIGH;
+    dispatch_queue_t queue = dispatch_get_global_queue(prio, 0);
+    dispatch_async(queue, ^{
+        // Since text container does not know about the inset,
+        // we must shift the frame to container coordinates
+        CGRect frame = [weakSelf.textView convertRect:weakSelf.crossView.bounds
+                                             fromView:weakSelf.crossView];
+        
+        frame.origin.x -= weakSelf.textView.textContainerInset.left;
+        frame.origin.y -= weakSelf.textView.textContainerInset.top;
+        
+        // Set the exclusion path.
+        UIBezierPath *path = [UIBezierPath customBezierPathOfPlusSymbolWithRect:frame
+                                                                          scale:1.0];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.textView.textContainer.exclusionPaths = @[path];
+        });
+    });
 }
 
 @end
