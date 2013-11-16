@@ -65,24 +65,6 @@
     }
 }
 
-#pragma mark - UITextViewDelegate methods
-
--      (BOOL)textView:(UITextView *)textView
-shouldInteractWithURL:(NSURL *)URL
-              inRange:(NSRange)characterRange
-{
-    NSString *template = @"You won't be able to navigate to %@";
-    NSString *message = [NSString stringWithFormat:template, [URL description]];
-    UIAlertView *alert = nil;
-    alert = [[UIAlertView alloc] initWithTitle:@"URL"
-                                       message:message
-                                      delegate:nil
-                             cancelButtonTitle:@"OK"
-                             otherButtonTitles:nil];
-    [alert show];
-    return NO;
-}
-
 #pragma mark - UIScrollViewDelegate methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
