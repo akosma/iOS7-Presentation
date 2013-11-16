@@ -127,7 +127,10 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 
 #pragma mark - KVO
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
 {
     if (object == self
         && [keyPath isEqualToString:@"currentIndex"])
@@ -347,8 +350,9 @@ didReceiveMessage:(NSString *)message
 - (void)broadcasterIsReady:(TRIBroadcaster *)broadcaster
 {
     // When the broadcaster is ready, we send the list of screens
+    NSPropertyListFormat format = NSPropertyListXMLFormat_v1_0;
     NSData *data = [NSPropertyListSerialization dataFromPropertyList:self.definitions
-                                                              format:NSPropertyListXMLFormat_v1_0
+                                                              format:format
                                                     errorDescription:nil];
     [self.broadcaster sendData:data];
 }
@@ -426,7 +430,8 @@ didReceiveMessage:(NSString *)message
         [self.currentScreen flashAndThen:^{
             
             // Ask the current screen to render itself as a PNG image
-            NSString *filename = [NSString stringWithFormat:@"image_%ld.png", (long)weakSelf.currentIndex];
+            long index = (long)weakSelf.currentIndex;
+            NSString *filename = [NSString stringWithFormat:@"image_%ld.png", index];
             [weakSelf.currentScreen saveTempSnapshotWithFilename:filename];
             [weakSelf.filenamesForPDF addObject:filename];
             
