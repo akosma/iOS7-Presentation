@@ -1,176 +1,188 @@
 {
-  "screens" : [
-    {
-      "title" : "iOS 7 Logo",
-      "contentMode" : 4,
-      "xtype" : "photo",
-      "contents" : "IOS_7_Logo"
-    },
-    {
-      "xtype" : "title",
-      "title" : "What's new in iOS 7",
-      "contents" : "Adrian Kosmaczewski\nTrifork GmbH"
-    },
-    {
-      "xtype" : "text",
-      "title" : "Introduction",
-      "contents" : "Adrian Kosmaczewski"
-    },
-    {
-      "title" : "Trifork Logo",
-      "contentMode" : "4",
-      "xtype" : "photo",
-      "contents" : "trifork_logo"
-    },
-    {
-      "xtype" : "text",
-      "title" : "Contact me",
-      "contents" : "ako@trifork.com\n\n@akotrifork"
-    },
-    {
-      "xtype" : "photo",
-      "title" : "My Books",
-      "contents" : "books"
-    },
-    {
-      "xtype" : "empty"
-    },
-    {
-      "xtype" : "title",
-      "title" : "URL Session",
-      "contents" : "Remember ASIHTTPRequest and AFNetworking? Yeah."
-    },
-    {
-      "demo" : true,
-      "title" : "URL Session demo",
-      "delay" : 5,
-      "xtype" : "download"
-    },
-    {
-      "xtype" : "text",
-      "title" : "NSURLSession ≠ NSOperationQueue",
-      "contents" : "NSURLSessions are not NSOperationQueues"
-    },
-    {
-      "xtype" : "text",
-      "title" : "NSURLSession ≠ NSOperationQueue",
-      "contents" : "… but the idea is similar."
-    },
-    {
-      "xtype" : "text",
-      "title" : "NSProgress",
-      "contents" : "New in iOS 7: NSProgress"
-    },
-    {
-      "xtype" : "text",
-      "title" : "NSProgress",
-      "contents" : "KVO Compliant"
-    },
-    {
-      "xtype" : "text",
-      "title" : "NSProgress",
-      "contents" : "Parent\/child relationships"
-    },
-    {
-      "xtype" : "empty"
-    },
-    {
-      "xtype" : "title",
-      "title" : "Text-to-Speech",
-      "contents" : "100% lip service"
-    },
-    {
-      "demo" : true,
-      "title" : "Text-to-Speech: Demo",
-      "delay" : 1.5,
-      "xtype" : "speech"
-    },
-    {
-      "xtype" : "empty"
-    },
-    {
-      "xtype" : "title",
-      "title" : "Maps and Location",
-      "contents" : "It's never been easier for the NSA to find you."
-    },
-    {
-      "xtype" : "text",
-      "title" : "MKDistanceFormatter",
-      "contents" : "MKDistanceFormatter"
-    },
-    {
-      "xtype" : "text",
-      "title" : "MKDistanceFormatter",
-      "contents" : "MKDistanceFormatterUnitsImperial\nMKDistanceFormatterUnitsMetric"
-    },
-    {
-      "demo" : true,
-      "title" : "Maps and Location: geodesic line demo",
-      "delay" : 10,
-      "xtype" : "geodesic"
-    },
-    {
-      "xtype" : "empty"
-    },
-    {
-      "xtype" : "title",
-      "title" : "iBeacon",
-      "contents" : "Marketing people rejoice"
-    },
-    {
-      "title" : "Forbes about iBeacon",
-      "contentMode" : "4",
-      "xtype" : "photo",
-      "contents" : "forbes_ibeacon"
-    },
-    {
-      "title" : "Minority Report",
-      "contents" : "ITjsb22-EwQ",
-      "xtype" : "youtube",
-      "placeholder" : "minority_report"
-    },
-    {
-      "demo" : true,
-      "title" : "iBeacon Demo",
-      "delay" : 60,
-      "xtype" : "ibeacon"
-    },
-    {
-      "xtype" : "empty"
-    },
-    {
-      "xtype" : "title",
-      "title" : "TextKit",
-      "contents" : "Text processing for the masses"
-    },
-    {
-      "xtype" : "movetxt",
-      "title" : "TextKit Demo",
-      "demo" : true
-    },
-    {
-      "xtype" : "empty"
-    },
-    {
-      "xtype" : "text",
-      "title" : "Questions",
-      "contents" : "Questions?"
-    },
-    {
-      "xtype" : "text",
-      "title" : "Credits",
-      "contents" : "Credits:\n\nobjc.io #5\nNSHipster\nWikipedia\nDevFright.com\nBig Nerd Ranch Blog\nCapTech Consulting Blog"
-    },
-    {
-      "xtype" : "title",
-      "title" : "Thanks for attending!",
-      "contents" : "Copyright © 2013 Trifork GmbH\nAll Rights Reserved"
-    },
-    {
-      "title" : "Trifork Logo",
-      "contentMode" : "4",
-      "xtype" : "photo",
-      "contents" : "trifork_logo"
-    }
-  ]
+    "screens" : [
+                 {
+                 "title" : "iOS 7 Logo",
+                 "contentMode" : 4,
+                 "xtype" : "photo",
+                 "contents" : "IOS_7_Logo"
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "What's new in iOS 7",
+                 "contents" : "Adrian Kosmaczewski\nTrifork GmbH"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Introduction",
+                 "contents" : "Adrian Kosmaczewski"
+                 },
+                 {
+                 "title" : "Trifork Logo",
+                 "contentMode" : "4",
+                 "xtype" : "photo",
+                 "contents" : "trifork_logo"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Contact me",
+                 "contents" : "ako@trifork.com\n\n@akotrifork"
+                 },
+                 {
+                 "xtype" : "photo",
+                 "title" : "My Books",
+                 "contents" : "books"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "URL Session",
+                 "contents" : "Remember ASIHTTPRequest and AFNetworking? Yeah."
+                 },
+                 {
+                 "demo" : true,
+                 "title" : "URL Session demo",
+                 "delay" : 5,
+                 "xtype" : "download"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "NSURLSession ≠ NSOperationQueue",
+                 "contents" : "NSURLSessions are not NSOperationQueues"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "NSURLSession ≠ NSOperationQueue",
+                 "contents" : "… but the idea is similar."
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "NSProgress",
+                 "contents" : "New in iOS 7: NSProgress"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "NSProgress",
+                 "contents" : "KVO Compliant"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "NSProgress",
+                 "contents" : "Parent\/child relationships"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "Text-to-Speech",
+                 "contents" : "100% lip service"
+                 },
+                 {
+                 "demo" : true,
+                 "title" : "Text-to-Speech: Demo",
+                 "delay" : 1.5,
+                 "xtype" : "speech"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "Maps and Location",
+                 "contents" : "It's never been easier for the NSA to find you."
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "MKDistanceFormatter",
+                 "contents" : "MKDistanceFormatter"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "MKDistanceFormatter",
+                 "contents" : "MKDistanceFormatterUnitsImperial\nMKDistanceFormatterUnitsMetric"
+                 },
+                 {
+                 "demo" : true,
+                 "title" : "Maps and Location: geodesic line demo",
+                 "delay" : 10,
+                 "xtype" : "geodesic"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "iBeacon",
+                 "contents" : "Marketing people rejoice"
+                 },
+                 {
+                 "title" : "Forbes about iBeacon",
+                 "contentMode" : "4",
+                 "xtype" : "photo",
+                 "contents" : "forbes_ibeacon"
+                 },
+                 {
+                 "title" : "Minority Report",
+                 "contents" : "ITjsb22-EwQ",
+                 "xtype" : "youtube",
+                 "placeholder" : "minority_report"
+                 },
+                 {
+                 "demo" : true,
+                 "title" : "iBeacon Demo",
+                 "delay" : 60,
+                 "xtype" : "ibeacon"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "JavaScriptCore",
+                 "contents" : "It would have been faster if they had used Node.js instead."
+                 },
+                 {
+                 "xtype": "javascript",
+                 "title": "JavaScriptCore Demo"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "TextKit",
+                 "contents" : "Text processing for the masses"
+                 },
+                 {
+                 "xtype" : "movetxt",
+                 "title" : "TextKit Demo",
+                 "demo" : true
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Questions",
+                 "contents" : "Questions?"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Credits",
+                 "contents" : "Credits:\n\nobjc.io #5\nNSHipster\nWikipedia\nDevFright.com\nBig Nerd Ranch Blog\nCapTech Consulting Blog"
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "Thanks for attending!",
+                 "contents" : "Copyright © 2013 Trifork GmbH\nAll Rights Reserved"
+                 },
+                 {
+                 "title" : "Trifork Logo",
+                 "contentMode" : "4",
+                 "xtype" : "photo",
+                 "contents" : "trifork_logo"
+                 }
+                 ]
 }

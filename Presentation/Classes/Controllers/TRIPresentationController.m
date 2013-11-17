@@ -84,16 +84,17 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     
     // The aliases used by the definitions file are stored here
     self.xtypes = @{
-                    @"title":    @"TRITitleAndTextScreen",
-                    @"text":     @"TRITextScreen",
-                    @"photo":    @"TRIPhotoScreen",
-                    @"speech":   @"TRISpeechScreen",
-                    @"geodesic": @"TRIGeodesicScreen",
-                    @"download": @"TRIURLSessionScreen",
-                    @"empty":    @"TRIEmptyScreen",
-                    @"ibeacon":  @"TRIBeaconScreen",
-                    @"movetxt":  @"TRIInteractiveTextScreen",
-                    @"youtube":  @"TRIYouTubeScreen",
+                    @"title":      @"TRITitleAndTextScreen",
+                    @"text":       @"TRITextScreen",
+                    @"photo":      @"TRIPhotoScreen",
+                    @"speech":     @"TRISpeechScreen",
+                    @"geodesic":   @"TRIGeodesicScreen",
+                    @"download":   @"TRIURLSessionScreen",
+                    @"empty":      @"TRIEmptyScreen",
+                    @"ibeacon":    @"TRIBeaconScreen",
+                    @"movetxt":    @"TRIInteractiveTextScreen",
+                    @"youtube":    @"TRIYouTubeScreen",
+                    @"javascript": @"TRIJavaScriptScreen",
                     };
     
     [self addObserver:self

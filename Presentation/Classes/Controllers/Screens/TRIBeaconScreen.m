@@ -64,8 +64,8 @@ static NSString *RASPBERRY_PI_UUID = @"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0";
        didRangeBeacons:(NSArray *)beacons
               inRegion:(CLBeaconRegion *)region
 {
-    CLBeacon *beacon = [[CLBeacon alloc] init];
-    beacon = [beacons firstObject];
+    // "firstObject" is another iOS 7 goodie!
+    CLBeacon *beacon = [beacons firstObject];
     
     [self.spinningWheel stopAnimating];
     self.foundLabel.text = @"Yes";
