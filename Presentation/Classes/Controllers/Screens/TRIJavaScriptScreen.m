@@ -91,11 +91,19 @@
     // Initialize the virtual machine
     JSVirtualMachine *machine = [[JSVirtualMachine alloc] init];
     self.context = [[JSContext alloc] initWithVirtualMachine:machine];
-
-    self.console = [[TRIConsole alloc] initWithTextView:self.consoleTextView];
     
+    // The context can hold lots of objects
+    self.context[@"copyright"] = @"Copyright © 2013 Trifork – All Rights Reserved";
+    self.context[@"author"] = @"Adrian Kosmaczewski";
+    self.context[@"year"] = @2013;
+    self.context[@"enabled"] = @YES;
+    self.context[@"offices"] = @[ @"Århus", @"Zürich", @"Amsterdam", @"Eindhoven" ];
+
+    // Adding a console object to the context
+    self.console = [[TRIConsole alloc] initWithTextView:self.consoleTextView];
     self.context[@"console"] = self.console;
     
+    // We can also store blocks, and this one is recursive!
     // Leak-free recursive blocks, as explained by
     // http://jeremywsherman.com/blog/2013/02/27/leak-free-recursive-blocks/
     unsigned int (^__block __weak weakFibonacci) (unsigned int n);
@@ -111,9 +119,9 @@
         }
         return weakFibonacci(n - 1) + weakFibonacci(n - 2);
     };
-    
     self.context[@"fibonacci"] = fibonacci;
     
+    // What would be a JavaScript runtime without "alert()"?
     self.context[@"alert"] = ^ (NSString *text) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"JS Alert"
                                                         message:text
