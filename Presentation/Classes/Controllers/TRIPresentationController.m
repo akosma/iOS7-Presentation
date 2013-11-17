@@ -74,8 +74,12 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     
     // Load the order of the screens from the configuration file
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ScreenDefinitions"
-                                                     ofType:@"plist"];
-    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+                                                     ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data
+                                                         options:0
+                                                           error:nil];
+    
     self.definitions = dict[@"screens"];
     
     // The aliases used by the definitions file are stored here
