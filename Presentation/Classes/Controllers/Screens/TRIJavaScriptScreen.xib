@@ -21,6 +21,14 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">var a = 10;
+var factory = function (input) {
+    return function () {
+        return input + a;
+    };
+};
+var fun = factory(50);
+console.log(fun());</string>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="26"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
