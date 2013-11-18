@@ -184,7 +184,7 @@
                  {
                  "xtype" : "text",
                  "title" : "Credits",
-                 "contents" : "Credits:\n\nobjc.io #5\nWikipedia\nNSHipster\nDevFright.com\nTypographica.org\nBig Nerd Ranch Blog\nCapTech Consulting Blog"
+                 "contents" : "Credits:\n\nGithub\nobjc.io #5\nWikipedia\nNSHipster\nDevFright.com\nStack Overflow\nTypographica.org\nBig Nerd Ranch Blog\nCapTech Consulting Blog"
                  },
                  {
                  "xtype" : "title",
