@@ -156,6 +156,18 @@
                  "contents" : "Text processing for the masses"
                  },
                  {
+                 "xtype" : "photo",
+                 "title" : "Text Frameworks in iOS 6",
+                 "contents" : "text_ios6",
+                 "contentMode": 4
+                 },
+                 {
+                 "xtype" : "photo",
+                 "title" : "Text Frameworks in iOS 7",
+                 "contents" : "text_ios7",
+                 "contentMode": 4
+                 },
+                 {
                  "xtype" : "movetxt",
                  "title" : "TextKit Demo",
                  "demo" : true

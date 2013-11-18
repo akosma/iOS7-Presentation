@@ -59,6 +59,8 @@
 		3AC9837718362C0A004E3A94 /* TRIMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9837618362C0A004E3A94 /* TRIMenuController.m */; };
 		3AC9837A18365D71004E3A94 /* IOS_7_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC9837918365D71004E3A94 /* IOS_7_Logo.png */; };
 		3AC9837C18365F2B004E3A94 /* trifork_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC9837B18365F2B004E3A94 /* trifork_logo.png */; };
+		3AE20AEC1839F14B00B7F998 /* text_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AE20AEA1839F14B00B7F998 /* text_ios7.png */; };
+		3AE20AED1839F14B00B7F998 /* text_ios6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AE20AEB1839F14B00B7F998 /* text_ios6.png */; };
 		3AEAC75A18392EBC0097A8C6 /* TRIJavaScriptScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAC75818392EBC0097A8C6 /* TRIJavaScriptScreen.m */; };
 		3AEAC75B18392EBC0097A8C6 /* TRIJavaScriptScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AEAC75918392EBC0097A8C6 /* TRIJavaScriptScreen.xib */; };
 		3AEAC75D183930C70097A8C6 /* ScreenDefinitions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AEAC75C183930C70097A8C6 /* ScreenDefinitions.json */; };
@@ -152,6 +154,8 @@
 		3AC9837818362C98004E3A94 /* TRIMenuControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIMenuControllerDelegate.h; sourceTree = "<group>"; };
 		3AC9837918365D71004E3A94 /* IOS_7_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IOS_7_Logo.png; sourceTree = "<group>"; };
 		3AC9837B18365F2B004E3A94 /* trifork_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trifork_logo.png; sourceTree = "<group>"; };
+		3AE20AEA1839F14B00B7F998 /* text_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text_ios7.png; sourceTree = "<group>"; };
+		3AE20AEB1839F14B00B7F998 /* text_ios6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text_ios6.png; sourceTree = "<group>"; };
 		3AEAC75718392EBC0097A8C6 /* TRIJavaScriptScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIJavaScriptScreen.h; sourceTree = "<group>"; };
 		3AEAC75818392EBC0097A8C6 /* TRIJavaScriptScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIJavaScriptScreen.m; sourceTree = "<group>"; };
 		3AEAC75918392EBC0097A8C6 /* TRIJavaScriptScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIJavaScriptScreen.xib; sourceTree = "<group>"; };
@@ -322,6 +326,8 @@
 		3A86E4731833B6DD00C1AC2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3AE20AEA1839F14B00B7F998 /* text_ios7.png */,
+				3AE20AEB1839F14B00B7F998 /* text_ios6.png */,
 				3A8D293C1837FDE70019C684 /* minority_report.png */,
 				3A8D29341837FC330019C684 /* forbes_ibeacon.png */,
 				3AC9837B18365F2B004E3A94 /* trifork_logo.png */,
@@ -452,6 +458,8 @@
 				3A98A40A1834A7E7008C83AC /* TRITitleAndTextScreen.xib in Resources */,
 				3AEAC75B18392EBC0097A8C6 /* TRIJavaScriptScreen.xib in Resources */,
 				3AC83A851833C9450089524B /* TRITextScreen.xib in Resources */,
+				3AE20AEC1839F14B00B7F998 /* text_ios7.png in Resources */,
+				3AE20AED1839F14B00B7F998 /* text_ios6.png in Resources */,
 				3AC9837A18365D71004E3A94 /* IOS_7_Logo.png in Resources */,
 				3AC83A8A1833E4CA0089524B /* TRISpeechScreen.xib in Resources */,
 				3AB9BA211837DA2B00B8161D /* TRIBeaconScreen.xib in Resources */,
