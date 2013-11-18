@@ -14,6 +14,8 @@
 @interface TRIQRCodeScreen () <AVCaptureMetadataOutputObjectsDelegate>
 
 @property (nonatomic, strong) AVCaptureSession *session;
+@property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
+
 @property (weak, nonatomic) IBOutlet UIView *previewView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
@@ -36,6 +38,8 @@
     self.session = [[AVCaptureSession alloc] init];
     AVCaptureDevice *videoCaptureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSError *error = nil;
+    
+    // Set the input object
     AVCaptureDeviceInput *videoInput = [AVCaptureDeviceInput deviceInputWithDevice:videoCaptureDevice error:&error];
     if(videoInput)
     {
@@ -46,18 +50,45 @@
         NSLog(@"Error: %@", error);
     }
     
+    // Set the output object
     AVCaptureMetadataOutput *metadataOutput = [[AVCaptureMetadataOutput alloc] init];
     [self.session addOutput:metadataOutput];
     [metadataOutput setMetadataObjectsDelegate:self
                                          queue:dispatch_get_main_queue()];
     [metadataOutput setMetadataObjectTypes:@[ AVMetadataObjectTypeQRCode ]];
     
-    AVCaptureVideoPreviewLayer *preview = nil;
-    preview = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
-    preview.frame = self.previewView.bounds;
-    [self.previewView.layer addSublayer:preview];
-    
+    // Create a preview layer
+    self.previewLayer = nil;
+    self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
+    self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    self.previewLayer.frame = self.previewView.bounds;
+    [self.previewView.layer addSublayer:self.previewLayer];
+
+    // Get those codes!
     [self.session startRunning];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self didRotateFromInterfaceOrientation:UIInterfaceOrientationPortrait];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    AVCaptureVideoOrientation orientation = AVCaptureVideoOrientationPortrait;
+    if (self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft)
+    {
+        orientation = AVCaptureVideoOrientationLandscapeLeft;
+    }
+    else if (self.interfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    {
+        orientation = AVCaptureVideoOrientationLandscapeRight;
+    }
+    else if (self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
+    {
+        orientation = AVCaptureVideoOrientationPortraitUpsideDown;
+    }
+    self.previewLayer.connection.videoOrientation = orientation;
 }
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
