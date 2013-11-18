@@ -44,11 +44,13 @@
     {
         self.className = NSStringFromClass([self class]);
     }
+    else
+    {
+        NSString *title = [NSString stringWithFormat:@"%@.m", self.className];
+        self.title = title;
+    }
     
     self.sourceCode = [self loadSourceCode];
-    NSString *title = [NSString stringWithFormat:@"%@.m", self.className];
-    self.title = title;
-
     self.textView.attributedText = self.sourceCode;
     [self styleSourceCode];
     [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
