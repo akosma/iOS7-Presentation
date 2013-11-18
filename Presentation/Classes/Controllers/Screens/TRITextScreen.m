@@ -16,6 +16,11 @@
 
 @implementation TRITextScreen
 
++ (NSString *)xtype
+{
+    return @"text";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

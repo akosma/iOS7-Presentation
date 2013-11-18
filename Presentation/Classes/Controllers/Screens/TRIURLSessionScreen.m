@@ -25,6 +25,11 @@ static NSString *HUGE_WIKIPEDIA_IMAGE = @"http://upload.wikimedia.org/wikipedia/
 
 @implementation TRIURLSessionScreen
 
++ (NSString *)xtype
+{
+    return @"download";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

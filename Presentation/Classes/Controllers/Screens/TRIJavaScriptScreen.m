@@ -84,6 +84,11 @@
 
 @implementation TRIJavaScriptScreen
 
++ (NSString *)xtype
+{
+    return @"javascript";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

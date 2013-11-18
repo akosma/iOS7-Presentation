@@ -14,6 +14,11 @@
 
 @implementation TRIEmptyScreen
 
++ (NSString *)xtype
+{
+    return @"empty";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -17,6 +17,11 @@
 
 @implementation TRIPhotoScreen
 
++ (NSString *)xtype
+{
+    return @"photo";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

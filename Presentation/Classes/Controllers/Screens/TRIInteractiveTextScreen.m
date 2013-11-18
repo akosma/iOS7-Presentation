@@ -28,6 +28,11 @@
 
 @implementation TRIInteractiveTextScreen
 
++ (NSString *)xtype
+{
+    return @"movetxt";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

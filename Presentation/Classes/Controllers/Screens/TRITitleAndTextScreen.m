@@ -17,6 +17,11 @@
 
 @implementation TRITitleAndTextScreen
 
++ (NSString *)xtype
+{
+    return @"title";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

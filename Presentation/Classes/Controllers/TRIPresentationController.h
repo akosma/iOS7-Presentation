@@ -8,6 +8,8 @@
 
 @import UIKit;
 
+#import <objc/runtime.h>
+
 
 @interface TRIPresentationController : UIViewController
 

@@ -82,20 +82,9 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     
     self.definitions = dict[@"screens"];
     
-    // The aliases used by the definitions file are stored here
-    self.xtypes = @{
-                    @"title":      @"TRITitleAndTextScreen",
-                    @"text":       @"TRITextScreen",
-                    @"photo":      @"TRIPhotoScreen",
-                    @"speech":     @"TRISpeechScreen",
-                    @"geodesic":   @"TRIGeodesicScreen",
-                    @"download":   @"TRIURLSessionScreen",
-                    @"empty":      @"TRIEmptyScreen",
-                    @"ibeacon":    @"TRIBeaconScreen",
-                    @"movetxt":    @"TRIInteractiveTextScreen",
-                    @"youtube":    @"TRIYouTubeScreen",
-                    @"javascript": @"TRIJavaScriptScreen",
-                    };
+    // The aliases used by the definitions file are retrieved dynamically
+    // from all the subclasses of TRIBaseScreenController
+    self.xtypes = [self buildScreenDictionary];
     
     [self addObserver:self
            forKeyPath:@"currentIndex"
@@ -367,6 +356,36 @@ didReceiveMessage:(NSString *)message
 }
 
 #pragma mark - Private methods
+
+- (NSDictionary *)buildScreenDictionary
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    int numClasses = objc_getClassList(NULL, 0);
+    if (numClasses > 0)
+    {
+        Class superClass = [TRIBaseScreenController class];
+        Class *classes = (Class *)malloc(sizeof(Class) * numClasses);
+        numClasses = objc_getClassList(classes, numClasses);
+        SEL selector = NSSelectorFromString(@"xtype");
+        for (int index = 0; index < numClasses; index++)
+        {
+            Class currentClass = classes[index];
+            if (class_getSuperclass(currentClass) == superClass)
+            {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+                // ARC cannot know for sure whether the result of this method call follows the naming
+                // conventions ('create', 'new', etc) so it provides a warning, that can be removed
+                // using the pragma statements around it
+                NSString *xtype = [currentClass performSelector:selector];
+#pragma clang diagnostic pop
+                dict[xtype] = NSStringFromClass(currentClass);
+            }
+        }
+        free(classes);
+    }
+    return dict;
+}
 
 - (void)showCurrentScreen
 {

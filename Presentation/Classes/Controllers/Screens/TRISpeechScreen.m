@@ -24,7 +24,10 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
 
 @implementation TRISpeechScreen
 
-
++ (NSString *)xtype
+{
+    return @"speech";
+}
 
 #pragma mark - Speech methods
 

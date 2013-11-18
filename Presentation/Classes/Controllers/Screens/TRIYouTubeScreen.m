@@ -20,6 +20,11 @@
 
 @implementation TRIYouTubeScreen
 
++ (NSString *)xtype
+{
+    return @"youtube";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

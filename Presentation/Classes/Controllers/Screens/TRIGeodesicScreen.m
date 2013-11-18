@@ -31,6 +31,11 @@ static NSString *REUSE_ID = @"REUSE_ID";
 
 @implementation TRIGeodesicScreen
 
++ (NSString *)xtype
+{
+    return @"geodesic";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
