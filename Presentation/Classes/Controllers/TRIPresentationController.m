@@ -348,6 +348,10 @@ didReceiveMessage:(NSString *)message
     {
         [self showMenu:nil];
     }
+    else if ([message isEqualToString:MESSAGE_EXECUTE])
+    {
+        [self.currentScreen executeDemo];
+    }
 }
 
 #pragma mark - TRIBroadcasterDelegate methods

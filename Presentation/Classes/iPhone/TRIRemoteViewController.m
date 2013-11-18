@@ -122,6 +122,16 @@
     [self.menu dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - Gesture recognizer methods
+
+- (IBAction)doubleTap:(UITapGestureRecognizer *)tap
+{
+    if (tap.state == UIGestureRecognizerStateRecognized)
+    {
+        [self.broadcaster sendText:MESSAGE_EXECUTE];
+    }
+}
+
 #pragma mark - UIActionSheetDelegate methods
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex

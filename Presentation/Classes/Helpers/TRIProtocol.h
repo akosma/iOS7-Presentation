@@ -15,6 +15,7 @@ extern NSString *const MESSAGE_PREVIOUS;
 extern NSString *const MESSAGE_SHOW_SOURCE;
 extern NSString *const MESSAGE_HIDE_SOURCE;
 extern NSString *const MESSAGE_TOGGLE_MENU;
+extern NSString *const MESSAGE_EXECUTE;
 
 // Used by the presenter (iPad app) to talk to the remote control (iPhone app)
 extern NSString *const PRESENTER_SERVICE_UUID;

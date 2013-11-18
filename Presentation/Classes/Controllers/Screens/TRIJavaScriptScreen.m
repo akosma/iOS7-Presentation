@@ -132,7 +132,14 @@
     };
 }
 
-- (IBAction)execute:(id)sender
+- (void)executeDemo
+{
+    [self executeJavaScript:nil];
+}
+
+#pragma mark - IBAction methods
+
+- (IBAction)executeJavaScript:(id)sender
 {
     [self.editorTextView resignFirstResponder];
     NSString *js = self.editorTextView.text;

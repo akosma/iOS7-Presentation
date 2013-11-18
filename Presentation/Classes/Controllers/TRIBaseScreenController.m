@@ -41,6 +41,12 @@
 
 #pragma mark - Public methods
 
+- (void)executeDemo
+{
+    // Subclasses implement this to allow the remote control to
+    // trigger any animation or demo as required
+}
+
 - (void)flashAndThen:(TRIBaseScreenControllerFlashCallback)callback
 {
     self.snapshotFlashView.alpha = 1.0;
