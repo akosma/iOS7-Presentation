@@ -11,7 +11,6 @@
 #import "TRIProtocol.h"
 #import "TRIReceiver.h"
 #import "TRIReceiverDelegate.h"
-#import "NSObject+TRISourceCode.h"
 #import "TRIOpenInAppActivity.h"
 #import "TRIOpenInAppActivityDelegate.h"
 #import "TRIPDFHelper.h"

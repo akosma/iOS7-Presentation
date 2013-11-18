@@ -6,10 +6,11 @@
 //  Copyright (c) 2013 Trifork GmbH. All rights reserved.
 //
 
-@import UIKit;
+#import "TRIBaseScreenController.h"
 
-@interface TRISourceCodeController : UIViewController
 
-@property (nonatomic, strong) NSMutableAttributedString *sourceCode;
+@interface TRISourceCodeController : TRIBaseScreenController
+
+@property (nonatomic, strong) NSString *className;
 
 @end

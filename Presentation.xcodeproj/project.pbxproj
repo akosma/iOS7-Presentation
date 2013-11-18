@@ -15,7 +15,6 @@
 		3A86E46B1833B53C00C1AC2C /* TRIBaseScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E46A1833B53C00C1AC2C /* TRIBaseScreenController.m */; };
 		3A86E46E1833B55B00C1AC2C /* TRIPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E46D1833B55B00C1AC2C /* TRIPresentationController.m */; };
 		3A86E4751833B6DD00C1AC2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E4741833B6DD00C1AC2C /* Images.xcassets */; };
-		3A86E47B1833B7D900C1AC2C /* NSObject+TRISourceCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E47A1833B7D900C1AC2C /* NSObject+TRISourceCode.m */; };
 		3A86E47D1833B8BF00C1AC2C /* generate_html.sh in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E47C1833B8BF00C1AC2C /* generate_html.sh */; };
 		3A86E47F1833B97200C1AC2C /* html in Resources */ = {isa = PBXBuildFile; fileRef = 3A86E47E1833B97200C1AC2C /* html */; };
 		3A86E4841833BAFA00C1AC2C /* TRIPhotoScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A86E4821833BAFA00C1AC2C /* TRIPhotoScreen.m */; };
@@ -46,8 +45,6 @@
 		3AB9BA261837E09700B8161D /* TRIInteractiveTextScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB9BA241837E09700B8161D /* TRIInteractiveTextScreen.xib */; };
 		3AB9BA291837E81700B8161D /* UIBezierPath+Symbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9BA281837E81700B8161D /* UIBezierPath+Symbol.m */; };
 		3AB9BA2D1837E85400B8161D /* TRICrossView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9BA2C1837E85400B8161D /* TRICrossView.m */; };
-		3AC83A7D1833BCC80089524B /* TRISourceCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */; };
-		3AC83A7E1833BCC80089524B /* TRISourceCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */; };
 		3AC83A801833C1330089524B /* TRIPresentationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A7F1833C1330089524B /* TRIPresentationController.xib */; };
 		3AC83A841833C9450089524B /* TRITextScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC83A821833C9450089524B /* TRITextScreen.m */; };
 		3AC83A851833C9450089524B /* TRITextScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC83A831833C9450089524B /* TRITextScreen.xib */; };
@@ -63,6 +60,8 @@
 		3AE20AED1839F14B00B7F998 /* text_ios6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AE20AEB1839F14B00B7F998 /* text_ios6.png */; };
 		3AE20AF1183A195100B7F998 /* TRIQRCodeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE20AEF183A195100B7F998 /* TRIQRCodeScreen.m */; };
 		3AE20AF2183A195100B7F998 /* TRIQRCodeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE20AF0183A195100B7F998 /* TRIQRCodeScreen.xib */; };
+		3AE20AF6183A394400B7F998 /* TRISourceCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE20AF4183A394400B7F998 /* TRISourceCodeController.m */; };
+		3AE20AF7183A394400B7F998 /* TRISourceCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE20AF5183A394400B7F998 /* TRISourceCodeController.xib */; };
 		3AEAC75A18392EBC0097A8C6 /* TRIJavaScriptScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAC75818392EBC0097A8C6 /* TRIJavaScriptScreen.m */; };
 		3AEAC75B18392EBC0097A8C6 /* TRIJavaScriptScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AEAC75918392EBC0097A8C6 /* TRIJavaScriptScreen.xib */; };
 		3AEAC75D183930C70097A8C6 /* ScreenDefinitions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AEAC75C183930C70097A8C6 /* ScreenDefinitions.json */; };
@@ -84,8 +83,6 @@
 		3A86E46C1833B55B00C1AC2C /* TRIPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIPresentationController.h; sourceTree = "<group>"; };
 		3A86E46D1833B55B00C1AC2C /* TRIPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIPresentationController.m; sourceTree = "<group>"; };
 		3A86E4741833B6DD00C1AC2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3A86E4791833B7D900C1AC2C /* NSObject+TRISourceCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TRISourceCode.h"; sourceTree = "<group>"; };
-		3A86E47A1833B7D900C1AC2C /* NSObject+TRISourceCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TRISourceCode.m"; sourceTree = "<group>"; };
 		3A86E47C1833B8BF00C1AC2C /* generate_html.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate_html.sh; sourceTree = "<group>"; };
 		3A86E47E1833B97200C1AC2C /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		3A86E4811833BAFA00C1AC2C /* TRIPhotoScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIPhotoScreen.h; sourceTree = "<group>"; };
@@ -135,9 +132,6 @@
 		3AB9BA2B1837E85400B8161D /* TRICrossView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRICrossView.h; sourceTree = "<group>"; };
 		3AB9BA2C1837E85400B8161D /* TRICrossView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRICrossView.m; sourceTree = "<group>"; };
 		3AB9BA2E1837E8BD00B8161D /* TRIViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRIViews.h; sourceTree = "<group>"; };
-		3AC83A7A1833BCC80089524B /* TRISourceCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRISourceCodeController.h; sourceTree = "<group>"; };
-		3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRISourceCodeController.m; sourceTree = "<group>"; };
-		3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRISourceCodeController.xib; sourceTree = "<group>"; };
 		3AC83A7F1833C1330089524B /* TRIPresentationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIPresentationController.xib; sourceTree = "<group>"; };
 		3AC83A811833C9450089524B /* TRITextScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRITextScreen.h; sourceTree = "<group>"; };
 		3AC83A821833C9450089524B /* TRITextScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRITextScreen.m; sourceTree = "<group>"; };
@@ -161,6 +155,9 @@
 		3AE20AEE183A195100B7F998 /* TRIQRCodeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIQRCodeScreen.h; sourceTree = "<group>"; };
 		3AE20AEF183A195100B7F998 /* TRIQRCodeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIQRCodeScreen.m; sourceTree = "<group>"; };
 		3AE20AF0183A195100B7F998 /* TRIQRCodeScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIQRCodeScreen.xib; sourceTree = "<group>"; };
+		3AE20AF3183A394400B7F998 /* TRISourceCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRISourceCodeController.h; sourceTree = "<group>"; };
+		3AE20AF4183A394400B7F998 /* TRISourceCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRISourceCodeController.m; sourceTree = "<group>"; };
+		3AE20AF5183A394400B7F998 /* TRISourceCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRISourceCodeController.xib; sourceTree = "<group>"; };
 		3AEAC75718392EBC0097A8C6 /* TRIJavaScriptScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIJavaScriptScreen.h; sourceTree = "<group>"; };
 		3AEAC75818392EBC0097A8C6 /* TRIJavaScriptScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIJavaScriptScreen.m; sourceTree = "<group>"; };
 		3AEAC75918392EBC0097A8C6 /* TRIJavaScriptScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIJavaScriptScreen.xib; sourceTree = "<group>"; };
@@ -263,9 +260,6 @@
 				3AC9837818362C98004E3A94 /* TRIMenuControllerDelegate.h */,
 				3A86E4691833B53C00C1AC2C /* TRIBaseScreenController.h */,
 				3A86E46A1833B53C00C1AC2C /* TRIBaseScreenController.m */,
-				3AC83A7A1833BCC80089524B /* TRISourceCodeController.h */,
-				3AC83A7B1833BCC80089524B /* TRISourceCodeController.m */,
-				3AC83A7C1833BCC80089524B /* TRISourceCodeController.xib */,
 				3A86E4671833B51600C1AC2C /* Screens */,
 			);
 			path = Controllers;
@@ -274,6 +268,9 @@
 		3A86E4671833B51600C1AC2C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3AE20AF3183A394400B7F998 /* TRISourceCodeController.h */,
+				3AE20AF4183A394400B7F998 /* TRISourceCodeController.m */,
+				3AE20AF5183A394400B7F998 /* TRISourceCodeController.xib */,
 				3A98A41D18350BD1008C83AC /* TRIEmptyScreen.h */,
 				3A98A41E18350BD1008C83AC /* TRIEmptyScreen.m */,
 				3A98A41F18350BD1008C83AC /* TRIEmptyScreen.xib */,
@@ -364,8 +361,6 @@
 				3A8D29371837FCF40019C684 /* XCDYouTubeVideoPlayerViewController.m */,
 				3AB9BA271837E81700B8161D /* UIBezierPath+Symbol.h */,
 				3AB9BA281837E81700B8161D /* UIBezierPath+Symbol.m */,
-				3A86E4791833B7D900C1AC2C /* NSObject+TRISourceCode.h */,
-				3A86E47A1833B7D900C1AC2C /* NSObject+TRISourceCode.m */,
 				3A98A42218352079008C83AC /* TRIOpenInAppActivity.h */,
 				3A98A42318352079008C83AC /* TRIOpenInAppActivity.m */,
 				3A98A425183520CE008C83AC /* TRIOpenInAppActivityDelegate.h */,
@@ -459,8 +454,8 @@
 				3A98A43B1835706F008C83AC /* TRIRemoteViewController.xib in Resources */,
 				3A86E4851833BAFA00C1AC2C /* TRIPhotoScreen.xib in Resources */,
 				3A98A42818352303008C83AC /* openinapp.png in Resources */,
+				3AE20AF7183A394400B7F998 /* TRISourceCodeController.xib in Resources */,
 				3A86E47F1833B97200C1AC2C /* html in Resources */,
-				3AC83A7E1833BCC80089524B /* TRISourceCodeController.xib in Resources */,
 				3A86E47D1833B8BF00C1AC2C /* generate_html.sh in Resources */,
 				3AEAC75D183930C70097A8C6 /* ScreenDefinitions.json in Resources */,
 				3A98A40A1834A7E7008C83AC /* TRITitleAndTextScreen.xib in Resources */,
@@ -506,7 +501,6 @@
 				3A86E4841833BAFA00C1AC2C /* TRIPhotoScreen.m in Sources */,
 				3A98A4091834A7E7008C83AC /* TRITitleAndTextScreen.m in Sources */,
 				3AEAC75A18392EBC0097A8C6 /* TRIJavaScriptScreen.m in Sources */,
-				3A86E47B1833B7D900C1AC2C /* NSObject+TRISourceCode.m in Sources */,
 				3AE20AF1183A195100B7F998 /* TRIQRCodeScreen.m in Sources */,
 				3AC83A891833E4CA0089524B /* TRISpeechScreen.m in Sources */,
 				3A98A43A1835706F008C83AC /* TRIRemoteViewController.m in Sources */,
@@ -521,11 +515,11 @@
 				3A86E46B1833B53C00C1AC2C /* TRIBaseScreenController.m in Sources */,
 				3A98A42418352079008C83AC /* TRIOpenInAppActivity.m in Sources */,
 				3A8D29381837FCF40019C684 /* XCDYouTubeVideoPlayerViewController.m in Sources */,
+				3AE20AF6183A394400B7F998 /* TRISourceCodeController.m in Sources */,
 				3AC9837718362C0A004E3A94 /* TRIMenuController.m in Sources */,
 				3AB9BA291837E81700B8161D /* UIBezierPath+Symbol.m in Sources */,
 				3A86E46E1833B55B00C1AC2C /* TRIPresentationController.m in Sources */,
 				3A98A43118356D15008C83AC /* TRIBroadcaster.m in Sources */,
-				3AC83A7D1833BCC80089524B /* TRISourceCodeController.m in Sources */,
 				3AB9BA251837E09700B8161D /* TRIInteractiveTextScreen.m in Sources */,
 				3AB9BA2D1837E85400B8161D /* TRICrossView.m in Sources */,
 				3AC83A841833C9450089524B /* TRITextScreen.m in Sources */,

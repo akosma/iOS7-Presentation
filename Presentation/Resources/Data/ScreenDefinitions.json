@@ -197,6 +197,11 @@
                  "demo" : true
                  },
                  {
+                 "xtype": "source",
+                 "demo": true,
+                 "title": "Displaying Source Code"
+                 },
+                 {
                  "xtype" : "empty"
                  },
                  {

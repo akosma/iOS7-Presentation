@@ -26,7 +26,7 @@ static NSString *PDF_FILENAME = @"slides.pdf";
 @property (nonatomic, strong) NSArray *definitions;
 @property (nonatomic) NSInteger currentIndex;
 @property (nonatomic, strong) TRIBaseScreenController *currentScreen;
-@property (nonatomic, strong) TRISourceCodeController *sourceCodeController;
+@property (nonatomic, strong) UINavigationController *sourceCodeController;
 @property (nonatomic, strong) UIPopoverController *screenPopover;
 @property (nonatomic, strong) UIPopoverController *sharePopover;
 @property (nonatomic, strong) NSDictionary *xtypes;
@@ -208,20 +208,21 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     
     if (self.currentScreen.enableSourceCodeButton)
     {
-        NSMutableAttributedString *sourceCode = [[self currentScreen] tri_sourceCode];
-        if (sourceCode)
+        TRISourceCodeController *scc = nil;
+        if (self.sourceCodeController == nil)
         {
-            self.sourceCodeController = [[TRISourceCodeController alloc] init];
-            self.sourceCodeController.sourceCode = sourceCode;
-            
-            NSString *className = NSStringFromClass([self.currentScreen class]);
-            NSString *title = [NSString stringWithFormat:@"%@.m", className];
-            self.sourceCodeController.title = title;
-
-            [self presentViewController:self.sourceCodeController
-                               animated:YES
-                             completion:nil];
+            scc = [[TRISourceCodeController alloc] init];
+            self.sourceCodeController = [[UINavigationController alloc] initWithRootViewController:scc];
         }
+        else
+        {
+            scc = (TRISourceCodeController *)self.sourceCodeController.viewControllers[0];
+        }
+        scc.className = NSStringFromClass([self.currentScreen class]);
+        
+        [self presentViewController:self.sourceCodeController
+                           animated:YES
+                         completion:nil];
     }
 }
 
