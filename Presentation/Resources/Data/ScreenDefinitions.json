@@ -37,8 +37,28 @@
                  },
                  {
                  "xtype" : "title",
+                 "title" : "New UI",
+                 "contents" : "Flatter than flat."
+                 },
+                 {
+                 "xtype" : "photo",
+                 "title" : "Icon Grid for iOS 7",
+                 "contents" : "icon_grid",
+                 "contentMode": 4
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 {
+                 "xtype" : "title",
                  "title" : "URL Session",
                  "contents" : "Remember ASIHTTPRequest and AFNetworking? Yeah."
+                 },
+                 {
+                 "xtype" : "photo",
+                 "title" : "Enabling Background Fetch",
+                 "contents" : "background_fetch_setting",
+                 "contentMode": 4
                  },
                  {
                  "demo" : true,
