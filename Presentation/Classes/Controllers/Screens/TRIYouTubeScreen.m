@@ -33,6 +33,11 @@
     self.urlLabel.text = url;
 }
 
+- (void)performMainScreenAction
+{
+    [self play];
+}
+
 #pragma mark - UIGestureRecognizer methods
 
 - (IBAction)showVideo:(UITapGestureRecognizer *)tap

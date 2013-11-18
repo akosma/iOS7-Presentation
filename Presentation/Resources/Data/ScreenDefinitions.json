@@ -139,6 +139,7 @@
                  "xtype" : "empty"
                  },
                  {
+                 "demo" : true,
                  "xtype" : "title",
                  "title" : "JavaScriptCore",
                  "contents" : "It would have been faster if they had used Node.js instead."

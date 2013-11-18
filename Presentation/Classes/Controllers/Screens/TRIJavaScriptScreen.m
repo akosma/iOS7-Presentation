@@ -132,7 +132,7 @@
     };
 }
 
-- (void)executeDemo
+- (void)performMainScreenAction
 {
     [self executeJavaScript:nil];
 }

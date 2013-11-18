@@ -64,7 +64,7 @@ static NSString *CELL_REUSE_IDENTIFIER = @"CELL_REUSE_IDENTIFIER";
     self.speechLanguage = @"en-EN";
 }
 
-- (void)executeDemo
+- (void)performMainScreenAction
 {
     [self speak:nil];
 }

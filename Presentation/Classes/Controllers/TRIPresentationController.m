@@ -350,7 +350,7 @@ didReceiveMessage:(NSString *)message
     }
     else if ([message isEqualToString:MESSAGE_EXECUTE])
     {
-        [self.currentScreen executeDemo];
+        [self.currentScreen performMainScreenAction];
     }
 }
 

@@ -47,7 +47,7 @@ static NSString *HUGE_WIKIPEDIA_IMAGE = @"http://upload.wikimedia.org/wikipedia/
     [self.session invalidateAndCancel];
 }
 
-- (void)executeDemo
+- (void)performMainScreenAction
 {
     [self.session invalidateAndCancel];
     [self launchDownload:nil];

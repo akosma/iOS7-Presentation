@@ -41,7 +41,7 @@
 
 #pragma mark - Public methods
 
-- (void)executeDemo
+- (void)performMainScreenAction
 {
     // Subclasses implement this to allow the remote control to
     // trigger any animation or demo as required
