@@ -1,16 +1,16 @@
 //
-//  TRISourceCodeController.m
+//  TRISourceCodeScreen.m
 //  Presentation
 //
 //  Created by Adrian on 13/11/13.
 //  Copyright (c) 2013 Trifork GmbH. All rights reserved.
 //
 
-#import "TRISourceCodeController.h"
+#import "TRISourceCodeScreen.h"
 #import "TRIHelpers.h"
 
 
-@interface TRISourceCodeController ()
+@interface TRISourceCodeScreen ()
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic, strong) NSMutableAttributedString *sourceCode;
@@ -18,7 +18,7 @@
 @end
 
 
-@implementation TRISourceCodeController
+@implementation TRISourceCodeScreen
 
 + (NSString *)xtype
 {

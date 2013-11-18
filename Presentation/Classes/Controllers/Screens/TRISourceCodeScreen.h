@@ -1,5 +1,5 @@
 //
-//  TRISourceCodeController.h
+//  TRISourceCodeScreen.h
 //  Presentation
 //
 //  Created by Adrian on 13/11/13.
@@ -9,7 +9,7 @@
 #import "TRIBaseScreenController.h"
 
 
-@interface TRISourceCodeController : TRIBaseScreenController
+@interface TRISourceCodeScreen : TRIBaseScreenController
 
 @property (nonatomic, strong) NSString *className;
 

@@ -8,7 +8,7 @@
 
 #import "TRIPresentationController.h"
 #import "TRIBaseScreenController.h"
-#import "TRISourceCodeController.h"
+#import "TRISourceCodeScreen.h"
 #import "TRIMenuController.h"
 #import "TRIMenuControllerDelegate.h"
 #import "TRIHelpers.h"
@@ -208,15 +208,15 @@ static NSString *PDF_FILENAME = @"slides.pdf";
     
     if (self.currentScreen.enableSourceCodeButton)
     {
-        TRISourceCodeController *scc = nil;
+        TRISourceCodeScreen *scc = nil;
         if (self.sourceCodeController == nil)
         {
-            scc = [[TRISourceCodeController alloc] init];
+            scc = [[TRISourceCodeScreen alloc] init];
             self.sourceCodeController = [[UINavigationController alloc] initWithRootViewController:scc];
         }
         else
         {
-            scc = (TRISourceCodeController *)self.sourceCodeController.viewControllers[0];
+            scc = (TRISourceCodeScreen *)self.sourceCodeController.viewControllers[0];
         }
         scc.className = NSStringFromClass([self.currentScreen class]);
         

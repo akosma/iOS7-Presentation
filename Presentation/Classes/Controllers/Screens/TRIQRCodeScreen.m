@@ -45,33 +45,34 @@
     if(input)
     {
         [self.session addInput:input];
+
+        // Set the output object
+        AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
+        [self.session addOutput:output];
+        dispatch_queue_t queue = dispatch_get_main_queue();
+        [output setMetadataObjectsDelegate:self
+                                     queue:queue];
+        [output setMetadataObjectTypes:@[ AVMetadataObjectTypeQRCode ]];
+        
+        // Create a preview layer
+        self.previewLayer = nil;
+        self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
+        self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+        self.previewLayer.frame = self.previewView.bounds;
+        [self.previewView.layer addSublayer:self.previewLayer];
+        
+        // Get those codes!
+        [self.session startRunning];
     }
     else
     {
         NSLog(@"Error: %@", error);
     }
-    
-    // Set the output object
-    AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
-    [self.session addOutput:output];
-    dispatch_queue_t queue = dispatch_get_main_queue();
-    [output setMetadataObjectsDelegate:self
-                                 queue:queue];
-    [output setMetadataObjectTypes:@[ AVMetadataObjectTypeQRCode ]];
-    
-    // Create a preview layer
-    self.previewLayer = nil;
-    self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
-    self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    self.previewLayer.frame = self.previewView.bounds;
-    [self.previewView.layer addSublayer:self.previewLayer];
-
-    // Get those codes!
-    [self.session startRunning];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
     [self didRotateFromInterfaceOrientation:UIInterfaceOrientationPortrait];
 }
 
