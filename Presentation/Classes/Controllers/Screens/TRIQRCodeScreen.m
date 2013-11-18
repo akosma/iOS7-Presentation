@@ -41,7 +41,7 @@
     
     // Set the input object
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device
-                                                                             error:&error];
+                                                                        error:&error];
     if(input)
     {
         [self.session addInput:input];
