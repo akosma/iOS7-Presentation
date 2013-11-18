@@ -27,6 +27,12 @@
 
     NSString *text = self.definition[@"contents"];
     self.label.text = text;
+    
+    if (self.definition[@"code"])
+    {
+        self.label.font = [UIFont fontWithName:@"Menlo"
+                                          size:40];
+    }
 }
 
 @end

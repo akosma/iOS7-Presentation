@@ -101,7 +101,8 @@
                  {
                  "xtype" : "text",
                  "title" : "MKDistanceFormatter",
-                 "contents" : "MKDistanceFormatterUnits…\n…Imperial\n…Metric"
+                 "contents" : "MKDistanceFormatterUnits…\n…Imperial\n…Metric",
+                 "code": true
                  },
                  {
                  "demo" : true,
@@ -159,7 +160,8 @@
                  {
                  "xtype": "text",
                  "title": "Supported Barcode Types",
-                 "contents": "AVMetadataObjectType…\n…UPCECode\n…Code39Code\n…Code39Mod43Code\n…EAN13Code\n…EAN8Code\n…Code93Code\n…Code128Code\n…PDF417Code\n…QRCode\n…AztecCode"
+                 "contents": "AVMetadataObjectType…\n…UPCECode\n…Code39Code\n…Code39Mod43Code\n…EAN13Code\n…EAN8Code\n…Code93Code\n…Code128Code\n…PDF417Code\n…QRCode\n…AztecCode",
+                 "code": true
                  },
                  {
                  "demo" : true,
@@ -195,6 +197,24 @@
                  "xtype" : "movetxt",
                  "title" : "TextKit Demo",
                  "demo" : true
+                 },
+                 {
+                 "xtype": "photo",
+                 "title": "Dynamic Type Settings",
+                 "contents": "dynamic_type",
+                 "contentMode": 4
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Dynamic Type",
+                 "contents" : "[UIFontDescriptor preferredFontDescriptorWithTextStyle: UIFontTextStyleBody]",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Dynamic Type Notification",
+                 "contents" : "UIContentSizeCategory…\n…DidChangeNotification",
+                 "code": true
                  },
                  {
                  "xtype": "source",

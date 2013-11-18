@@ -30,10 +30,20 @@
     [super viewDidLoad];
     
     UIBarButtonItem *closeButton = nil;
-    closeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+    UIBarButtonSystemItem type = UIBarButtonSystemItemDone;
+    SEL sel = @selector(close:);
+    closeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:type
                                                                 target:self
-                                                                action:@selector(close:)];
+                                                                action:sel];
     self.navigationItem.rightBarButtonItem = closeButton;
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserverForName:UIContentSizeCategoryDidChangeNotification
+                        object:nil
+                         queue:nil
+                    usingBlock:^(NSNotification *notification) {
+                        [self styleSourceCode];
+                    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -67,8 +77,7 @@
 - (NSMutableAttributedString *)loadSourceCode
 {
     // Let's find out the path of the HTML file to show
-    NSString *className = NSStringFromClass([self class]);
-    NSString *filename = [NSString stringWithFormat:@"html/%@.m", className];
+    NSString *filename = [NSString stringWithFormat:@"html/%@.m", self.className];
     NSString *path = [[NSBundle mainBundle] pathForResource:filename
                                                      ofType:@"html"];
     NSMutableAttributedString *string = nil;
@@ -78,9 +87,10 @@
         NSURL *url = [NSURL fileURLWithPath:path];
         
         // Now we're going to load that HTML on a mutable string
-        NSDictionary *options = @{
-                                  NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType
-                                  };
+        NSDictionary *options = nil;
+        options = @{
+                    NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType
+                    };
         NSError *error = nil;
         string = [[NSMutableAttributedString alloc] initWithFileURL:url
                                                             options:options
@@ -93,30 +103,22 @@
 
 - (void)styleSourceCode
 {
-    NSInteger index = 1; // If we use zero, the font will be Times New Roman :)
-    
-    // Get the string currently selected by the CSS
-    UIFont *font = [self.sourceCode attribute:NSFontAttributeName
-                                      atIndex:index
-                               effectiveRange:NULL];
-    
-    // Use the same font, but with the size selected by the user
-    // in the system preferences
+    NSMutableAttributedString *string = nil;
+    NSAttributedString *text = self.textView.attributedText;
+    string = [[NSMutableAttributedString alloc] initWithAttributedString:text];
+    NSRange range = NSMakeRange(0, string.length - 1);
+
     NSString *style = UIFontTextStyleBody;
     UIFontDescriptor *descriptor = nil;
     descriptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:style];
-    font = [UIFont fontWithName:font.familyName
-                           size:descriptor.pointSize];
+
+    UIFont *newFont = [UIFont fontWithName:@"Menlo"
+                                      size:descriptor.pointSize];
+    [string addAttribute:NSFontAttributeName
+                   value:newFont
+                   range:range];
     
-    // Let's apply that font all over the attributed string
-    NSInteger length = [self.sourceCode length];
-    NSRange range = NSMakeRange(0, length);
-    
-    [self.sourceCode beginEditing];
-    [self.sourceCode addAttribute:NSFontAttributeName
-                            value:font
-                            range:range];
-    [self.sourceCode endEditing];
+    self.textView.attributedText = string;
 }
 
 @end
