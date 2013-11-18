@@ -225,6 +225,19 @@
                  "xtype" : "empty"
                  },
                  {
+                 "xtype" : "title",
+                 "title" : "Base64",
+                 "contents" : "No more copy-pasting code from StackOverflow."
+                 },
+                 {
+                 "xtype": "base64",
+                 "demo": true,
+                 "title": "Encoding an image as Base64"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 {
                  "xtype" : "text",
                  "title" : "Questions",
                  "contents" : "Questions?"
