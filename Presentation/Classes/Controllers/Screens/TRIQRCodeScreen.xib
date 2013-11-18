@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRIQRCodeScreen">
+            <connections>
+                <outlet property="previewView" destination="RdH-94-QoB" id="O3X-1P-Kgg"/>
+                <outlet property="textView" destination="XpL-tf-fDl" id="INJ-Vx-kbl"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdH-94-QoB">
+                    <rect key="frame" x="20" y="337" width="350" height="350"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="350" id="5xV-zp-yUF"/>
+                        <constraint firstAttribute="width" constant="350" id="NGa-nz-XVY"/>
+                        <constraint firstAttribute="height" constant="350" id="QSb-9c-Nag"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-tf-fDl">
+                    <rect key="frame" x="378" y="337" width="350" height="350"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="G8a-ml-8zf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="XpL-tf-fDl" firstAttribute="width" secondItem="RdH-94-QoB" secondAttribute="width" id="6ka-Ro-MKj"/>
+                <constraint firstItem="XpL-tf-fDl" firstAttribute="height" secondItem="RdH-94-QoB" secondAttribute="height" id="9H9-Fb-Dtj"/>
+                <constraint firstItem="XpL-tf-fDl" firstAttribute="leading" secondItem="RdH-94-QoB" secondAttribute="trailing" constant="8" id="W6V-pf-rnd"/>
+                <constraint firstAttribute="centerY" secondItem="XpL-tf-fDl" secondAttribute="centerY" id="e9b-yO-5UR"/>
+                <constraint firstItem="RdH-94-QoB" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="rtR-wv-2OY"/>
+                <constraint firstAttribute="centerY" secondItem="RdH-94-QoB" secondAttribute="centerY" id="xLm-BL-tsR"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+        </view>
+    </objects>
+</document>

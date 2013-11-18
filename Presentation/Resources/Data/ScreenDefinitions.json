@@ -101,7 +101,7 @@
                  {
                  "xtype" : "text",
                  "title" : "MKDistanceFormatter",
-                 "contents" : "MKDistanceFormatterUnitsImperial\nMKDistanceFormatterUnitsMetric"
+                 "contents" : "MKDistanceFormatterUnits…\n…Imperial\n…Metric"
                  },
                  {
                  "demo" : true,
@@ -139,14 +139,37 @@
                  "xtype" : "empty"
                  },
                  {
-                 "demo" : true,
                  "xtype" : "title",
                  "title" : "JavaScriptCore",
                  "contents" : "It would have been faster if they had used Node.js instead."
                  },
                  {
+                 "demo" : true,
                  "xtype": "javascript",
                  "title": "JavaScriptCore Demo"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "Barcode Reading",
+                 "contents" : "Because QRCodes are the next big thing©®™"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Supported Barcode Types",
+                 "contents": "AVMetadataObjectType…\n…UPCECode\n…Code39Code\n…Code39Mod43Code\n…EAN13Code\n…EAN8Code\n…Code93Code\n…Code128Code\n…PDF417Code\n…QRCode\n…AztecCode"
+                 },
+                 {
+                 "demo" : true,
+                 "xtype": "qrcode",
+                 "title": "QRCodes Demo"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Gotcha!",
+                 "contents": "Behold!\n\n[AVCaptureSession addOutput:]\nmust be called before\n[AVCaptureMetadataOutput setMetadataObjectTypes:]"
                  },
                  {
                  "xtype" : "empty"
@@ -184,7 +207,7 @@
                  {
                  "xtype" : "text",
                  "title" : "Credits",
-                 "contents" : "Credits:\n\nGithub\nobjc.io #5\nWikipedia\nNSHipster\nDevFright.com\nStack Overflow\nTypographica.org\nBig Nerd Ranch Blog\nCapTech Consulting Blog"
+                 "contents" : "Credits:\n\nGithub\nobjc.io #5\nWikipedia\nNSHipster\nDevFright.com\nStack Overflow\nTypographica.org\nBig Nerd Ranch Blog\nRenaud Pradenc Blog\nCapTech Consulting Blog"
                  },
                  {
                  "xtype" : "title",
