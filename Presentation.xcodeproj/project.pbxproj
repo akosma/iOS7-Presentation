@@ -61,6 +61,8 @@
 		3AC9837C18365F2B004E3A94 /* trifork_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC9837B18365F2B004E3A94 /* trifork_logo.png */; };
 		3AE20AEC1839F14B00B7F998 /* text_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AE20AEA1839F14B00B7F998 /* text_ios7.png */; };
 		3AE20AED1839F14B00B7F998 /* text_ios6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AE20AEB1839F14B00B7F998 /* text_ios6.png */; };
+		3AE20AF1183A195100B7F998 /* TRIQRCodeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE20AEF183A195100B7F998 /* TRIQRCodeScreen.m */; };
+		3AE20AF2183A195100B7F998 /* TRIQRCodeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE20AF0183A195100B7F998 /* TRIQRCodeScreen.xib */; };
 		3AEAC75A18392EBC0097A8C6 /* TRIJavaScriptScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAC75818392EBC0097A8C6 /* TRIJavaScriptScreen.m */; };
 		3AEAC75B18392EBC0097A8C6 /* TRIJavaScriptScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AEAC75918392EBC0097A8C6 /* TRIJavaScriptScreen.xib */; };
 		3AEAC75D183930C70097A8C6 /* ScreenDefinitions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AEAC75C183930C70097A8C6 /* ScreenDefinitions.json */; };
@@ -156,6 +158,9 @@
 		3AC9837B18365F2B004E3A94 /* trifork_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trifork_logo.png; sourceTree = "<group>"; };
 		3AE20AEA1839F14B00B7F998 /* text_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text_ios7.png; sourceTree = "<group>"; };
 		3AE20AEB1839F14B00B7F998 /* text_ios6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text_ios6.png; sourceTree = "<group>"; };
+		3AE20AEE183A195100B7F998 /* TRIQRCodeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIQRCodeScreen.h; sourceTree = "<group>"; };
+		3AE20AEF183A195100B7F998 /* TRIQRCodeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIQRCodeScreen.m; sourceTree = "<group>"; };
+		3AE20AF0183A195100B7F998 /* TRIQRCodeScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIQRCodeScreen.xib; sourceTree = "<group>"; };
 		3AEAC75718392EBC0097A8C6 /* TRIJavaScriptScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIJavaScriptScreen.h; sourceTree = "<group>"; };
 		3AEAC75818392EBC0097A8C6 /* TRIJavaScriptScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIJavaScriptScreen.m; sourceTree = "<group>"; };
 		3AEAC75918392EBC0097A8C6 /* TRIJavaScriptScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIJavaScriptScreen.xib; sourceTree = "<group>"; };
@@ -302,6 +307,9 @@
 				3AEAC75718392EBC0097A8C6 /* TRIJavaScriptScreen.h */,
 				3AEAC75818392EBC0097A8C6 /* TRIJavaScriptScreen.m */,
 				3AEAC75918392EBC0097A8C6 /* TRIJavaScriptScreen.xib */,
+				3AE20AEE183A195100B7F998 /* TRIQRCodeScreen.h */,
+				3AE20AEF183A195100B7F998 /* TRIQRCodeScreen.m */,
+				3AE20AF0183A195100B7F998 /* TRIQRCodeScreen.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -465,6 +473,7 @@
 				3AB9BA211837DA2B00B8161D /* TRIBeaconScreen.xib in Resources */,
 				3A98A42118350BD1008C83AC /* TRIEmptyScreen.xib in Resources */,
 				3A8D29351837FC330019C684 /* forbes_ibeacon.png in Resources */,
+				3AE20AF2183A195100B7F998 /* TRIQRCodeScreen.xib in Resources */,
 				3A98A42918352303008C83AC /* openinapp@2x.png in Resources */,
 				3A98A4101834E077008C83AC /* books.png in Resources */,
 			);
@@ -498,6 +507,7 @@
 				3A98A4091834A7E7008C83AC /* TRITitleAndTextScreen.m in Sources */,
 				3AEAC75A18392EBC0097A8C6 /* TRIJavaScriptScreen.m in Sources */,
 				3A86E47B1833B7D900C1AC2C /* NSObject+TRISourceCode.m in Sources */,
+				3AE20AF1183A195100B7F998 /* TRIQRCodeScreen.m in Sources */,
 				3AC83A891833E4CA0089524B /* TRISpeechScreen.m in Sources */,
 				3A98A43A1835706F008C83AC /* TRIRemoteViewController.m in Sources */,
 				3AC9837418361EFC004E3A94 /* TRIPDFHelper.m in Sources */,

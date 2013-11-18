@@ -17,6 +17,14 @@
 
 @implementation TRIBaseScreenController
 
++ (NSString *)xtype
+{
+    // Subclasses must override this method, returning a specific
+    // xtype used in the JSON screen definition file, read at
+    // application startup by the presentation controller.
+    return @"invalid";
+}
+
 - (instancetype)initWithDefinition:(NSDictionary *)definition
 {
     if (self = [super init])
