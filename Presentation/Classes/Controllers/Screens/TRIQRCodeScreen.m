@@ -36,14 +36,15 @@
     // Adapted from
     // http://www.renaudpradenc.com/?p=453
     self.session = [[AVCaptureSession alloc] init];
-    AVCaptureDevice *videoCaptureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSError *error = nil;
     
     // Set the input object
-    AVCaptureDeviceInput *videoInput = [AVCaptureDeviceInput deviceInputWithDevice:videoCaptureDevice error:&error];
-    if(videoInput)
+    AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device
+                                                                             error:&error];
+    if(input)
     {
-        [self.session addInput:videoInput];
+        [self.session addInput:input];
     }
     else
     {
@@ -51,11 +52,12 @@
     }
     
     // Set the output object
-    AVCaptureMetadataOutput *metadataOutput = [[AVCaptureMetadataOutput alloc] init];
-    [self.session addOutput:metadataOutput];
-    [metadataOutput setMetadataObjectsDelegate:self
-                                         queue:dispatch_get_main_queue()];
-    [metadataOutput setMetadataObjectTypes:@[ AVMetadataObjectTypeQRCode ]];
+    AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
+    [self.session addOutput:output];
+    dispatch_queue_t queue = dispatch_get_main_queue();
+    [output setMetadataObjectsDelegate:self
+                                 queue:queue];
+    [output setMetadataObjectTypes:@[ AVMetadataObjectTypeQRCode ]];
     
     // Create a preview layer
     self.previewLayer = nil;
