@@ -51,6 +51,7 @@
     CMStepUpdateHandler handler = ^(NSInteger numberOfSteps, NSDate *timestamp, NSError *error) {
         self.stepsLabel.text = [NSString stringWithFormat:@"Steps: %ld", (long)numberOfSteps];
     };
+    self.stepsLabel.text = @"";
     [self.stepCounter startStepCountingUpdatesToQueue:self.queue
                                              updateOn:1
                                           withHandler:handler];
