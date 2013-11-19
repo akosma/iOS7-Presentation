@@ -6,11 +6,12 @@
 //  Copyright (c) 2013 Trifork GmbH. All rights reserved.
 //
 
-#import "TRIMACAddressScreen.h"
 #include <sys/socket.h>
 #include <sys/sysctl.h>
 #include <net/if.h>
 #include <net/if_dl.h>
+
+#import "TRIMACAddressScreen.h"
 
 
 @interface TRIMACAddressScreen ()
@@ -34,6 +35,8 @@
     
     self.label.text = [self macAddress];
 }
+
+#pragma mark - Very private parts
 
 - (NSString *)macAddress
 {
