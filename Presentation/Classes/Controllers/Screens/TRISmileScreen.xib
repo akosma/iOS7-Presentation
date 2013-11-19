@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRISmileScreen">
+            <connections>
+                <outlet property="previewView" destination="spG-XI-vjM" id="3aw-um-i91"/>
+                <outlet property="textView" destination="tT0-9r-2cP" id="XPk-AE-Zad"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spG-XI-vjM">
+                    <rect key="frame" x="20" y="327" width="350" height="350"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="350" id="8hj-B0-RMT"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="350" id="OWr-CH-ScO"/>
+                        <constraint firstAttribute="height" constant="350" id="qqk-P6-o2W"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="Not smiling :(" translatesAutoresizingMaskIntoConstraints="NO" id="tT0-9r-2cP">
+                    <rect key="frame" x="378" y="327" width="350" height="350"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.11221535539999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="yX5-mz-MiF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="spG-XI-vjM" secondAttribute="centerY" id="BGX-cj-Vsm"/>
+                <constraint firstItem="tT0-9r-2cP" firstAttribute="width" secondItem="spG-XI-vjM" secondAttribute="width" id="EzR-UW-kZ0"/>
+                <constraint firstItem="tT0-9r-2cP" firstAttribute="height" secondItem="spG-XI-vjM" secondAttribute="height" id="Qe9-1c-289"/>
+                <constraint firstItem="spG-XI-vjM" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" id="QsE-zp-KgV"/>
+                <constraint firstAttribute="centerY" secondItem="tT0-9r-2cP" secondAttribute="centerY" id="Y4h-Wl-FOD"/>
+                <constraint firstItem="tT0-9r-2cP" firstAttribute="leading" secondItem="spG-XI-vjM" secondAttribute="trailing" constant="8" id="qX8-7C-lHl"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+        </view>
+    </objects>
+</document>

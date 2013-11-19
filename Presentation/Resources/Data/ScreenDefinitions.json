@@ -221,7 +221,7 @@
                  },
                  
                  
-
+                 
                  
                  
                  {
@@ -233,6 +233,31 @@
                  "demo" : true,
                  "xtype": "javascript",
                  "title": "JavaScriptCore Demo"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== FACE RECOGNITION =================="
+                 },
+                 
+                 
+                 
+                 
+                 
+                 {
+                 "xtype" : "title",
+                 "title" : "Smile Recognition",
+                 "contents" : "Siri can hear AND see you now."
+                 },
+                 {
+                 "demo" : true,
+                 "xtype": "smile",
+                 "title": "Face Recognition Demo"
                  },
                  {
                  "xtype" : "empty"
