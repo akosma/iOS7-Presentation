@@ -166,12 +166,6 @@
                  },
                  {
                  "xtype": "text",
-                 "title": "Buttons",
-                 "contents": "Borderless buttons:\nJust text",
-                 "notes": ""
-                 },
-                 {
-                 "xtype": "text",
                  "title": "Translucent Bars",
                  "contents": "Translucent Bars",
                  "notes": ""
@@ -285,6 +279,36 @@
                  "contentMode": 4
                  },
                  {
+                 "xtype": "text",
+                 "title": "Columns",
+                 "contents": "Columns",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Hyphenation",
+                 "contents": "Hyphenation",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Kerning",
+                 "contents": "Kerning",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Dynamic Type",
+                 "contents": "Dynamic Type",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "exclusionPaths",
+                 "contents": "textView.textContainer.exclusionPaths = @[path];",
+                 "code": true
+                 },
+                 {
                  "xtype" : "movetxt",
                  "title" : "TextKit Demo",
                  "demo" : true
@@ -313,6 +337,12 @@
                  "title": "Displaying Source Code"
                  },
                  {
+                 "xtype" : "text",
+                 "title" : "NSHTMLTextDocumentType",
+                 "contents" : "NSHTMLTextDocumentType",
+                 "code": true
+                 },
+                 {
                  "xtype" : "empty"
                  },
                  
@@ -337,10 +367,22 @@
                  "contentMode": 4
                  },
                  {
-                 "demo" : true,
-                 "title" : "URL Session demo",
-                 "delay" : 5,
-                 "xtype" : "download"
+                 "xtype": "text",
+                 "title": "NSURLSession",
+                 "contents": "NSURLSession",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "NSURLSessionConfiguration",
+                 "contents": "NSURLSessionConfiguration",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "NSURLSessionDownloadTask",
+                 "contents": "NSURLSessionDownloadTask",
+                 "code": true
                  },
                  {
                  "xtype" : "text",
@@ -355,7 +397,8 @@
                  {
                  "xtype" : "text",
                  "title" : "NSProgress",
-                 "contents" : "New in iOS 7: NSProgress"
+                 "contents" : "NSProgress",
+                 "code": true
                  },
                  {
                  "xtype" : "text",
@@ -366,6 +409,12 @@
                  "xtype" : "text",
                  "title" : "NSProgress",
                  "contents" : "Parent\/child relationships"
+                 },
+                 {
+                 "demo" : true,
+                 "title" : "URL Session demo",
+                 "delay" : 5,
+                 "xtype" : "download"
                  },
                  {
                  "xtype" : "empty"
@@ -383,6 +432,18 @@
                  "xtype" : "title",
                  "title" : "Text-to-Speech",
                  "contents" : "100% lip service"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "AVSpeechUtterance",
+                 "contents" : "AVSpeechUtterance",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "AVSpeechSynthesizer",
+                 "contents" : "AVSpeechSynthesizer",
+                 "code": true
                  },
                  {
                  "demo" : true,
@@ -415,12 +476,36 @@
                  {
                  "xtype" : "text",
                  "title" : "MKDistanceFormatter",
-                 "contents" : "MKDistanceFormatter"
+                 "contents" : "MKDistanceFormatter",
+                 "code": true
                  },
                  {
                  "xtype" : "text",
                  "title" : "MKDistanceFormatter",
                  "contents" : "MKDistanceFormatterUnits…\n…Imperial\n…Metric",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "MKDistanceFormatter",
+                 "contents" : "Guess what's the default?"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "MKGeodesicPolyline",
+                 "contents" : "MKGeodesicPolyline",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "MKPolylineRenderer",
+                 "contents" : "MKPolylineRenderer",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "showAnnotations:animated:",
+                 "contents" : "[map showAnnotations:array animated:YES]",
                  "code": true
                  },
                  {
@@ -460,6 +545,36 @@
                  "placeholder" : "minority_report"
                  },
                  {
+                 "xtype" : "text",
+                 "title" : "CLBeaconRegion",
+                 "contents" : "CLBeaconRegion",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "CLBeacon",
+                 "contents" : "CLBeacon",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "CLBeacon.proximityUUID",
+                 "contents" : "CLBeacon.proximityUUID",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "CLBeacon.major",
+                 "contents" : "CLBeacon.major",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "CLBeacon.minor",
+                 "contents" : "CLBeacon.minor",
+                 "code": true
+                 },
+                 {
                  "demo" : true,
                  "title" : "iBeacon Demo",
                  "delay" : 60,
@@ -483,6 +598,40 @@
                  "xtype" : "title",
                  "title" : "JavaScriptCore",
                  "contents" : "It would have been faster if they had used Node.js instead."
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "JSVirtualMachine",
+                 "contents" : "JSVirtualMachine",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "JSContext",
+                 "contents" : "JSContext",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Collection of objects",
+                 "contents" : "Collection of objects"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Collection of objects",
+                 "contents" : "Strings, numbers, blocks, etc"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "JSValue",
+                 "contents" : "JSValue",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "[JSContext evaluateScript:]",
+                 "contents": "[context evaluateScript:js]",
+                 "code": true
                  },
                  {
                  "demo" : true,
@@ -510,6 +659,18 @@
                  "contents" : "Siri can hear AND see you now."
                  },
                  {
+                 "xtype": "text",
+                 "title": "CIDetector",
+                 "contents": "detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:options];",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "CIFaceFeature",
+                 "contents": "[detector featuresInImage:image options:@{ CIDetectorSmile: @YES }];",
+                 "code": true
+                 },
+                 {
                  "demo" : true,
                  "xtype": "smile",
                  "title": "Face Recognition Demo"
@@ -535,6 +696,36 @@
                  },
                  {
                  "xtype": "text",
+                 "title": "AVCaptureSession",
+                 "contents": "AVCaptureSession",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "AVCaptureDevice",
+                 "contents": "AVCaptureDevice",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "AVCaptureDeviceInput",
+                 "contents": "AVCaptureDeviceInput",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "AVCaptureMetadataOutputObjectsDelegate",
+                 "contents": "AVCaptureMetadataOutputObjectsDelegate",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "AVMetadataMachineReadableCodeObject",
+                 "contents": "AVMetadataMachineReadableCodeObject",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
                  "title": "Supported Barcode Types",
                  "contents": "AVMetadataObjectType…\n…UPCECode\n…Code39Code\n…Code39Mod43Code\n…EAN13Code\n…EAN8Code\n…Code93Code\n…Code128Code\n…PDF417Code\n…QRCode\n…AztecCode",
                  "code": true
@@ -547,7 +738,8 @@
                  {
                  "xtype": "text",
                  "title": "Gotcha!",
-                 "contents": "Behold!\n\n[AVCaptureSession addOutput:]\nmust be called before\n[AVCaptureMetadataOutput setMetadataObjectTypes:]"
+                 "contents": "// Behold!\n\n[AVCaptureSession addOutput:]\n// must be called before\n[AVCaptureMetadataOutput setMetadataObjectTypes:]",
+                 "code": true
                  },
                  {
                  "xtype" : "empty"
@@ -565,8 +757,14 @@
                  
                  {
                  "xtype" : "title",
-                 "title" : "Minor Additions",
+                 "title" : "More!",
                  "contents" : "KISS principle applies here"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "base64EncodedStringWithOptions",
+                 "contents": "[NSData base64EncodedStringWithOptions:]",
+                 "code": true
                  },
                  {
                  "xtype": "base64",
@@ -574,14 +772,31 @@
                  "title": "Encoding an image as Base64"
                  },
                  {
+                 "xtype": "text",
+                 "title": "SSReadingList",
+                 "contents": "SSReadingList",
+                 "code": true
+                 },
+                 {
                  "xtype": "readinglist",
                  "demo": true,
                  "title": "Adding to Safari Reading List"
                  },
                  {
+                 "xtype": "text",
+                 "title": "CMStepCounter",
+                 "contents": "CMStepCounter",
+                 "code": true
+                 },
+                 {
                  "xtype": "steps",
                  "demo": true,
-                 "title": "Counting Steps with CMStepCounter"
+                 "title": "Counting Steps"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "No More MAC Address",
+                 "contents": "No More MAC Address\n\n(privacy concerns)"
                  },
                  {
                  "xtype": "macaddress",
@@ -601,19 +816,19 @@
                  
                  
                  {
+                 "xtype" : "title",
+                 "title" : "Thanks for attending!",
+                 "contents" : "Get the PDF of this presentation\nwhile it's hot."
+                 },
+                 {
                  "xtype" : "text",
                  "title" : "Credits",
                  "contents" : "Credits:\n\nGithub\nobjc.io #5\nWikipedia\nNSHipster\nDevFright.com\nStack Overflow\nTypographica.org\nBig Nerd Ranch Blog\nRenaud Pradenc Blog\nMaximiliano Firtman Blog\nCapTech Consulting Blog"
                  },
                  {
-                 "xtype" : "title",
-                 "title" : "Thanks for attending!",
-                 "contents" : "Get the PDF of this presentation while it's hot."
-                 },
-                 {
                  "xtype" : "text",
                  "title" : "Upcoming Trainings",
-                 "contents" : "iOS Training in the Netherlands in January!\nContact us for more details."
+                 "contents" : "iOS Training in the\nNetherlands in January!\n\nContact us for more details."
                  },
                  {
                  "xtype" : "text",
