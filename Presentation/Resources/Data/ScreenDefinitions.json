@@ -51,7 +51,7 @@
                  {
                  "xtype": "text",
                  "title": "Summary",
-                 "contents": "New UI\nDynamic behavior for views\nText Kit\n64-bit Support\nMore Multitasking\nSprite Kit\nGame Controller\nInter App Audio\nPeer-to-Peer Connectivity\nPlus additions to existing frameworks…",
+                 "contents": "New UI\nDynamic behavior\nText Kit\n64-bit Support\nMore Multitasking\nSprite Kit\nGame Controller\nInter App Audio\nPeer-to-Peer Connectivity\n…and more…",
                  "backgroundColor": "262626",
                  "textColor": "FFFFFF"
                  },
@@ -443,6 +443,12 @@
                  "xtype" : "text",
                  "title" : "AVSpeechSynthesizer",
                  "contents" : "AVSpeechSynthesizer",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "AVSpeechSynthesisVoice",
+                 "contents" : "AVSpeechSynthesisVoice",
                  "code": true
                  },
                  {
