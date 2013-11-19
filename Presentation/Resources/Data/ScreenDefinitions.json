@@ -53,10 +53,65 @@
                  "contents" : "Flatter than flat."
                  },
                  {
+                 "xtype": "text",
+                 "title": "New UI: Key Concepts",
+                 "contents": "New UI: Key Concepts"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "New UI: Keywords (1/3)",
+                 "contents": "Deference",
+                 "notes": "UI does not compete with content. It supports it."
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "New UI: Keywords (2/3)",
+                 "contents": "Clarity",
+                 "notes": "Text is legible at every size, icons are lucid, adornments are subtle"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "New UI: Keywords (3/3)",
+                 "contents": "Depth",
+                 "notes": "Visual layers and motion"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Icons",
+                 "contents": "Icon radius: 12pt",
+                 "notes": "It used to be 10pt in iOS 6"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Icons",
+                 "contents": "Superellipse",
+                 "notes": "It used to be 10pt in iOS 6"
+                 },
+                 {
+                 "xtype": "photo",
+                 "title": "Icons",
+                 "contents": "superellipse",
+                 "contentMode": 4,
+                 "backgroundColor": "262626",
+                 "notes": ""
+                 },
+                 {
                  "xtype" : "photo",
                  "title" : "Icon Grid for iOS 7",
                  "contents" : "icon_grid",
                  "contentMode": 4
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Buttons",
+                 "contents": "Buttons are just text",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Buttons",
+                 "contents": "Buttons are just text",
+                 "notes": ""
                  },
                  {
                  "xtype" : "empty"

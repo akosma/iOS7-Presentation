@@ -8,6 +8,7 @@
 
 #import "TRIPhotoScreen.h"
 
+
 @interface TRIPhotoScreen ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

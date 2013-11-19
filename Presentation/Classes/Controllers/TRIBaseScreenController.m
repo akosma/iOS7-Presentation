@@ -7,6 +7,8 @@
 //
 
 #import "TRIBaseScreenController.h"
+#import "TRIHelpers.h"
+
 
 @interface TRIBaseScreenController ()
 
@@ -45,6 +47,13 @@
 
     NSNumber *delay = self.definition[@"delay"];
     self.delayForSnapshot = (delay) ? [delay floatValue] : 0.75;
+
+    if (self.definition[@"backgroundColor"])
+    {
+        NSString *string = self.definition[@"backgroundColor"];
+        UIColor *color = [UIColor colorWithHexString:string];
+        self.view.backgroundColor = color;
+    }
 }
 
 #pragma mark - Public methods

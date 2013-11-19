@@ -13,6 +13,8 @@
 		3A3D6330183BA9EF00B137DE /* TRICountingStepsScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D632E183BA9EF00B137DE /* TRICountingStepsScreen.xib */; };
 		3A3D6375183BAF7500B137DE /* TRIMACAddressScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D6373183BAF7500B137DE /* TRIMACAddressScreen.m */; };
 		3A3D6376183BAF7500B137DE /* TRIMACAddressScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6374183BAF7500B137DE /* TRIMACAddressScreen.xib */; };
+		3A3D637C183BD95600B137DE /* superellipse.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D637B183BD95600B137DE /* superellipse.png */; };
+		3A3D637F183BDAFA00B137DE /* UIColor+Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D637E183BDAFA00B137DE /* UIColor+Presentation.m */; };
 		3A6F6193183A55EA000ABC90 /* base64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6192183A55EA000ABC90 /* base64.png */; };
 		3A6F6197183A55FA000ABC90 /* TRIBase64Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F6195183A55FA000ABC90 /* TRIBase64Screen.m */; };
 		3A6F6198183A55FA000ABC90 /* TRIBase64Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6196183A55FA000ABC90 /* TRIBase64Screen.xib */; };
@@ -91,6 +93,9 @@
 		3A3D6372183BAF7500B137DE /* TRIMACAddressScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIMACAddressScreen.h; sourceTree = "<group>"; };
 		3A3D6373183BAF7500B137DE /* TRIMACAddressScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIMACAddressScreen.m; sourceTree = "<group>"; };
 		3A3D6374183BAF7500B137DE /* TRIMACAddressScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIMACAddressScreen.xib; sourceTree = "<group>"; };
+		3A3D637B183BD95600B137DE /* superellipse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = superellipse.png; sourceTree = "<group>"; };
+		3A3D637D183BDAFA00B137DE /* UIColor+Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Presentation.h"; sourceTree = "<group>"; };
+		3A3D637E183BDAFA00B137DE /* UIColor+Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Presentation.m"; sourceTree = "<group>"; };
 		3A6F6192183A55EA000ABC90 /* base64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base64.png; sourceTree = "<group>"; };
 		3A6F6194183A55FA000ABC90 /* TRIBase64Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIBase64Screen.h; sourceTree = "<group>"; };
 		3A6F6195183A55FA000ABC90 /* TRIBase64Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIBase64Screen.m; sourceTree = "<group>"; };
@@ -379,6 +384,7 @@
 		3A86E4731833B6DD00C1AC2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3A3D637B183BD95600B137DE /* superellipse.png */,
 				3A6F6199183A5CF3000ABC90 /* background_fetch_setting.png */,
 				3A6F6192183A55EA000ABC90 /* base64.png */,
 				3AE20AFA183A503D00B7F998 /* icon_grid.png */,
@@ -418,6 +424,8 @@
 				3A98A425183520CE008C83AC /* TRIOpenInAppActivityDelegate.h */,
 				3AC9837218361EFC004E3A94 /* TRIPDFHelper.h */,
 				3AC9837318361EFC004E3A94 /* TRIPDFHelper.m */,
+				3A3D637D183BDAFA00B137DE /* UIColor+Presentation.h */,
+				3A3D637E183BDAFA00B137DE /* UIColor+Presentation.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -509,6 +517,7 @@
 				3A8D293F1837FFF00019C684 /* TRIYouTubeScreen.xib in Resources */,
 				3AB1CF25183B8976005B8757 /* TRISmileScreen.xib in Resources */,
 				3AB9BA261837E09700B8161D /* TRIInteractiveTextScreen.xib in Resources */,
+				3A3D637C183BD95600B137DE /* superellipse.png in Resources */,
 				3A86E4751833B6DD00C1AC2C /* Images.xcassets in Resources */,
 				3AC9837C18365F2B004E3A94 /* trifork_logo.png in Resources */,
 				3A98A41C1834F599008C83AC /* TRIURLSessionScreen.xib in Resources */,
@@ -592,6 +601,7 @@
 				3AC9837718362C0A004E3A94 /* TRIMenuController.m in Sources */,
 				3A3D6375183BAF7500B137DE /* TRIMACAddressScreen.m in Sources */,
 				3A3D632A183BA7E600B137DE /* TRIReadingListScreen.m in Sources */,
+				3A3D637F183BDAFA00B137DE /* UIColor+Presentation.m in Sources */,
 				3AB9BA291837E81700B8161D /* UIBezierPath+Symbol.m in Sources */,
 				3A86E46E1833B55B00C1AC2C /* TRIPresentationController.m in Sources */,
 				3A3D632F183BA9EF00B137DE /* TRICountingStepsScreen.m in Sources */,
