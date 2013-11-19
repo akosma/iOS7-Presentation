@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A3D632A183BA7E600B137DE /* TRIReadingListScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D6328183BA7E600B137DE /* TRIReadingListScreen.m */; };
 		3A3D632B183BA7E600B137DE /* TRIReadingListScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6329183BA7E600B137DE /* TRIReadingListScreen.xib */; };
+		3A3D632F183BA9EF00B137DE /* TRICountingStepsScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D632D183BA9EF00B137DE /* TRICountingStepsScreen.m */; };
+		3A3D6330183BA9EF00B137DE /* TRICountingStepsScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D632E183BA9EF00B137DE /* TRICountingStepsScreen.xib */; };
 		3A6F6193183A55EA000ABC90 /* base64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6192183A55EA000ABC90 /* base64.png */; };
 		3A6F6197183A55FA000ABC90 /* TRIBase64Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F6195183A55FA000ABC90 /* TRIBase64Screen.m */; };
 		3A6F6198183A55FA000ABC90 /* TRIBase64Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6196183A55FA000ABC90 /* TRIBase64Screen.xib */; };
@@ -81,6 +83,9 @@
 		3A3D6327183BA7E600B137DE /* TRIReadingListScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIReadingListScreen.h; sourceTree = "<group>"; };
 		3A3D6328183BA7E600B137DE /* TRIReadingListScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIReadingListScreen.m; sourceTree = "<group>"; };
 		3A3D6329183BA7E600B137DE /* TRIReadingListScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIReadingListScreen.xib; sourceTree = "<group>"; };
+		3A3D632C183BA9EF00B137DE /* TRICountingStepsScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRICountingStepsScreen.h; sourceTree = "<group>"; };
+		3A3D632D183BA9EF00B137DE /* TRICountingStepsScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRICountingStepsScreen.m; sourceTree = "<group>"; };
+		3A3D632E183BA9EF00B137DE /* TRICountingStepsScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRICountingStepsScreen.xib; sourceTree = "<group>"; };
 		3A6F6192183A55EA000ABC90 /* base64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base64.png; sourceTree = "<group>"; };
 		3A6F6194183A55FA000ABC90 /* TRIBase64Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIBase64Screen.h; sourceTree = "<group>"; };
 		3A6F6195183A55FA000ABC90 /* TRIBase64Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIBase64Screen.m; sourceTree = "<group>"; };
@@ -339,6 +344,9 @@
 				3A3D6327183BA7E600B137DE /* TRIReadingListScreen.h */,
 				3A3D6328183BA7E600B137DE /* TRIReadingListScreen.m */,
 				3A3D6329183BA7E600B137DE /* TRIReadingListScreen.xib */,
+				3A3D632C183BA9EF00B137DE /* TRICountingStepsScreen.h */,
+				3A3D632D183BA9EF00B137DE /* TRICountingStepsScreen.m */,
+				3A3D632E183BA9EF00B137DE /* TRICountingStepsScreen.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -513,6 +521,7 @@
 				3AE20AEC1839F14B00B7F998 /* text_ios7.png in Resources */,
 				3AE20AED1839F14B00B7F998 /* text_ios6.png in Resources */,
 				3AC9837A18365D71004E3A94 /* IOS_7_Logo.png in Resources */,
+				3A3D6330183BA9EF00B137DE /* TRICountingStepsScreen.xib in Resources */,
 				3A3D632B183BA7E600B137DE /* TRIReadingListScreen.xib in Resources */,
 				3AC83A8A1833E4CA0089524B /* TRISpeechScreen.xib in Resources */,
 				3A6F6198183A55FA000ABC90 /* TRIBase64Screen.xib in Resources */,
@@ -575,6 +584,7 @@
 				3A3D632A183BA7E600B137DE /* TRIReadingListScreen.m in Sources */,
 				3AB9BA291837E81700B8161D /* UIBezierPath+Symbol.m in Sources */,
 				3A86E46E1833B55B00C1AC2C /* TRIPresentationController.m in Sources */,
+				3A3D632F183BA9EF00B137DE /* TRICountingStepsScreen.m in Sources */,
 				3A98A43118356D15008C83AC /* TRIBroadcaster.m in Sources */,
 				3AB9BA251837E09700B8161D /* TRIInteractiveTextScreen.m in Sources */,
 				3AB9BA2D1837E85400B8161D /* TRICrossView.m in Sources */,

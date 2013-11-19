@@ -383,6 +383,11 @@
                  "title": "Adding to Safari Reading List"
                  },
                  {
+                 "xtype": "steps",
+                 "demo": true,
+                 "title": "Counting Steps with CMStepCounter"
+                 },
+                 {
                  "xtype" : "empty"
                  },
                  
