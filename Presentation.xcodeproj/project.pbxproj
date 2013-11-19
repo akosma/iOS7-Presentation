@@ -15,6 +15,11 @@
 		3A3D6376183BAF7500B137DE /* TRIMACAddressScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6374183BAF7500B137DE /* TRIMACAddressScreen.xib */; };
 		3A3D637C183BD95600B137DE /* superellipse.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D637B183BD95600B137DE /* superellipse.png */; };
 		3A3D637F183BDAFA00B137DE /* UIColor+Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D637E183BDAFA00B137DE /* UIColor+Presentation.m */; };
+		3A3D6385183BE12A00B137DE /* icon_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6380183BE12A00B137DE /* icon_twitter.png */; };
+		3A3D6386183BE12A00B137DE /* icon_instapaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6381183BE12A00B137DE /* icon_instapaper.png */; };
+		3A3D6387183BE12A00B137DE /* icon_evernote.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6382183BE12A00B137DE /* icon_evernote.png */; };
+		3A3D6388183BE12A00B137DE /* icon_runkeeper.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6383183BE12A00B137DE /* icon_runkeeper.png */; };
+		3A3D6389183BE12A00B137DE /* icon_pcalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6384183BE12A00B137DE /* icon_pcalc.png */; };
 		3A6F6193183A55EA000ABC90 /* base64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6192183A55EA000ABC90 /* base64.png */; };
 		3A6F6197183A55FA000ABC90 /* TRIBase64Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F6195183A55FA000ABC90 /* TRIBase64Screen.m */; };
 		3A6F6198183A55FA000ABC90 /* TRIBase64Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6196183A55FA000ABC90 /* TRIBase64Screen.xib */; };
@@ -96,6 +101,11 @@
 		3A3D637B183BD95600B137DE /* superellipse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = superellipse.png; sourceTree = "<group>"; };
 		3A3D637D183BDAFA00B137DE /* UIColor+Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Presentation.h"; sourceTree = "<group>"; };
 		3A3D637E183BDAFA00B137DE /* UIColor+Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Presentation.m"; sourceTree = "<group>"; };
+		3A3D6380183BE12A00B137DE /* icon_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_twitter.png; sourceTree = "<group>"; };
+		3A3D6381183BE12A00B137DE /* icon_instapaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_instapaper.png; sourceTree = "<group>"; };
+		3A3D6382183BE12A00B137DE /* icon_evernote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_evernote.png; sourceTree = "<group>"; };
+		3A3D6383183BE12A00B137DE /* icon_runkeeper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_runkeeper.png; sourceTree = "<group>"; };
+		3A3D6384183BE12A00B137DE /* icon_pcalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_pcalc.png; sourceTree = "<group>"; };
 		3A6F6192183A55EA000ABC90 /* base64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base64.png; sourceTree = "<group>"; };
 		3A6F6194183A55FA000ABC90 /* TRIBase64Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIBase64Screen.h; sourceTree = "<group>"; };
 		3A6F6195183A55FA000ABC90 /* TRIBase64Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIBase64Screen.m; sourceTree = "<group>"; };
@@ -384,6 +394,11 @@
 		3A86E4731833B6DD00C1AC2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3A3D6380183BE12A00B137DE /* icon_twitter.png */,
+				3A3D6381183BE12A00B137DE /* icon_instapaper.png */,
+				3A3D6382183BE12A00B137DE /* icon_evernote.png */,
+				3A3D6383183BE12A00B137DE /* icon_runkeeper.png */,
+				3A3D6384183BE12A00B137DE /* icon_pcalc.png */,
 				3A3D637B183BD95600B137DE /* superellipse.png */,
 				3A6F6199183A5CF3000ABC90 /* background_fetch_setting.png */,
 				3A6F6192183A55EA000ABC90 /* base64.png */,
@@ -516,17 +531,20 @@
 				3AC83A801833C1330089524B /* TRIPresentationController.xib in Resources */,
 				3A8D293F1837FFF00019C684 /* TRIYouTubeScreen.xib in Resources */,
 				3AB1CF25183B8976005B8757 /* TRISmileScreen.xib in Resources */,
+				3A3D6385183BE12A00B137DE /* icon_twitter.png in Resources */,
 				3AB9BA261837E09700B8161D /* TRIInteractiveTextScreen.xib in Resources */,
 				3A3D637C183BD95600B137DE /* superellipse.png in Resources */,
 				3A86E4751833B6DD00C1AC2C /* Images.xcassets in Resources */,
 				3AC9837C18365F2B004E3A94 /* trifork_logo.png in Resources */,
 				3A98A41C1834F599008C83AC /* TRIURLSessionScreen.xib in Resources */,
+				3A3D6389183BE12A00B137DE /* icon_pcalc.png in Resources */,
 				3AC83A8F183418270089524B /* TRIGeodesicScreen.xib in Resources */,
 				3A3D6376183BAF7500B137DE /* TRIMACAddressScreen.xib in Resources */,
 				3A8D293D1837FDE70019C684 /* minority_report.png in Resources */,
 				3A98A43B1835706F008C83AC /* TRIRemoteViewController.xib in Resources */,
 				3A86E4851833BAFA00C1AC2C /* TRIPhotoScreen.xib in Resources */,
 				3A98A42818352303008C83AC /* openinapp.png in Resources */,
+				3A3D6387183BE12A00B137DE /* icon_evernote.png in Resources */,
 				3AE20AF7183A394400B7F998 /* TRISourceCodeScreen.xib in Resources */,
 				3A6F6193183A55EA000ABC90 /* base64.png in Resources */,
 				3A86E47F1833B97200C1AC2C /* html in Resources */,
@@ -543,12 +561,14 @@
 				3A3D632B183BA7E600B137DE /* TRIReadingListScreen.xib in Resources */,
 				3AC83A8A1833E4CA0089524B /* TRISpeechScreen.xib in Resources */,
 				3A6F6198183A55FA000ABC90 /* TRIBase64Screen.xib in Resources */,
+				3A3D6388183BE12A00B137DE /* icon_runkeeper.png in Resources */,
 				3AB9BA211837DA2B00B8161D /* TRIBeaconScreen.xib in Resources */,
 				3AE20AFB183A503D00B7F998 /* icon_grid.png in Resources */,
 				3A98A42118350BD1008C83AC /* TRIEmptyScreen.xib in Resources */,
 				3A8D29351837FC330019C684 /* forbes_ibeacon.png in Resources */,
 				3AE20AF2183A195100B7F998 /* TRIQRCodeScreen.xib in Resources */,
 				3A98A42918352303008C83AC /* openinapp@2x.png in Resources */,
+				3A3D6386183BE12A00B137DE /* icon_instapaper.png in Resources */,
 				3A6F619A183A5CF3000ABC90 /* background_fetch_setting.png in Resources */,
 				3A98A4101834E077008C83AC /* books.png in Resources */,
 			);

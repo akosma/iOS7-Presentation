@@ -41,6 +41,33 @@
                  
                  {
                  "xtype": "comment",
+                 "contents": "==================== SUMMARY =================="
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "Summary",
+                 "contents" : "If you just stay for one slide, this is it."
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Summary",
+                 "contents": "New UI\nDynamic behavior for views\nText Kit\n64-bit Support\nMore Multitasking\nSprite Kit\nGame Controller\nInter App Audio\nPeer-to-Peer Connectivity\nPlus additions to existing frameworks…",
+                 "backgroundColor": "262626",
+                 "textColor": "FFFFFF"
+                 },
+                 {
+                 "xtype": "title",
+                 "title": "Thanks for coming!",
+                 "contents": "(no no no wait!)"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+
+                 
+                 
+                 {
+                 "xtype": "comment",
                  "contents": "==================== UI CHANGES =================="
                  },
                  
@@ -102,6 +129,36 @@
                  "contentMode": 4
                  },
                  {
+                 "xtype" : "photo",
+                 "title" : "Twitter Icon",
+                 "contents" : "icon_twitter",
+                 "contentMode": 4
+                 },
+                 {
+                 "xtype" : "photo",
+                 "title" : "Instapaper Icon",
+                 "contents" : "icon_instapaper",
+                 "contentMode": 4
+                 },
+                 {
+                 "xtype" : "photo",
+                 "title" : "Evernote Icon",
+                 "contents" : "icon_evernote",
+                 "contentMode": 4
+                 },
+                 {
+                 "xtype" : "photo",
+                 "title" : "Runkeeper Icon",
+                 "contents" : "icon_runkeeper",
+                 "contentMode": 4
+                 },
+                 {
+                 "xtype" : "photo",
+                 "title" : "PCalc Icon",
+                 "contents" : "icon_pcalc",
+                 "contentMode": 4
+                 },
+                 {
                  "xtype": "text",
                  "title": "Buttons",
                  "contents": "Buttons are just text",
@@ -110,12 +167,155 @@
                  {
                  "xtype": "text",
                  "title": "Buttons",
-                 "contents": "Buttons are just text",
+                 "contents": "Borderless buttons:\nJust text",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Translucent Bars",
+                 "contents": "Translucent Bars",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Fullscreen layout",
+                 "contents": "Fullscreen Controllers are Good©®™",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Update your Apps",
+                 "contents": "Update your apps:",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Update your Apps",
+                 "contents": "Pay attention to translucent elements",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Update your Apps",
+                 "contents": "Redesign icons and buttons",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Update your Apps",
+                 "contents": "Prepare for borderless buttons",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Update your Apps",
+                 "contents": "Beware of hard-coded UI locations",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Update your Apps",
+                 "contents": "Use Dynamic Type",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Update your Apps",
+                 "contents": "Pay attention to new gestures",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Update your Apps",
+                 "contents": "Shadows, bezels, gradients",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Update your Apps",
+                 "contents": "Use auto layout and (ahem!) storyboards",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Update your Apps",
+                 "contents": "Remove deprecated APIs",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "New Version",
+                 "contents": "iOS 7 is a complete reboot for your app",
                  "notes": ""
                  },
                  {
                  "xtype" : "empty"
                  },
+
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== TEXTKIT =================="
+                 },
+                 
+                 
+                 
+                 
+                 {
+                 "xtype" : "title",
+                 "title" : "TextKit",
+                 "contents" : "Text processing for the masses"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "TextKit",
+                 "contents": "Probably the most important update in iOS 7",
+                 "notes": ""
+                 },
+                 {
+                 "xtype" : "photo",
+                 "title" : "Text Frameworks in iOS 6",
+                 "contents" : "text_ios6",
+                 "contentMode": 4
+                 },
+                 {
+                 "xtype" : "photo",
+                 "title" : "Text Frameworks in iOS 7",
+                 "contents" : "text_ios7",
+                 "contentMode": 4
+                 },
+                 {
+                 "xtype" : "movetxt",
+                 "title" : "TextKit Demo",
+                 "demo" : true
+                 },
+                 {
+                 "xtype": "photo",
+                 "title": "Dynamic Type Settings",
+                 "contents": "dynamic_type",
+                 "contentMode": 4
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Dynamic Type",
+                 "contents" : "[UIFontDescriptor preferredFontDescriptorWithTextStyle: UIFontTextStyleBody]",
+                 "code": true
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Dynamic Type Notification",
+                 "contents" : "UIContentSizeCategory…\n…DidChangeNotification",
+                 "code": true
+                 },
+                 {
+                 "xtype": "source",
+                 "demo": true,
+                 "title": "Displaying Source Code"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+                 
                  
                  
                  {
@@ -357,65 +557,6 @@
                  
                  {
                  "xtype": "comment",
-                 "contents": "==================== TEXTKIT =================="
-                 },
-                 
-                 
-                 
-                 
-                 {
-                 "xtype" : "title",
-                 "title" : "TextKit",
-                 "contents" : "Text processing for the masses"
-                 },
-                 {
-                 "xtype" : "photo",
-                 "title" : "Text Frameworks in iOS 6",
-                 "contents" : "text_ios6",
-                 "contentMode": 4
-                 },
-                 {
-                 "xtype" : "photo",
-                 "title" : "Text Frameworks in iOS 7",
-                 "contents" : "text_ios7",
-                 "contentMode": 4
-                 },
-                 {
-                 "xtype" : "movetxt",
-                 "title" : "TextKit Demo",
-                 "demo" : true
-                 },
-                 {
-                 "xtype": "photo",
-                 "title": "Dynamic Type Settings",
-                 "contents": "dynamic_type",
-                 "contentMode": 4
-                 },
-                 {
-                 "xtype" : "text",
-                 "title" : "Dynamic Type",
-                 "contents" : "[UIFontDescriptor preferredFontDescriptorWithTextStyle: UIFontTextStyleBody]",
-                 "code": true
-                 },
-                 {
-                 "xtype" : "text",
-                 "title" : "Dynamic Type Notification",
-                 "contents" : "UIContentSizeCategory…\n…DidChangeNotification",
-                 "code": true
-                 },
-                 {
-                 "xtype": "source",
-                 "demo": true,
-                 "title": "Displaying Source Code"
-                 },
-                 {
-                 "xtype" : "empty"
-                 },
-                 
-                 
-                 
-                 {
-                 "xtype": "comment",
                  "contents": "==================== MINOR APIS =================="
                  },
                  
@@ -445,7 +586,7 @@
                  {
                  "xtype": "macaddress",
                  "demo": true,
-                 "title": "Not being able to get the MAC Address anymore"
+                 "title": "No MAC address anymore"
                  },
                  {
                  "xtype" : "empty"

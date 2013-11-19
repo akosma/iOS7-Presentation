@@ -7,6 +7,7 @@
 //
 
 #import "TRITextScreen.h"
+#import "TRIHelpers.h"
 
 @interface TRITextScreen ()
 
@@ -32,6 +33,12 @@
     {
         self.label.font = [UIFont fontWithName:@"Menlo"
                                           size:40];
+    }
+    
+    if (self.definition[@"textColor"])
+    {
+        NSString *string = self.definition[@"textColor"];
+        self.label.textColor = [UIColor colorWithHexString:string];
     }
 }
 
