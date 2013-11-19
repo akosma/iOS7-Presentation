@@ -29,11 +29,6 @@
                  "contents" : "trifork_logo"
                  },
                  {
-                 "xtype" : "text",
-                 "title" : "Contact me",
-                 "contents" : "ako@trifork.com\n\n@akotrifork"
-                 },
-                 {
                  "xtype" : "photo",
                  "title" : "My Books",
                  "contents" : "books"
@@ -371,11 +366,6 @@
                  
                  {
                  "xtype" : "text",
-                 "title" : "Questions",
-                 "contents" : "Questions?"
-                 },
-                 {
-                 "xtype" : "text",
                  "title" : "Credits",
                  "contents" : "Credits:\n\nGithub\nobjc.io #5\nWikipedia\nNSHipster\nDevFright.com\nStack Overflow\nTypographica.org\nBig Nerd Ranch Blog\nRenaud Pradenc Blog\nMaximiliano Firtman Blog\nCapTech Consulting Blog"
                  },
@@ -383,6 +373,21 @@
                  "xtype" : "title",
                  "title" : "Thanks for attending!",
                  "contents" : "Get the PDF of this presentation while it's hot."
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Upcoming Trainings",
+                 "contents" : "iOS Training in the Netherlands in January!\nContact us for more details."
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Contact me",
+                 "contents" : "ako@trifork.com\n\n@akotrifork"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "Questions",
+                 "contents" : "Questions?"
                  },
                  {
                  "xtype": "text",
