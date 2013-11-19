@@ -1,5 +1,11 @@
 {
     "screens" : [
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== INTRODUCTION =================="
+                 },
+                 
                  {
                  "title" : "iOS 7 Logo",
                  "contentMode" : 4,
@@ -9,7 +15,7 @@
                  {
                  "xtype" : "title",
                  "title" : "What's new in iOS 7",
-                 "contents" : "Adrian Kosmaczewski\nTrifork GmbH"
+                 "contents" : "Summary: a lot."
                  },
                  {
                  "xtype" : "text",
@@ -35,6 +41,17 @@
                  {
                  "xtype" : "empty"
                  },
+                 
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== UI CHANGES =================="
+                 },
+                 
+                 
+                 
+                 
                  {
                  "xtype" : "title",
                  "title" : "New UI",
@@ -49,9 +66,18 @@
                  {
                  "xtype" : "empty"
                  },
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== URL SESSION =================="
+                 },
+                 
+                 
+                 
                  {
                  "xtype" : "title",
-                 "title" : "URL Session",
+                 "title" : "NSURLSession",
                  "contents" : "Remember ASIHTTPRequest and AFNetworking? Yeah."
                  },
                  {
@@ -94,6 +120,15 @@
                  {
                  "xtype" : "empty"
                  },
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== TEXT TO SPEECH =================="
+                 },
+                 
+                
+                 
                  {
                  "xtype" : "title",
                  "title" : "Text-to-Speech",
@@ -108,6 +143,20 @@
                  {
                  "xtype" : "empty"
                  },
+
+                 
+                 
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== MAPS AND LOCATION =================="
+                 },
+                 
+                 
+                 
+                 
+                 
                  {
                  "xtype" : "title",
                  "title" : "Maps and Location",
@@ -133,6 +182,16 @@
                  {
                  "xtype" : "empty"
                  },
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== IBEACON =================="
+                 },
+                 
+                 
+                 
+                 
                  {
                  "xtype" : "title",
                  "title" : "iBeacon",
@@ -159,6 +218,17 @@
                  {
                  "xtype" : "empty"
                  },
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== JAVASCRIPTCORE =================="
+                 },
+                 
+                 
+
+                 
+                 
                  {
                  "xtype" : "title",
                  "title" : "JavaScriptCore",
@@ -172,6 +242,17 @@
                  {
                  "xtype" : "empty"
                  },
+                 
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== BARCODES =================="
+                 },
+                 
+                 
+
+                 
                  {
                  "xtype" : "title",
                  "title" : "Barcode Reading",
@@ -196,6 +277,17 @@
                  {
                  "xtype" : "empty"
                  },
+                 
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== TEXTKIT =================="
+                 },
+                 
+                 
+                 
+                 
                  {
                  "xtype" : "title",
                  "title" : "TextKit",
@@ -244,6 +336,17 @@
                  {
                  "xtype" : "empty"
                  },
+                 
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== BASE64 =================="
+                 },
+                 
+                 
+
+                 
                  {
                  "xtype" : "title",
                  "title" : "Base64",
@@ -257,6 +360,15 @@
                  {
                  "xtype" : "empty"
                  },
+                 
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== THE END =================="
+                 },
+                 
+                 
                  {
                  "xtype" : "text",
                  "title" : "Questions",

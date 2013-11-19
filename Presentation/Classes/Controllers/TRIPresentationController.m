@@ -23,7 +23,7 @@ static NSString *PDF_FILENAME = @"slides.pdf";
                                          TRIBroadcasterDelegate,
                                          TRIMenuControllerDelegate>
 
-@property (nonatomic, strong) NSArray *definitions;
+@property (nonatomic, strong) NSMutableArray *definitions;
 @property (nonatomic) NSInteger currentIndex;
 @property (nonatomic, strong) TRIBaseScreenController *currentScreen;
 @property (nonatomic, strong) UINavigationController *sourceCodeController;
@@ -80,7 +80,12 @@ static NSString *PDF_FILENAME = @"slides.pdf";
                                                          options:0
                                                            error:nil];
     
-    self.definitions = dict[@"screens"];
+    self.definitions = [dict[@"screens"] mutableCopy];
+    
+    // Remove "comment" objects
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"xtype = 'comment'"];
+    NSArray *comments = [self.definitions filteredArrayUsingPredicate:predicate];
+    [self.definitions removeObjectsInArray:comments];
     
     // The aliases used by the definitions file are retrieved dynamically
     // from all the subclasses of TRIBaseScreenController
