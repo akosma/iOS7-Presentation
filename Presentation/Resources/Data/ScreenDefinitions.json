@@ -361,7 +361,7 @@
                  
                  {
                  "xtype": "comment",
-                 "contents": "==================== BASE64 =================="
+                 "contents": "==================== MINOR APIS =================="
                  },
                  
                  
@@ -369,13 +369,18 @@
                  
                  {
                  "xtype" : "title",
-                 "title" : "Base64",
-                 "contents" : "No more copy-pasting code from StackOverflow."
+                 "title" : "Minor Additions",
+                 "contents" : "KISS principle applies here"
                  },
                  {
                  "xtype": "base64",
                  "demo": true,
                  "title": "Encoding an image as Base64"
+                 },
+                 {
+                 "xtype": "readinglist",
+                 "demo": true,
+                 "title": "Adding to Safari Reading List"
                  },
                  {
                  "xtype" : "empty"
