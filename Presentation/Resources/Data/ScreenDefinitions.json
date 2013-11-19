@@ -270,7 +270,12 @@
                  {
                  "xtype" : "title",
                  "title" : "Thanks for attending!",
-                 "contents" : "Copyright © 2013 Trifork GmbH\nAll Rights Reserved"
+                 "contents" : "Get the PDF of this presentation while it's hot."
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Copyright",
+                 "contents": "Copyright © 2013 Trifork GmbH\nAll Rights Reserved"
                  },
                  {
                  "title" : "Trifork Logo",
