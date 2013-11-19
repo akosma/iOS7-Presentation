@@ -388,6 +388,11 @@
                  "title": "Counting Steps with CMStepCounter"
                  },
                  {
+                 "xtype": "macaddress",
+                 "demo": true,
+                 "title": "Not being able to get the MAC Address anymore"
+                 },
+                 {
                  "xtype" : "empty"
                  },
                  
