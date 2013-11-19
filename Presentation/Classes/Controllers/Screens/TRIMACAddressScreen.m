@@ -41,7 +41,7 @@
 - (NSString *)macAddress
 {
     // Courtesy of
-    // http://stackoverflow.com/questions/14827365/how-to-get-ios-device-mac-address-programmatically
+    // http://stackoverflow.com/q/14827365/133764
     int                 mgmtInfoBase[6];
     char                *msgBuffer = NULL;
     NSString            *errorFlag = NULL;
@@ -81,9 +81,10 @@
         unsigned char macAddress[6];
         memcpy(&macAddress, socketStruct->sdl_data + socketStruct->sdl_nlen, 6);
         
-        // Read from char array into a string object, into traditional Mac address format
+        // Read from char array into a string object, into traditional MAC address format
         NSString *macAddressString = [NSString stringWithFormat:@"%02X:%02X:%02X:%02X:%02X:%02X",
-                                      macAddress[0], macAddress[1], macAddress[2], macAddress[3], macAddress[4], macAddress[5]];
+                                      macAddress[0], macAddress[1], macAddress[2],
+                                      macAddress[3], macAddress[4], macAddress[5]];
         
         // Release the buffer memory
         free(msgBuffer);
