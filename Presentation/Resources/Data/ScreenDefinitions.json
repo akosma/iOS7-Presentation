@@ -56,6 +56,12 @@
                  "textColor": "FFFFFF"
                  },
                  {
+                 "title" : "iOS 7 Market Share",
+                 "contentMode" : 4,
+                 "xtype" : "photo",
+                 "contents" : "ios_7_adoption"
+                 },
+                 {
                  "xtype": "title",
                  "title": "Thanks for coming!",
                  "contents": "(no no no wait!)"

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A3BBE75183CDDD9009391FA /* ios_7_adoption.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3BBE74183CDDD9009391FA /* ios_7_adoption.png */; };
 		3A3D632A183BA7E600B137DE /* TRIReadingListScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D6328183BA7E600B137DE /* TRIReadingListScreen.m */; };
 		3A3D632B183BA7E600B137DE /* TRIReadingListScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6329183BA7E600B137DE /* TRIReadingListScreen.xib */; };
 		3A3D632F183BA9EF00B137DE /* TRICountingStepsScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D632D183BA9EF00B137DE /* TRICountingStepsScreen.m */; };
@@ -96,6 +97,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A3BBE74183CDDD9009391FA /* ios_7_adoption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios_7_adoption.png; sourceTree = "<group>"; };
 		3A3D6327183BA7E600B137DE /* TRIReadingListScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIReadingListScreen.h; sourceTree = "<group>"; };
 		3A3D6328183BA7E600B137DE /* TRIReadingListScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIReadingListScreen.m; sourceTree = "<group>"; };
 		3A3D6329183BA7E600B137DE /* TRIReadingListScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIReadingListScreen.xib; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 		3A86E4731833B6DD00C1AC2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3A3BBE74183CDDD9009391FA /* ios_7_adoption.png */,
 				3A62FE47183CCA9E0025065B /* ibeacon_seatlocator.png */,
 				3A3D6397183CC83300B137DE /* ibeacon_mlb.png */,
 				3A3D6380183BE12A00B137DE /* icon_twitter.png */,
@@ -558,6 +561,7 @@
 				3AC83A801833C1330089524B /* TRIPresentationController.xib in Resources */,
 				3A8D293F1837FFF00019C684 /* TRIYouTubeScreen.xib in Resources */,
 				3AB1CF25183B8976005B8757 /* TRISmileScreen.xib in Resources */,
+				3A3BBE75183CDDD9009391FA /* ios_7_adoption.png in Resources */,
 				3A3D6393183CBCA200B137DE /* TRIBehaviorScreen.xib in Resources */,
 				3A3D6385183BE12A00B137DE /* icon_twitter.png in Resources */,
 				3AB9BA261837E09700B8161D /* TRIInteractiveTextScreen.xib in Resources */,
