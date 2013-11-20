@@ -26,6 +26,7 @@
 		3A3D6393183CBCA200B137DE /* TRIBehaviorScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6391183CBCA200B137DE /* TRIBehaviorScreen.xib */; };
 		3A3D6396183CBCEE00B137DE /* TRICircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D6395183CBCEE00B137DE /* TRICircleView.m */; };
 		3A3D6398183CC83300B137DE /* ibeacon_mlb.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6397183CC83300B137DE /* ibeacon_mlb.png */; };
+		3A62FE48183CCA9E0025065B /* ibeacon_seatlocator.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A62FE47183CCA9E0025065B /* ibeacon_seatlocator.png */; };
 		3A6F6193183A55EA000ABC90 /* base64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6192183A55EA000ABC90 /* base64.png */; };
 		3A6F6197183A55FA000ABC90 /* TRIBase64Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F6195183A55FA000ABC90 /* TRIBase64Screen.m */; };
 		3A6F6198183A55FA000ABC90 /* TRIBase64Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6196183A55FA000ABC90 /* TRIBase64Screen.xib */; };
@@ -121,6 +122,7 @@
 		3A3D6394183CBCEE00B137DE /* TRICircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRICircleView.h; sourceTree = "<group>"; };
 		3A3D6395183CBCEE00B137DE /* TRICircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRICircleView.m; sourceTree = "<group>"; };
 		3A3D6397183CC83300B137DE /* ibeacon_mlb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ibeacon_mlb.png; sourceTree = "<group>"; };
+		3A62FE47183CCA9E0025065B /* ibeacon_seatlocator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ibeacon_seatlocator.png; sourceTree = "<group>"; };
 		3A6F6192183A55EA000ABC90 /* base64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base64.png; sourceTree = "<group>"; };
 		3A6F6194183A55FA000ABC90 /* TRIBase64Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIBase64Screen.h; sourceTree = "<group>"; };
 		3A6F6195183A55FA000ABC90 /* TRIBase64Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIBase64Screen.m; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 		3A86E4731833B6DD00C1AC2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3A62FE47183CCA9E0025065B /* ibeacon_seatlocator.png */,
 				3A3D6397183CC83300B137DE /* ibeacon_mlb.png */,
 				3A3D6380183BE12A00B137DE /* icon_twitter.png */,
 				3A3D6381183BE12A00B137DE /* icon_instapaper.png */,
@@ -560,6 +563,7 @@
 				3AB9BA261837E09700B8161D /* TRIInteractiveTextScreen.xib in Resources */,
 				3A3D637C183BD95600B137DE /* superellipse.png in Resources */,
 				3A86E4751833B6DD00C1AC2C /* Images.xcassets in Resources */,
+				3A62FE48183CCA9E0025065B /* ibeacon_seatlocator.png in Resources */,
 				3AC9837C18365F2B004E3A94 /* trifork_logo.png in Resources */,
 				3A98A41C1834F599008C83AC /* TRIURLSessionScreen.xib in Resources */,
 				3A3D6389183BE12A00B137DE /* icon_pcalc.png in Resources */,

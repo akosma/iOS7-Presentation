@@ -618,6 +618,12 @@
                  "contents" : "ibeacon_mlb"
                  },
                  {
+                 "title" : "iBeacon on the MLB",
+                 "contentMode" : 4,
+                 "xtype" : "photo",
+                 "contents" : "ibeacon_seatlocator"
+                 },
+                 {
                  "xtype" : "text",
                  "title" : "CLBeaconRegion",
                  "contents" : "CLBeaconRegion",
