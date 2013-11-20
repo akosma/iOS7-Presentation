@@ -243,6 +243,11 @@
                  "notes": ""
                  },
                  {
+                 "xtype": "tint",
+                 "title": "The UIView.tint property",
+                 "demo": true
+                 },
+                 {
                  "xtype" : "empty"
                  },
 
