@@ -828,11 +828,41 @@
                  
                  {
                  "xtype": "comment",
+                 "contents": "==================== WEB DEVELOPMENT =================="
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "Web Development in iOS 7",
+                 "contents" : "Bad News Coming"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Says Max Firtman:",
+                 "contents": "\"I can say without fear of mistake that this is the buggiest Safari version since 1.0.\"\n\nMaximiliano Firtman"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "Issues",
+                 "contents": "Full screen webapps problems\n'online' and 'offline' events not firing\nNo more <input type=\"datetime\">\nNo WebGL or IndexedDB yet\nSerious WebSQL bugs"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "New Features",
+                 "contents": "New 'Add to Home Screen' button\nNew UI gestures\nNew icon sizes\nAirPlay API\nCSS Grid Layout\n"
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+
+                 
+                 
+                 {
+                 "xtype": "comment",
                  "contents": "==================== MINOR APIS =================="
                  },
                  
                  
-
+                 
                  
                  {
                  "xtype" : "title",
@@ -881,6 +911,11 @@
                  "xtype": "macaddress",
                  "demo": true,
                  "title": "No MAC address anymore"
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "… and soooo much more…",
+                 "contents": "… and soooo much more…"
                  },
                  {
                  "xtype" : "empty"
