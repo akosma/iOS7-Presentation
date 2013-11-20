@@ -24,7 +24,7 @@
                  },
                  {
                  "title" : "Trifork Logo",
-                 "contentMode" : "4",
+                 "contentMode" : 4,
                  "xtype" : "photo",
                  "contents" : "trifork_logo"
                  },
@@ -601,7 +601,7 @@
                  },
                  {
                  "title" : "Forbes about iBeacon",
-                 "contentMode" : "4",
+                 "contentMode" : 4,
                  "xtype" : "photo",
                  "contents" : "forbes_ibeacon"
                  },
@@ -610,6 +610,12 @@
                  "contents" : "ITjsb22-EwQ",
                  "xtype" : "youtube",
                  "placeholder" : "minority_report"
+                 },
+                 {
+                 "title" : "iBeacon on the MLB",
+                 "contentMode" : 4,
+                 "xtype" : "photo",
+                 "contents" : "ibeacon_mlb"
                  },
                  {
                  "xtype" : "text",
@@ -914,7 +920,7 @@
                  },
                  {
                  "title" : "Trifork Logo",
-                 "contentMode" : "4",
+                 "contentMode" : 4,
                  "xtype" : "photo",
                  "contents" : "trifork_logo"
                  }
