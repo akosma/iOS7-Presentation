@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRITintScreen">
             <connections>
+                <outlet property="colorSwitch" destination="xlA-nk-vAO" id="oDH-yK-yY5"/>
                 <outlet property="contactsItem" destination="Fld-Pb-eB0" id="Ng1-e4-rIi"/>
                 <outlet property="tabBar" destination="RhB-L5-5tX" id="Oy4-M8-AMP"/>
                 <outlet property="view" destination="2" id="3"/>

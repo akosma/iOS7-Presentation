@@ -15,7 +15,7 @@
                  {
                  "xtype" : "title",
                  "title" : "What's new in iOS 7",
-                 "contents" : "Summary: a lot."
+                 "contents" : "Spoiler alert: a lot."
                  },
                  {
                  "xtype" : "text",
@@ -309,6 +309,12 @@
                  },
                  {
                  "xtype": "text",
+                 "title": "Exclusion Paths",
+                 "contents": "Exclusion Paths\n\n(aka \"text wrapping an image\")",
+                 "notes": ""
+                 },
+                 {
+                 "xtype": "text",
                  "title": "exclusionPaths",
                  "contents": "textView.textContainer.exclusionPaths = @[path];",
                  "code": true
@@ -351,6 +357,50 @@
                  "xtype" : "empty"
                  },
                  
+                 
+                 
+                 {
+                 "xtype": "comment",
+                 "contents": "==================== UIKIT DYNAMICS =================="
+                 },
+                 {
+                 "xtype" : "title",
+                 "title" : "UIKit Dynamics",
+                 "contents" : "The following programme contains moving objects, sensible viewers beware."
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "UIDynamicAnimator",
+                 "contents": "UIDynamicAnimator",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "UIPushBehavior",
+                 "contents": "UIPushBehavior",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "UIDynamicItemBehavior",
+                 "contents": "UIDynamicItemBehavior",
+                 "code": true
+                 },
+                 {
+                 "xtype": "text",
+                 "title": "UICollisionBehavior",
+                 "contents": "UICollisionBehavior",
+                 "code": true
+                 },
+                 {
+                 "xtype": "behavior",
+                 "title": "UIKit Behaviors",
+                 "demo": true
+                 },
+                 {
+                 "xtype" : "empty"
+                 },
+
                  
                  
                  {
@@ -493,13 +543,19 @@
                  {
                  "xtype" : "text",
                  "title" : "MKDistanceFormatter",
-                 "contents" : "MKDistanceFormatterUnits…\n…Imperial\n…Metric",
+                 "contents" : "MKDistanceFormatterUnits…\n…Imperial\n…Metric\n…ImperialWithYards",
                  "code": true
                  },
                  {
                  "xtype" : "text",
                  "title" : "MKDistanceFormatter",
-                 "contents" : "Guess what's the default?"
+                 "contents" : "(guess which one is the default?)"
+                 },
+                 {
+                 "xtype" : "text",
+                 "title" : "MKDistanceFormatter",
+                 "contents" : "MKDistanceFormatterUnitsDefault\n\n// depends on the locale!",
+                 "code": true
                  },
                  {
                  "xtype" : "text",

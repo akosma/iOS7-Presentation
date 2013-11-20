@@ -22,6 +22,9 @@
 		3A3D6389183BE12A00B137DE /* icon_pcalc.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6384183BE12A00B137DE /* icon_pcalc.png */; };
 		3A3D638D183CB5AC00B137DE /* TRITintScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D638B183CB5AC00B137DE /* TRITintScreen.m */; };
 		3A3D638E183CB5AC00B137DE /* TRITintScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D638C183CB5AC00B137DE /* TRITintScreen.xib */; };
+		3A3D6392183CBCA200B137DE /* TRIBehaviorScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D6390183CBCA200B137DE /* TRIBehaviorScreen.m */; };
+		3A3D6393183CBCA200B137DE /* TRIBehaviorScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D6391183CBCA200B137DE /* TRIBehaviorScreen.xib */; };
+		3A3D6396183CBCEE00B137DE /* TRICircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D6395183CBCEE00B137DE /* TRICircleView.m */; };
 		3A6F6193183A55EA000ABC90 /* base64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6192183A55EA000ABC90 /* base64.png */; };
 		3A6F6197183A55FA000ABC90 /* TRIBase64Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F6195183A55FA000ABC90 /* TRIBase64Screen.m */; };
 		3A6F6198183A55FA000ABC90 /* TRIBase64Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6196183A55FA000ABC90 /* TRIBase64Screen.xib */; };
@@ -111,6 +114,11 @@
 		3A3D638A183CB5AC00B137DE /* TRITintScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRITintScreen.h; sourceTree = "<group>"; };
 		3A3D638B183CB5AC00B137DE /* TRITintScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRITintScreen.m; sourceTree = "<group>"; };
 		3A3D638C183CB5AC00B137DE /* TRITintScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRITintScreen.xib; sourceTree = "<group>"; };
+		3A3D638F183CBCA200B137DE /* TRIBehaviorScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIBehaviorScreen.h; sourceTree = "<group>"; };
+		3A3D6390183CBCA200B137DE /* TRIBehaviorScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIBehaviorScreen.m; sourceTree = "<group>"; };
+		3A3D6391183CBCA200B137DE /* TRIBehaviorScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRIBehaviorScreen.xib; sourceTree = "<group>"; };
+		3A3D6394183CBCEE00B137DE /* TRICircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRICircleView.h; sourceTree = "<group>"; };
+		3A3D6395183CBCEE00B137DE /* TRICircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRICircleView.m; sourceTree = "<group>"; };
 		3A6F6192183A55EA000ABC90 /* base64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base64.png; sourceTree = "<group>"; };
 		3A6F6194183A55FA000ABC90 /* TRIBase64Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRIBase64Screen.h; sourceTree = "<group>"; };
 		3A6F6195183A55FA000ABC90 /* TRIBase64Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRIBase64Screen.m; sourceTree = "<group>"; };
@@ -378,6 +386,9 @@
 				3A3D638A183CB5AC00B137DE /* TRITintScreen.h */,
 				3A3D638B183CB5AC00B137DE /* TRITintScreen.m */,
 				3A3D638C183CB5AC00B137DE /* TRITintScreen.xib */,
+				3A3D638F183CBCA200B137DE /* TRIBehaviorScreen.h */,
+				3A3D6390183CBCA200B137DE /* TRIBehaviorScreen.m */,
+				3A3D6391183CBCA200B137DE /* TRIBehaviorScreen.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -469,6 +480,8 @@
 				3AB9BA2E1837E8BD00B8161D /* TRIViews.h */,
 				3AB9BA2B1837E85400B8161D /* TRICrossView.h */,
 				3AB9BA2C1837E85400B8161D /* TRICrossView.m */,
+				3A3D6394183CBCEE00B137DE /* TRICircleView.h */,
+				3A3D6395183CBCEE00B137DE /* TRICircleView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -539,6 +552,7 @@
 				3AC83A801833C1330089524B /* TRIPresentationController.xib in Resources */,
 				3A8D293F1837FFF00019C684 /* TRIYouTubeScreen.xib in Resources */,
 				3AB1CF25183B8976005B8757 /* TRISmileScreen.xib in Resources */,
+				3A3D6393183CBCA200B137DE /* TRIBehaviorScreen.xib in Resources */,
 				3A3D6385183BE12A00B137DE /* icon_twitter.png in Resources */,
 				3AB9BA261837E09700B8161D /* TRIInteractiveTextScreen.xib in Resources */,
 				3A3D637C183BD95600B137DE /* superellipse.png in Resources */,
@@ -608,6 +622,7 @@
 			files = (
 				3AB9BA201837DA2B00B8161D /* TRIBeaconScreen.m in Sources */,
 				3A86E4841833BAFA00C1AC2C /* TRIPhotoScreen.m in Sources */,
+				3A3D6396183CBCEE00B137DE /* TRICircleView.m in Sources */,
 				3A98A4091834A7E7008C83AC /* TRITitleAndTextScreen.m in Sources */,
 				3AEAC75A18392EBC0097A8C6 /* TRIJavaScriptScreen.m in Sources */,
 				3A6F6197183A55FA000ABC90 /* TRIBase64Screen.m in Sources */,
@@ -619,6 +634,7 @@
 				3A86E4681833B51600C1AC2C /* TRIAppDelegate.m in Sources */,
 				3A98A43218356D15008C83AC /* TRIProtocol.m in Sources */,
 				3AC83A8E183418270089524B /* TRIGeodesicScreen.m in Sources */,
+				3A3D6392183CBCA200B137DE /* TRIBehaviorScreen.m in Sources */,
 				3A98A43318356D15008C83AC /* TRIReceiver.m in Sources */,
 				3A98A41B1834F599008C83AC /* TRIURLSessionScreen.m in Sources */,
 				3A98A42018350BD1008C83AC /* TRIEmptyScreen.m in Sources */,

@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITabBar *tabBar;
 @property (weak, nonatomic) IBOutlet UITabBarItem *contactsItem;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *colorSwitch;
 
 @end
 
@@ -26,6 +27,11 @@
 {
     [super viewDidLoad];
     self.tabBar.selectedItem = self.contactsItem;
+}
+
+- (void)performMainScreenAction
+{
+    self.colorSwitch.selectedSegmentIndex = 0;
 }
 
 - (IBAction)changeTint:(id)sender

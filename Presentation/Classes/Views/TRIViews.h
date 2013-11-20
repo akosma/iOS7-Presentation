@@ -7,3 +7,4 @@
 //
 
 #import "TRICrossView.h"
+#import "TRICircleView.h"
