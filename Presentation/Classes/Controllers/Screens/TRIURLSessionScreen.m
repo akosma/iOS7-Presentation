@@ -74,25 +74,35 @@ static NSString *HUGE_WIKIPEDIA_IMAGE = @"http://upload.wikimedia.org/wikipedia/
     NSURL *url = [NSURL URLWithString:HUGE_WIKIPEDIA_IMAGE];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     self.task = [self.session downloadTaskWithRequest:request];
-    [self.task resume];
     
     // Progress object
     self.progress = [NSProgress progressWithTotalUnitCount:100];
+    self.progress.pausable = YES;
     [self.progress addObserver:self
                     forKeyPath:@"completedUnitCount"
                        options:0
                        context:NULL];
+    
+    __weak typeof(self) weakSelf = self;
+    self.progress.cancellationHandler = ^{
+        [weakSelf.session invalidateAndCancel];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf resetUI];
+        });
+    };
+    self.progress.pausingHandler = ^{
+        [weakSelf.task suspend];
+    };
 
-    // Prepare the UI
-    self.total = 0;
-    self.progressView.progress = 0.0;
-    self.totalLabel.text = @"";
-    self.completedLabel.text = @"";
+    [self resetUI];
+    
+    // Launch the download
+    [self.task resume];
 }
 
 - (IBAction)cancel:(id)sender
 {
-    [self.session invalidateAndCancel];
+    [self.progress cancel];
 }
 
 - (IBAction)resume:(id)sender
@@ -102,7 +112,7 @@ static NSString *HUGE_WIKIPEDIA_IMAGE = @"http://upload.wikimedia.org/wikipedia/
 
 - (IBAction)suspend:(id)sender
 {
-    [self.task suspend];
+    [self.progress pause];
 }
 
 #pragma mark - KVO
@@ -156,5 +166,15 @@ expectedTotalBytes:(int64_t)expectedTotalBytes
 {
 }
 
+#pragma mark - Private methods
+
+- (void)resetUI
+{
+    // Prepare the UI
+    self.total = 0;
+    self.progressView.progress = 0.0;
+    self.totalLabel.text = @"";
+    self.completedLabel.text = @"";
+}
 
 @end
