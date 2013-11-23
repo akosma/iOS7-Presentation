@@ -80,7 +80,6 @@ static long long const ARC4RANDOM_MAX = 0x100000000;
 {
     CGFloat dx =  (CGFloat)arc4random() / (CGFloat)ARC4RANDOM_MAX;
     CGFloat dy = (CGFloat)arc4random() / (CGFloat)ARC4RANDOM_MAX;
-    NSLog(@"vector: %1.2f, %1.2f", dx, dy);
     return CGVectorMake(dx, dy);
 }
 
