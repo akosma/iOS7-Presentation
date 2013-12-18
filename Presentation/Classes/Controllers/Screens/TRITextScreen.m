@@ -27,12 +27,20 @@
     [super viewDidLoad];
 
     NSString *text = self.definition[@"contents"];
-    self.label.text = text;
     
     if (self.definition[@"code"])
     {
         self.label.font = [UIFont fontWithName:@"Menlo"
-                                          size:40];
+                                          size:30];
+    }
+    
+    if (self.definition[@"list"])
+    {
+        NSArray *parts = [text componentsSeparatedByString:@"\n"];
+        NSMutableString *string = [NSMutableString stringWithString:@"• "];
+        [string appendString:[parts componentsJoinedByString:@"\n• "]];
+        text = string;
+        self.label.textAlignment = NSTextAlignmentLeft;
     }
     
     if (self.definition[@"textColor"])
@@ -40,6 +48,8 @@
         NSString *string = self.definition[@"textColor"];
         self.label.textColor = [UIColor colorWithHexString:string];
     }
+
+    self.label.text = text;
 }
 
 @end

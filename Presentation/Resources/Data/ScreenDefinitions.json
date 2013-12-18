@@ -54,7 +54,7 @@
                  "contents": "New UI\nDynamic behavior\nText Kit\n64-bit Support\nMore Multitasking\nSprite Kit\nGame Controller\nInter App Audio\nPeer-to-Peer Connectivity\n…and more…",
                  "backgroundColor": "262626",
                  "textColor": "FFFFFF",
-                 "longText": true
+                 "list": true
                  },
                  {
                  "title" : "iOS 7 Market Share",
@@ -181,7 +181,8 @@
                  "xtype": "text",
                  "title": "Update your Apps",
                  "contents": "Translucent elements\nBorderless buttons\nBeware of hard-coded UI locations\nUse Dynamic Type\nNew gestures\nShadows, bezels, gradients\nUse auto layout and storyboards\nRemove deprecated APIs",
-                 "notes": ""
+                 "notes": "",
+                 "list": true
                  },
                  {
                  "xtype": "text",
@@ -632,17 +633,19 @@
                  {
                  "xtype": "text",
                  "title": "Says Max Firtman:",
-                 "contents": "\"I can say without fear of mistake that this is the buggiest Safari version since 1.0.\"\n\nMaximiliano Firtman"
+                 "contents": "”I can say without fear of mistake that this is the buggiest Safari version since 1.0.“\n\nMaximiliano Firtman"
                  },
                  {
                  "xtype": "text",
                  "title": "Issues",
-                 "contents": "Full screen webapps problems\n'online' and 'offline' events not firing\nNo more <input type=\"datetime\">\nNo WebGL or IndexedDB yet\nSerious WebSQL bugs"
+                 "contents": "Full screen webapps problems\n‘online‘ and ‘offline‘ not firing\nNo <input type=“datetime“>\nNo WebGL or IndexedDB yet\nSerious WebSQL bugs",
+                 "list": true
                  },
                  {
                  "xtype": "text",
                  "title": "New Features",
-                 "contents": "New 'Add to Home Screen' button\nNew UI gestures\nNew icon sizes\nAirPlay API\nCSS Grid Layout\n"
+                 "contents": "New ‘Add to Home Screen‘\nNew UI gestures\nNew icon sizes\nAirPlay API\nCSS Grid Layout",
+                 "list": true
                  },
                  {
                  "xtype" : "empty"
@@ -736,7 +739,8 @@
                  {
                  "xtype" : "text",
                  "title" : "Credits",
-                 "contents" : "Credits:\n\nGithub\nobjc.io #5\nWikipedia\nNSHipster\nDevFright.com\nStack Overflow\nTypographica.org\nBig Nerd Ranch Blog\nRenaud Pradenc Blog\nMaximiliano Firtman Blog\nCapTech Consulting Blog"
+                 "contents" : "Credits:\nGithub\nobjc.io #5\nWikipedia\nNSHipster\nDevFright.com\nStack Overflow\nTypographica.org\nBig Nerd Ranch Blog\nRenaud Pradenc Blog\nMaximiliano Firtman Blog\nCapTech Consulting Blog",
+                 "list": true
                  },
                  {
                  "xtype" : "text",

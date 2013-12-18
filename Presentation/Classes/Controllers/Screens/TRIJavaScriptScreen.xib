@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -21,23 +21,26 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">var a = 10;
-var factory = function (input) {
+                    <string key="text">var greeting = 'Welcome to the Zürich GOTO Night!';
+
+var factory = function (message) {
     return function () {
-        return input + a;
+        console.log('about to say: ' + message);
+        alert(message);
     };
 };
-var fun = factory(50);
-console.log(fun());</string>
+
+var greet = factory(greeting);
+greet();</string>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="26"/>
+                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                 </textView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUm-vo-9fx" userLabel="Console Text View">
                     <rect key="frame" x="0.0" y="519" width="768" height="454"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="26"/>
+                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8j-3N-5X3">
