@@ -638,7 +638,7 @@
                  {
                  "xtype": "text",
                  "title": "Issues",
-                 "contents": "Full screen webapps problems\n‘online‘ and ‘offline‘ not firing\nNo <input type=“datetime“>\nNo WebGL or IndexedDB yet\nSerious WebSQL bugs",
+                 "contents": "Fullscreen webapp issues\n‘online‘ and ‘offline‘ not firing\nNo <input type=“datetime“>\nNo WebGL or IndexedDB yet\nSerious WebSQL bugs",
                  "list": true
                  },
                  {
