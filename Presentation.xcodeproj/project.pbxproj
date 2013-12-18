@@ -759,7 +759,7 @@
 				GCC_PREFIX_HEADER = "Presentation/Presentation-Prefix.pch";
 				INFOPLIST_FILE = "Presentation/Presentation-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "24CBF7EB-D328-4594-95CE-A13A8A0679EC";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
