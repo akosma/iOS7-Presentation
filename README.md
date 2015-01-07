@@ -1,5 +1,5 @@
-GOTO Night Presentation Tool
-============================
+"What's new in iOS 7" Presentation
+==================================
 
 This repository contains an Xcode 5 project for iOS 7, showcasing the
 major changes and new APIs in iOS 7.
